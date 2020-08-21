@@ -10,6 +10,16 @@
 	<h1 style="margin-left: 30px;">PREVENTIF MAINTENANCE FIRE ALARM</h1>
 	<a href="?page=tambah_af" class="w3-bar-item w3-button w3-green"><i class="fas fa-plus"></i>Tambah Data</a>
 	<a href="" class="w3bar-item w3-button w3-blue"><i class="fas fa-print"></i>Print</a>
+
+	<form action="" method="post" class="d-none d-sm-inline-block form-inline ml-md-3 my-2 my-md-0 mw-100 navbar-search" style="float: right; margin-right: 50px;">
+            <div class="input-group">
+              <input type="text" name="cari" class="form-control bg-light border-1 mb-3 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+              <div class="input-group-append">
+                <input type="submit" name="cari_barang" class="btn btn-primary mb-3" value="cari">
+              </div>
+            </div>
+          </form>
+	
 	<br>
 	<div class="card-body">
 		<table class="w3-table w3-striped" border="1">

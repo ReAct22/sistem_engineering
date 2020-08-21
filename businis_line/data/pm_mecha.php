@@ -10,6 +10,16 @@
 	<h1 style="margin-left: 30px;">PREVENTIF MAINTENANCE MECHANICAL</h1>
 	<a href="?page=tambah_mecha" class="w3-bar-item w3-button w3-green"><i class="fas fa-plus"></i>Tambah Data</a>
 	<a href="" class="w3bar-item w3-button w3-blue"><i class="fas fa-print"></i>Print</a>
+
+	<form action="" method="post" class="d-none d-sm-inline-block form-inline ml-md-3 my-2 my-md-0 mw-100 navbar-search" style="float: right; margin-right: 50px;">
+            <div class="input-group">
+              <input type="text" name="cari" class="form-control bg-light border-1 mb-3 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+              <div class="input-group-append">
+                <input type="submit" name="cari_barang" class="btn btn-primary mb-3" value="cari">
+              </div>
+            </div>
+          </form>
+
 	<br>
 	<div class="card-body">
 		<table class="w3-table w3-striped" border="1">
@@ -24,7 +34,26 @@
 			<th>Opsi</th>
 		</tr>
 		<?php 
+		$cari = @$_POST['cari'];
+	$cari_barang = @$_POST['cari_barang'];
+	if($cari_barang){
+		if($cari != ""){
+			$sql = mysqli_query($koneksi,"select *from pm_mecha where id_mecha like '%$cari%' or nama_utilitas like '%$cari%' or lokasi_utilitas like '%$cari%'");
+		}else{
+			$sql = mysqli_query($koneksi,"select *from pm_mecha");
+		}
+	}else{
 		$sql = mysqli_query($koneksi,"select *from pm_mecha");
+	}
+
+	$cek = mysqli_num_rows($sql);
+	if($cek < 1){
+		?>
+			<tr>
+				<td colspan="7" style="padding: 10px; text-align: center;">Data Tidak Ditemukan</td>
+			</tr>
+		<?php
+	}else{
 		while($data = mysqli_fetch_array($sql)){
 		?>
 		<tr>
@@ -42,6 +71,7 @@
 		</tr>
 		<?php 
 		}
+	}
 		?>
 	</table>
 	</div>
