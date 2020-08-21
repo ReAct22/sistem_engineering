@@ -16,12 +16,31 @@
 	<br>
 	<div class="card-body">
 		<form action="" method="post" class="form-group">
+			<div class="input-group mb-3">
+	  <div class="input-group-prepend">
+	  <span class="input-group-text">NO.AC Tenant</span>
+	  </div>
 		<input type="text" name="no_pmten" class="form-control" value="<?php echo $kodeData ?>">
-		<br>
+		</div>
+
+		<div class="input-group mb-3">
+	  <div class="input-group-prepend">
+	  <span class="input-group-text">Tangga Rencana</span>
+	  </div>
 		<input type="date" name="tanggal_rencana" class="form-control">
-		<br>
+		</div>
+
+		<div class="input-group mb-3">
+	  <div class="input-group-prepend">
+	  <span class="input-group-text">Tanggal Realisasi</span>
+	  </div>
 		<input type="date" name="tanggal_realisasi" class="form-control">
-		<br>
+		</div>
+
+		<div class="input-group mb-3">
+	  <div class="input-group-prepend">
+	  <span class="input-group-text">Unit</span>
+	  </div>
 		<select name="unit" class="form-control">
 			<option label="">Pilih Nomer Unit</option>
 			<?php 
@@ -33,16 +52,30 @@
 				}
 			?>
 		</select>
-		<br>
+		</div>
+
+		<div class="input-group mb-3">
+	  <div class="input-group-prepend">
+	  <span class="input-group-text">Nama Teknisi</span>
+	  </div>
 		<select name="nama_teknisi" class="form-control">
 			<option label="Nama Teknisi">Nama Teknisi</option>
 			<option value="Andrean">Andrean</option>
 		</select>
-		<br>
+		</div>
+
+		<div class="input-group mb-3">
+	  <div class="input-group-prepend">
+	  <span class="input-group-text">Progres</span>
+	  </div>
 		<input type="text" name="progres" class="form-control">
-		<br>
+		</div>
+		<div class="input-group mb-3">
+	  <div class="input-group-prepend">
+	  <span class="input-group-text">keterangan</span>
+	  </div>
 		<textarea name="keterangan" rows="3" class="form-control"></textarea>
-		<br>
+		</div>
 		<input type="submit" name="tambah" class="w3-bar-item w3-button w3-green">
 		<input type="reset" name="" class="w3-bar-item w3-button w3-red">
 	</form>
