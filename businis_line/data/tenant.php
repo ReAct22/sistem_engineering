@@ -39,7 +39,7 @@
 		if($cari != ""){
 			$sql = mysqli_query($koneksi,"select *from pm_acten where id_acten like '%$cari%' or unit like '%$cari%' or nama_teknisi like '%$cari%'");
 		}else{
-			$sql = mysqli_query($koneksi,"select *from pm_actenap");
+			$sql = mysqli_query($koneksi,"select *from pm_acten");
 		}
 	}else{
 		$sql = mysqli_query($koneksi,"select *from pm_acten");
