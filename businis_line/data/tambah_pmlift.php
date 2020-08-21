@@ -16,12 +16,31 @@
 	<br>
 	<div class="card-body">
 		<form action="" method="post" class="form-group">
+			<div class="input-group mb-3">
+	  <div class="input-group-prepend">
+	  <span class="input-group-text">NO. PM Lift</span>
+	  </div>
 		<input type="text" name="no_pmlift" class="form-control" value="<?php echo $kodeData ?>">
-		<br>
+		</div>
+
+		<div class="input-group mb-3">
+	  <div class="input-group-prepend">
+	  <span class="input-group-text">Tanggal Rencana</span>
+	  </div>
 		<input type="date" name="tanggal_rencana" class="form-control">
-		<br>
+		</div>
+
+		<div class="input-group mb-3">
+	  <div class="input-group-prepend">
+	  <span class="input-group-text">Tanggal Realisasi</span>
+	  </div>
 		<input type="date" name="tanggal_realisasi" class="form-control">
-		<br>
+		</div>
+
+		<div class="input-group mb-3">
+	  <div class="input-group-prepend">
+	  <span class="input-group-text">Pilih Equipment</span>
+	  </div>
 		<select name="nama_equipmen" class="form-control">
 			<option label="Pilih Nama Equipment">Pilih Equipment</option>
 			<?php 
@@ -33,7 +52,12 @@
 			}
 			?>
 		</select>
-		<br>
+		</div>
+
+		<div class="input-group mb-3">
+	  <div class="input-group-prepend">
+	  <span class="input-group-text">Pilih Lokasi</span>
+	  </div>
 		<select name="lokasi_equipmen" class="form-control">
 			<option label="Pilih Lokasi">Pilih Lokasi</option>
 			<?php 
@@ -45,17 +69,42 @@
 			}
 			?>
 		</select>
-		<br>
+		</div>
+
+		<div class="input-group mb-3">
+	  <div class="input-group-prepend">
+	  <span class="input-group-text">Nama Vendor</span>
+	  </div>
 		<input type="text" name="nama_vendor" class="form-control">
-		<br>
+		</div>
+
+		<div class="input-group mb-3">
+	  <div class="input-group-prepend">
+	  <span class="input-group-text">Nama Teknisi</span>
+	  </div>
 		<input type="text" name="nama_teknisi" class="form-control">
-		<br>
+		</div>
+
+		<div class="input-group mb-3">
+	  <div class="input-group-prepend">
+	  <span class="input-group-text">Alamat Vendor</span>
+	  </div>
 		<input type="text" name="alamat_vendor" class="form-control">
-		<br>
+		</div>
+
+		<div class="input-group mb-3">
+	  <div class="input-group-prepend">
+	  <span class="input-group-text">Progres</span>
+	  </div>
 		<input type="text" name="progres" class="form-control">
-		<br>
+		</div>
+
+		<div class="input-group mb-3">
+	  <div class="input-group-prepend">
+	  <span class="input-group-text">Keterangan</span>
+	  </div>
 		<textarea name="keterangan" rows="3" class="form-control"></textarea>
-		<br>
+		</div>
 		<input type="submit" name="tambah" class="w3-bar-item w3-button w3-green">
 		<input type="reset" name="" class="w3-bar-item w3-button w3-red">
 	</form>

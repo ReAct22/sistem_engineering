@@ -15,14 +15,48 @@
 	<h2>Tambah Data PREVENTIF MAINTENANCE Ac Area Public</h2>
 	<div class="card-body">
 		<form action="" method="post" class="form-group">
+			<div class="input-group mb-3">
+	  <div class="input-group-prepend">
+	  <span class="input-group-text">NO. PM AC</span>
+	  </div>
 		<input type="text" name="no_pmacpa" class="form-control" value="<?php echo $kodeData ?>">
-		<br>
+		</div>
+
+		<div class="input-group mb-3">
+	  <div class="input-group-prepend">
+	  <span class="input-group-text">Tanggal Rencana</span>
+	  </div>
 		<input type="date" name="tanggal_rencana" class="form-control">
-		<br>
+		</div>
+
+		<div class="input-group mb-3">
+	  <div class="input-group-prepend">
+	  <span class="input-group-text">Tanggal Realisasi</span>
+	  </div>
 		<input type="date" name="tanggal_realisasi" class="form-control">
-		<br>
-		<input type="text" name="nama_ac" class="form-control">
-		<br>
+		</div>
+
+		<div class="input-group mb-3">
+	  <div class="input-group-prepend">
+	  <span class="input-group-text">Nama AC</span>
+	  </div>
+		<select name="nama_ac" class="form-control">
+			<option></option>
+			<?php 
+			$sql = mysqli_query($koneksi,"select *from du_ac_public_area");
+			while($data = mysqli_fetch_array($sql)){
+			?>
+			<option value="<?php echo $data['nama_utilitas'] ?>"><?php echo $data['nama_utilitas'] ?></option>
+			<?php 
+			}
+			?>
+		</select>
+		</div>
+
+		<div class="input-group mb-3">
+	  <div class="input-group-prepend">
+	  <span class="input-group-text">Lokasi</span>
+	  </div>
 		<select name="lokasi_ac" class="form-control">
 			<option label="">PIlih Lokasi</option>
 			<?php 
@@ -34,13 +68,29 @@
 				}
 			?>
 		</select>
-		<br>
+		</div>
+
+		<div class="input-group mb-3">
+	  <div class="input-group-prepend">
+	  <span class="input-group-text">Nama Teknisi</span>
+	  </div>
 		<input type="text" name="nama_teknisi" class="form-control">
-		<br>
+		</div>
+
+		<div class="input-group mb-3">
+	  <div class="input-group-prepend">
+	  <span class="input-group-text">Progres</span>
+	  </div>
 		<input type="text" name="progres" class="form-control">
-		<br>
+		</div>
+
+		<div class="input-group mb-3">
+	  <div class="input-group-prepend">
+	  <span class="input-group-text">Keterangan</span>
+	  </div>
 		<textarea name="keterangan" rows="3" class="form-control"></textarea>
-		<br>
+		</div>
+
 		<input type="submit" name="tambah" class="w3-bar-item w3-button w3-green">
 		<input type="reset" name="" class="w3-bar-item w3-button w3-red">
 	</form>
