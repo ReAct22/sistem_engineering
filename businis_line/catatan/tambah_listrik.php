@@ -1,5 +1,15 @@
 <?php 
 	include "config/koneksi.php";
+	$query = mysqli_query($koneksi,"select max(id_listrik) as kodePC from dc_listrik");
+		$data = mysqli_fetch_array($query);
+		$kodePC = $data['kodePC'];
+
+		$urutan = (int) substr($kodePC, 3, 3);
+
+		$urutan++;
+
+		$huruf = "PCL";
+		$kodeData = $huruf.sprintf("%03s", $urutan);
 ?>
 <div class="card-body">
 	<h2>Input data Pencatatan Air</h2>
@@ -19,7 +29,7 @@
 	  <div class="input-group-prepend">
 	  <span class="input-group-text">NO. Unit</span>
 	  </div>
-			<input type="text" name="no_cek" class="form-control">
+			<input type="text" name="no_cek" value="<?php echo $kodeData ?>" class="form-control">
 		</div>
 
 		<div class="input-group mb-3">
@@ -109,7 +119,7 @@
 				?>
 					<script type="text/javascript">
 						alert("Data berhasil di tambah kan");
-						window.location.href="?page=pc_air";
+						window.location.href="?page=pc_listrik";
 					</script>
 				<?php
 			}else{

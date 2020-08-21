@@ -1,6 +1,6 @@
 <?php 
 	include "config/koneksi.php";
-	$query = mysqli_query($koneksi,"select max(id_air) as kodePC from pm_air");
+	$query = mysqli_query($koneksi,"select max(id_air) as kodePC from dc_air");
 		$data = mysqli_fetch_array($query);
 		$kodePC = $data['kodePC'];
 
@@ -11,7 +11,7 @@
 		$huruf = "PCA";
 		$kodeData = $huruf.sprintf("%03s", $urutan);
 ?>
-?>
+
 <div class="card-body">
 	<h2>Input data Pencatatan Air</h2>
 	<script type="text/javascript">
