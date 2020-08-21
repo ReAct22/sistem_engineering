@@ -1,5 +1,16 @@
 <?php 
 	include "config/koneksi.php";
+	$query = mysqli_query($koneksi,"select max(id_air) as kodePC from pm_air");
+		$data = mysqli_fetch_array($query);
+		$kodePC = $data['kodePC'];
+
+		$urutan = (int) substr($kodePC, 3, 3);
+
+		$urutan++;
+
+		$huruf = "PCA";
+		$kodeData = $huruf.sprintf("%03s", $urutan);
+?>
 ?>
 <div class="card-body">
 	<h2>Input data Pencatatan Air</h2>
@@ -19,7 +30,7 @@
 	  <div class="input-group-prepend">
 	  <span class="input-group-text">NO. Unit</span>
 	  </div>
-			<input type="text" name="no_cek" class="form-control">
+			<input type="text" name="no_cek" value="<?php echo $kodeData ?>" class="form-control">
 		</div>
 
 		<div class="input-group mb-3">
