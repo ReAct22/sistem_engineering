@@ -31,11 +31,35 @@
 			<th>Lokasi Utilitas</th>
 			<th>Rencana Perkerjaan</th>
 			<th>Realisasi Perkerjaan</th>
-			<th>Smoke And Heat Detector</th>
+			<th colspan="5" style="text-align: center;">Smoke And Heat Detector</th>
 			<th>Opsi</th>
 		</tr>
 		<tr>
+			<th colspan="7"></th>
+			<th>Break Glass</th>
+			<th>Bell</th>
+			<th>Telphone</th>
+			<th>Box Hydrant</th>
+			<th>Sprinkle</th>
 			<th></th>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>
+				<a href="" class="btn btn-sm btn-primary"><i class="fas fa-edit"></i>Edit</a>
+				<a href="" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i>Delete</a>
+			</td>
 		</tr>
 		
 	</table>

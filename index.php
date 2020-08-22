@@ -34,7 +34,7 @@ if($page == ""){
 }
 ?>
 <!-- Footer -->
-<footer class="w3-center w3-black w3-padding-16">
+<footer class="w3-center w3-black w3-padding-16" style="margin-top: 30px;">
   <p>Copyright &copy; 2020</p>
 </footer>
 </body>
