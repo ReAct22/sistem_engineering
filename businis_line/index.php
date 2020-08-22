@@ -186,6 +186,8 @@ if($page == ""){
 	include "catatan/edit_listrik.php";
 }else if($page == "delete_listrik"){
 	include "catatan/hapus_listrik.php";
+}else if($page == "tambah_fa"){
+	include "data/tambah_fa.php";
 }else{
 	include "views/404.php";
 }
