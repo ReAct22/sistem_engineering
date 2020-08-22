@@ -188,6 +188,10 @@ if($page == ""){
 	include "catatan/hapus_listrik.php";
 }else if($page == "tambah_fa"){
 	include "data/tambah_fa.php";
+}else if($page == "edit_fa"){
+	include "data/edit_fa.php";
+}else if($page == "delete_fa"){
+	include "data/hapus_fa.php";
 }else{
 	include "views/404.php";
 }

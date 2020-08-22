@@ -45,29 +45,49 @@
 			<th></th>
 		</tr>
 		<?php 
+		$cari = @$_POST['cari'];
+	$cari_barang = @$_POST['cari_barang'];
+	if($cari_barang){
+		if($cari != ""){
+			$sql = mysqli_query($koneksi,"select *from pm_fa where id_pmfa like '%$cari%' or lokasi_pm like '%$cari%' or nama_unit like '%$cari%' or lokasi_utilitas like '%$cari%'");
+		}else{
+			$sql = mysqli_query($koneksi,"select *from pm_fa");
+		}
+	}else{
 		$sql = mysqli_query($koneksi,"select *from pm_fa");
+	}
+
+	$cek = mysqli_num_rows($sql);
+	if($cek < 1){
+		?>
+			<tr>
+				<td colspan="7" style="padding: 10px; text-align: center;">Data Tidak Ditemukan</td>
+			</tr>
+		<?php
+	}else{
 		while($data = mysqli_fetch_array($sql)){
 		?>
 		<tr>
-			<td><?php echo $data[''] ?></td>
-			<td><?php echo $data[''] ?></td>
-			<td><?php echo $data[''] ?></td>
-			<td><?php echo $data[''] ?></td>
-			<td><?php echo $data[''] ?></td>
+			<td><?php echo $data['id_pmfa'] ?></td>
+			<td><?php echo $data['periode'] ?></td>
+			<td><?php echo $data['lokasi_pm'] ?></td>
+			<td><?php echo $data['nama_unit'] ?></td>
+			<td><?php echo $data['lokasi_utilitas'] ?></td>
 			<td><?php echo date('d-m-y',strtotime($data['rencana'])) ?></td>
 			<td><?php echo date('d-m-y',strtotime($data['realisasi'])) ?></td>
-			<td><?php echo $data[''] ?></td>
-			<td><?php echo $data[''] ?></td>
-			<td><?php echo $data[''] ?></td>
-			<td><?php echo $data[''] ?></td>
-			<td><?php echo $data[''] ?></td>
+			<td><?php echo $data['break_glass'] ?></td>
+			<td><?php echo $data['bell'] ?></td>
+			<td><?php echo $data['telphone'] ?></td>
+			<td><?php echo $data['box_hydrant'] ?></td>
+			<td><?php echo $data['sprinkle'] ?></td>
 			<td>
-				<a href="" class="btn btn-sm btn-primary"><i class="fas fa-edit"></i>Edit</a>
-				<a href="" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i>Delete</a>
+				<a href="?page=edit_fa&id=<?php echo $data['id_pmfa'] ?>" class="btn btn-sm btn-primary"><i class="fas fa-edit"></i>Edit</a>
+				<a href="?page=delete_fa&id=<?php echo $data['id_pmfa'] ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i>Delete</a>
 			</td>
 		</tr>
 		<?php 
 			}
+		}
 		?>
 	</table>
 	</div>
