@@ -27,6 +27,17 @@ include "config/koneksi.php";
 				<th style="text-align: center;">Opsi</th>
 			</tr>
 			<?php
+			$no =1;
+
+        $batas = 3;
+        $hal = @$_GET['hal'];
+        if(empty($hal)){
+          $posisi = 0;
+          $hal = 1;
+        }else{
+          $posisi = ($hal - 1)*$batas;
+        }
+
 			$cari = @$_POST['cari'];
 	$cari_barang = @$_POST['cari_data'];
 	if($cari_barang){
@@ -36,7 +47,7 @@ include "config/koneksi.php";
 			$sql = mysqli_query($koneksi,"select *from du_lift");
 		}
 	}else{
-		$sql = mysqli_query($koneksi,"select *from du_lift");
+		$sql = mysqli_query($koneksi,"select *from du_lift LIMIT $posisi, $batas");
 	}
 
 	$cek = mysqli_num_rows($sql);
@@ -65,5 +76,21 @@ include "config/koneksi.php";
 			}
 			?>
 		</table>
+			<div style="margin-top: 10px;float: left;">
+        <?php 
+        $jml = mysqli_num_rows(mysqli_query($koneksi,"select *from du_lift"));
+        
+        ?>
+      </div>
+      <div style="margin-top: 10px; float: right;">
+        <?php 
+          $jml_hal = ceil($jml / $batas);
+          for($i=1; $i<=$jml_hal; $i++){
+        ?>
+        <a href="?page=lift&hal=<?php echo $i; ?>" class="btn btn-outline-primary"><?php echo $i; ?></a>
+        <?php
+          }
+        ?>
+      </div>
 	</div>
 </div>

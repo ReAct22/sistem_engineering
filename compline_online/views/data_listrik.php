@@ -26,6 +26,17 @@ include "config/koneksi.php";
 		<th>Keterangan</th>
 	</tr>
 	<?php
+	$no =1;
+
+        $batas = 3;
+        $hal = @$_GET['hal'];
+        if(empty($hal)){
+          $posisi = 0;
+          $hal = 1;
+        }else{
+          $posisi = ($hal - 1)*$batas;
+        }
+
 	$inputan_pencarian = @$_POST['inputan_pencarian'];
 	$cari_data = @$_POST['cari_data'];
 	if($cari_data){  
@@ -35,7 +46,7 @@ include "config/koneksi.php";
 			$sql = mysqli_query($koneksi,"select *from dp_listrik");
 		}
 	}else{
-		$sql = mysqli_query($koneksi,"select *from dp_listrik");
+		$sql = mysqli_query($koneksi,"select *from dp_listrik LIMIT $posisi, $batas");
 	}
 
 	$cek = mysqli_num_rows($sql);
@@ -54,7 +65,7 @@ include "config/koneksi.php";
 			<td><?php echo $data['unit'] ?></td>
 			<td><?php echo $data['meter_awal'] ?></td>
 			<td><?php echo $data['meter_akhir'] ?></td>
-			<td><img src="img/<?php echo $data['gambar'] ?>" width="100" height="50"></td>
+			<td><img src="img/<?php echo $data['gambar'] ?>" width="100" haight="50"></td>
 			<td><?php echo $data['pemakaian'] ?></td>
 			<td><?php echo $data['keterangan'] ?></td>
 		</tr>
@@ -64,4 +75,20 @@ include "config/koneksi.php";
 	}
 	?>
 </table>
+<div style="margin-top: 10px;float: left;">
+        <?php 
+        $jml = mysqli_num_rows(mysqli_query($koneksi,"select *from dp_listrik"));
+        
+        ?>
+      </div>
+      <div style="margin-top: 10px; float: right;">
+        <?php 
+          $jml_hal = ceil($jml / $batas);
+          for($i=1; $i<=$jml_hal; $i++){
+        ?>
+        <a href="?page=listrik&hal=<?php echo $i; ?>" class="btn btn-outline-primary"><?php echo $i; ?></a>
+        <?php
+          }
+        ?>
+      </div>
 </div>
