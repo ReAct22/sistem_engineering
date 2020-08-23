@@ -27,7 +27,18 @@
 		<th>Kompline</th>
 		<th>Keterangan</th>
 	</tr>
-	<?php 
+	<?php
+	$no = 1;
+	$batas = 3;
+	$hal = @$_GET['hal'];
+	if(empty($hal)){
+		$posisi = 0;
+		$hal = 1;
+	}else{
+		$posisi = ($hal - 1)*$batas;
+	}
+
+
 	$cari = @$_POST['cari'];
 	$cari_barang = @$_POST['cari_barang'];
 	if($cari_barang){
@@ -37,9 +48,11 @@
 			$sql = mysqli_query($koneksi,"select *from co_ac");
 		}
 	}else{
-		$sql = mysqli_query($koneksi,"select *from co_ac");
+		 
+		$sql = mysqli_query($koneksi,"select *from co_ac LIMIT $posisi, $batas ");
+		
 	}
-
+	$no = $posisi +1;
 	$cek = mysqli_num_rows($sql);
 	if($cek < 1){
 		?>
@@ -64,4 +77,20 @@
 }
 	?>
 </table>
+<div style="margin-top: 10px; float: left;">
+		<?php 
+		$jml = mysqli_num_rows(mysqli_query($koneksi,"select *from co_ac"));
+		?>
+	</div>
+<div style="margin-top: 10px; float: right;">
+	<?php 
+	$jml_hal = ceil($jml / $batas);
+	for ($i=0; $i<=$jml_hal; $i++) { 
+	?>
+	<a href="?page=ac&hal=<?php echo $i; ?>" class="btn btn-outline-primary"><?php echo $i; ?></a>
+</div>	
+	<?php 
+		}
+	?>
+</div>
 </div>
