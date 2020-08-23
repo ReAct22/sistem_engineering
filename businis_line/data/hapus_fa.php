@@ -7,5 +7,5 @@
 ?>
 <script type="text/javascript">
 	alert("Hapus Data berhasi");
-	window.location.href="?page=pm_fa";
+	window.location.href="?page=pmfa";
 </script>
