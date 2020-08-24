@@ -39,7 +39,7 @@ if(@$_SESSION['engineering']){
 	  <div class="w3-dropdown-content w3-bar-block w3-border">
 		<a href="?page=bulanan" class="w3-bar-item w3-button">Data Bulanan</a>
 		<a href="?page=3bulan" class="w3-bar-item w3-button">Data 3 Bulanan</a>
-		<a href="" class="w3-bar-item w3-button">Data 6 Bulanan</a>
+		<a href="?page=6bulan" class="w3-bar-item w3-button">Data 6 Bulanan</a>
 		<a href="" class="w3-bar-item w3-button">Data Tahunan</a>
 	  </div>
 	</div>
@@ -192,6 +192,8 @@ if($page == ""){
 	include "data/edit_fa.php";
 }else if($page == "delete_fa"){
 	include "data/hapus_fa.php";
+}else if($page == "6bulan"){
+	include "data/6bulanan.php";
 }else{
 	include "views/404.php";
 }

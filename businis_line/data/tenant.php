@@ -33,6 +33,17 @@
 				<th>KETERANGAN </th>
 			</tr>
 			<?php 
+			$no =1;
+
+        $batas = 3;
+        $hal = @$_GET['hal'];
+        if(empty($hal)){
+          $posisi = 0;
+          $hal = 1;
+        }else{
+          $posisi = ($hal - 1)*$batas;
+        }
+
 			$cari = @$_POST['cari'];
 	$cari_barang = @$_POST['cari_barang'];
 	if($cari_barang){
@@ -42,7 +53,7 @@
 			$sql = mysqli_query($koneksi,"select *from pm_acten");
 		}
 	}else{
-		$sql = mysqli_query($koneksi,"select *from pm_acten");
+		$sql = mysqli_query($koneksi,"select *from pm_acten LIMIT $posisi, $batas");
 	}
 
 	$cek = mysqli_num_rows($sql);
@@ -69,5 +80,21 @@
 			}
 			?>
 		</table>
+		<div style="margin-top: 10px;float: left;">
+        <?php 
+        $jml = mysqli_num_rows(mysqli_query($koneksi,"select *from pm_acten"));
+        
+        ?>
+      </div>
+      <div style="margin-top: 10px; float: right;">
+        <?php 
+          $jml_hal = ceil($jml / $batas);
+          for($i=1; $i<=$jml_hal; $i++){
+        ?>
+        <a href="?page=acten&hal=<?php echo $i; ?>" class="btn btn-outline-primary"><?php echo $i; ?></a>
+        <?php
+          }
+        ?>
+      </div>
 	</div>
 </div>

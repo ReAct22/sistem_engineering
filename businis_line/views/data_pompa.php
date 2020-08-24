@@ -27,6 +27,17 @@ include "config/koneksi.php";
 				<th>Opsi</th>
 			</tr>
 			<?php
+			$no =1;
+
+        $batas = 3;
+        $hal = @$_GET['hal'];
+        if(empty($hal)){
+          $posisi = 0;
+          $hal = 1;
+        }else{
+          $posisi = ($hal - 1)*$batas;
+        }
+
 			$cari = @$_POST['cari'];
 			$cari_barang = @$_POST['cari_barang'];
 			if($cari_barang){
@@ -36,7 +47,7 @@ include "config/koneksi.php";
 					$sql = mysqli_query($koneksi,"select *from du_pompa");
 				}
 			}else{
-				$sql = mysqli_query($koneksi,"select *from du_pompa");
+				$sql = mysqli_query($koneksi,"select *from du_pompa LIMIT $posisi, $batas");
 			}
 			$cek = mysqli_num_rows($sql);
 			if($cek < 1){
@@ -64,5 +75,21 @@ include "config/koneksi.php";
 			}
 			?>
 		</table>
+		<div style="margin-top: 10px;float: left;">
+        <?php 
+        $jml = mysqli_num_rows(mysqli_query($koneksi,"select *from du_pompa"));
+        
+        ?>
+      </div>
+      <div style="margin-top: 10px; float: right;">
+        <?php 
+          $jml_hal = ceil($jml / $batas);
+          for($i=1; $i<=$jml_hal; $i++){
+        ?>
+        <a href="?page=pompa&hal=<?php echo $i; ?>" class="btn btn-outline-primary"><?php echo $i; ?></a>
+        <?php
+          }
+        ?>
+      </div>
 	</div>
 </div>
