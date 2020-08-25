@@ -220,6 +220,10 @@ if($page == ""){
 	include "data_tahunan/data_pm_trafo.php";
 }else if($page == "tambah_pmtrafo"){
 	include "data_tahunan/tambah_pmtrafo.php";
+}else if($page == "edit_pmtrafo"){
+	include "data_tahunan/edit_pmtrafo.php";
+}else if($page == "delete_pmtrafo"){
+	include "data_tahunan/hapus_pmtrafo.php";
 }else{
 	include "views/404.php";
 }

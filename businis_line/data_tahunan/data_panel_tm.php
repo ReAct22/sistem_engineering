@@ -3,7 +3,7 @@
 ?>
 <div style="margin-left: 30px;">
 	<nav class="w3-blok-item w3-padding">
-		<a href="?page=3bulan" class="w3-bar-item w3-button">PM PANLE TM</a>
+		<a href="?page=pm_pt" class="w3-bar-item w3-button">PM PANLE TM</a>
 		<a href="?page=pm_trafo" class="w3-bar-item w3-button">PM TRAFO</a>
 		<a href="?page=pm_mecha" class="w3-bar-item w3-button">PM PANEL LVMDP</a>
 		<a href="?page=pm_mecha" class="w3-bar-item w3-button">PM GESET</a>
