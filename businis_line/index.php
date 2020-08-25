@@ -218,6 +218,8 @@ if($page == ""){
 	include "data_tahunan/hapus_pt.php";
 }else if($page == "pm_trafo"){
 	include "data_tahunan/data_pm_trafo.php";
+}else if($page == "tambah_pmtrafo"){
+	include "data_tahunan/tambah_pmtrafo.php";
 }else{
 	include "views/404.php";
 }

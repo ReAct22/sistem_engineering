@@ -13,8 +13,8 @@
 		<a href="?page=pm_mecha" class="w3-bar-item w3-button">PM ROOF TANK</a>
 		<a href="?page=pm_mecha" class="w3-bar-item w3-button">PM GROUND TANK</a>
 	</nav>
-	<h1 style="margin-left: 30px;">PREVENTIF MAINTENANCE PANLE TM</h1>
-	<a href="?page=tambah_pt" class="w3-bar-item w3-button w3-green"><i class="fas fa-plus"></i>Tambah Data</a>
+	<h1 style="margin-left: 30px;">PREVENTIF MAINTENANCE TRAFO</h1>
+	<a href="?page=tambah_pmtrafo" class="w3-bar-item w3-button w3-green"><i class="fas fa-plus"></i>Tambah Data</a>
 	<a href="" class="w3bar-item w3-button w3-blue"><i class="fas fa-print"></i>Print</a>
 
 	<form action="" method="post" class="d-none d-sm-inline-block form-inline ml-md-3 my-2 my-md-0 mw-100 navbar-search" style="float: right; margin-right: 50px;">
@@ -60,7 +60,7 @@
 	$cari_barang = @$_POST['cari_barang'];
 	if($cari_barang){
 		if($cari != ""){
-			$sql = mysqli_query($koneksi,"select *from pm_trafo where id_pt like '%$cari%' or nama_utilitas like '%$cari%' or lokasi_utilitas like '%$cari%'");
+			$sql = mysqli_query($koneksi,"select *from pm_trafo where id_trafo like '%$cari%' or nama_utilitas like '%$cari%' or lokasi_utilitas like '%$cari%'");
 		}else{
 			$sql = mysqli_query($koneksi,"select *from pm_trafo");
 		}
