@@ -112,7 +112,7 @@
 		}else{
 			$pindah = move_uploaded_file($sumber, $target.$nama_gambar);
 			if($pindah){
-				mysqli_query($koneksi,"update dc_listrik set unit = '$unit', meter_awal = '$meter_awal', meter_akhir = '$meter_akhir', gambar = '$gambar', total = '$total', keterangan = '$keterangan' where id_listrik = '$id'");
+				mysqli_query($koneksi,"update dc_listrik set unit = '$unit', meter_awal = '$meter_awal', meter_akhir = '$meter_akhir', gambar = '$nama_gambar', total = '$total', keterangan = '$keterangan' where id_listrik = '$id'");
 				?>
 					<script type="text/javascript">
 						alert("Data berhasil di tambah kan");

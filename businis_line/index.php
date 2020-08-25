@@ -40,7 +40,7 @@ if(@$_SESSION['engineering']){
 		<a href="?page=bulanan" class="w3-bar-item w3-button">Data Bulanan</a>
 		<a href="?page=3bulan" class="w3-bar-item w3-button">Data 3 Bulanan</a>
 		<a href="?page=6bulan" class="w3-bar-item w3-button">Data 6 Bulanan</a>
-		<a href="" class="w3-bar-item w3-button">Data Tahunan</a>
+		<a href="?page=pm_pt" class="w3-bar-item w3-button">Data Tahunan</a>
 	  </div>
 	</div>
        <div class="w3-dropdown-hover">
@@ -194,6 +194,30 @@ if($page == ""){
 	include "data/hapus_fa.php";
 }else if($page == "6bulan"){
 	include "data/6bulanan.php";
+}else if($page == "tambah_gwt"){
+	include "data/tambah_gwt.php";
+}else if($page == "edit_gwt"){
+	include "data/edit_gwt.php";
+}else if($page == "delete_gwt"){
+	include "data/hapus_gwt.php";
+}else if($page == "preasure_fan"){
+	include "data/data_preasure_fan.php";
+}else if($page == "tambah_preasure_fan"){
+	include "data/tambah_preasure_fan.php";
+}else if($page == "edit_pf"){
+	include "data/edit_pf.php";
+}else if($page == "delete_pf"){
+	include "data/hapus_pf.php";
+}else if($page == "pm_pt"){
+	include "data_tahunan/data_panel_tm.php";
+}else if($page == "tambah_pt"){
+	include "data_tahunan/tambah_pt.php";
+}else if($page == "edit_pt"){
+	include "data_tahunan/edit_pt.php";
+}else if($page == "delete_pt"){
+	include "data_tahunan/hapus_pt.php";
+}else if($page == "pm_trafo"){
+	include "data_tahunan/data_pm_trafo.php";
 }else{
 	include "views/404.php";
 }

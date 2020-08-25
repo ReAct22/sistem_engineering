@@ -12,7 +12,9 @@ if(@$_SESSION['username']){
     <link rel="icon" type="image/x-icon" href="assets/img/icon.png">
     <link rel="stylesheet" type="text/css" href="assets/w3.css">
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css"> 
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" 
+    integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous"> 
 </head>
 <body>
 
@@ -36,6 +38,7 @@ if(@$_SESSION['username']){
                 </div>
                 <div class="form-group">
                   <input type="submit" name="login" value="Login" class="btn btn-primary btn-block">
+                  <a href="" class="btn btn-success btn-block">Register </a>
                 </div>
               </form>
               <?php 
@@ -67,7 +70,7 @@ if(@$_SESSION['username']){
             </div>
           </div>
           <br>
-          <a href="/sistem_engineering/index.php" class="btn btn-md btn-success">Back</a>
+          <a href="/sistem_engineering/index.php" class="btn btn-md btn-success"><i class="fas fa-arrow-left"></i> Back</a>
         </div>
       </div>
     </div>

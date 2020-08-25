@@ -6,8 +6,8 @@
 		<a href="?page=6bulan" class="w3-bar-item w3-button">GWT</a>
 		<a href="?page=preasure_fan" class="w3-bar-item w3-button">PREASURE FAN</a>
 	</nav>
-	<h1 style="margin-left: 30px;">PREVENTIF MAINTENANCE GWT</h1>
-	<a href="?page=tambah_gwt" class="w3-bar-item w3-button w3-green"><i class="fas fa-plus"></i>Tambah Data</a>
+	<h1 style="margin-left: 30px;">PREVENTIF MAINTENANCE ELECTRICAL</h1>
+	<a href="?page=tambah_preasure_fan" class="w3-bar-item w3-button w3-green"><i class="fas fa-plus"></i>Tambah Data</a>
 	<a href="" class="w3bar-item w3-button w3-blue"><i class="fas fa-print"></i>Print</a>
 
 	<form action="" method="post" class="d-none d-sm-inline-block form-inline ml-md-3 my-2 my-md-0 mw-100 navbar-search" style="float: right; margin-right: 50px;">
@@ -53,26 +53,26 @@
 	$cari_barang = @$_POST['cari_barang'];
 	if($cari_barang){
 		if($cari != ""){
-			$sql = mysqli_query($koneksi,"select *from pm_gwt where id_pmgwt like '%$cari%' or nama_utilitas like '%$cari%' or nama_vendor like '%$cari%' or lokasi_utilitas like '%$cari%'");
+			$sql = mysqli_query($koneksi,"select *from pm_preasure_fan where id_pf like '%$cari%' or nama_utilitas like '%$cari%' or lokasi_utilitas like '%$cari%'");
 		}else{
-			$sql = mysqli_query($koneksi,"select *from pm_gwt");
+			$sql = mysqli_query($koneksi,"select *from pm_preasure_fan");
 		}
 	}else{
-		$sql = mysqli_query($koneksi,"select *from pm_gwt  LIMIT $posisi, $batas");
+		$sql = mysqli_query($koneksi,"select *from pm_preasure_fan LIMIT $posisi, $batas");
 	}
 
 	$cek = mysqli_num_rows($sql);
 	if($cek < 1){
 		?>
 			<tr>
-				<td colspan="9" style="padding: 10px; text-align: center;">Data Tidak Ditemukan</td>
+				<td colspan="7" style="padding: 10px; text-align: center;">Data Tidak Ditemukan</td>
 			</tr>
 		<?php
 	}else{
 		while($data = mysqli_fetch_array($sql)){
 		?>
 		<tr>
-			<td><?php echo $data['id_pmgwt']; ?></td>
+			<td><?php echo $data['id_pf']; ?></td>
 			<td><?php echo $data['periode'] ?></td>
 			<td><?php echo $data['nama_utilitas'] ?></td>
 			<td><?php echo $data['lokasi_utilitas'] ?></td>
@@ -85,8 +85,8 @@
 			<td><img src="img/<?php echo $data['gambar'] ?>" width="100" ></td>
 			<td><?php echo $data['rekomendasi'] ?></td>
 			<td>
-				<a href="?page=edit_gwt&id=<?php echo $data['id_pmgwt']; ?>" class="btn btn-sm btn-primary"><i class="fas fa-edit"></i>Edit</a>
-				<a href="?page=delete_gwt&id=<?php echo $data['id_pmgwt']; ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i>Hapus</a>
+				<a href="?page=edit_pf&id=<?php echo $data['id_pf']; ?>" class="btn btn-sm btn-primary"><i class="fas fa-edit"></i>Edit</a>
+				<a href="?page=delete_pf&id=<?php echo $data['id_pf']; ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i>Hapus</a>
 			</td>
 		</tr>
 		<?php 
@@ -94,9 +94,9 @@
 		}
 		?>
 	</table>
-	<div style="margin-top: 10px;float: left;">
+		<div style="margin-top: 10px;float: left;">
         <?php 
-        $jml = mysqli_num_rows(mysqli_query($koneksi,"select *from pm_gwt"));
+        $jml = mysqli_num_rows(mysqli_query($koneksi,"select *from pm_preasure_fan"));
         
         ?>
       </div>
@@ -105,7 +105,7 @@
           $jml_hal = ceil($jml / $batas);
           for($i=1; $i<=$jml_hal; $i++){
         ?>
-        <a href="?page=6bulan&hal=<?php echo $i; ?>" class="btn btn-outline-primary"><?php echo $i; ?></a>
+        <a href="?page=preasure_fan&hal=<?php echo $i; ?>" class="btn btn-outline-primary"><?php echo $i; ?></a>
         <?php
           }
         ?>
