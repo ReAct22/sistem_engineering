@@ -224,6 +224,30 @@ if($page == ""){
 	include "data_tahunan/edit_pmtrafo.php";
 }else if($page == "delete_pmtrafo"){
 	include "data_tahunan/hapus_pmtrafo.php";
+}else if($page == "pm_pl"){
+	include "data_tahunan/data_panel_lvmdp.php";
+}else if($page == "tambah_pl"){
+	include "data_tahunan/tambah_pl.php";
+}else if($page == "edit_pl"){
+	include "data_tahunan/edit_pl.php";
+}else if($page == "delete_pl"){
+	include "data_tahunan/hapus_pl.php";
+}else if($page == "pm_geset"){
+	include "data_tahunan/data_pm_geset.php";
+}else if($page == "tambah_geset"){
+	include "data_tahunan/tambah_geset.php";
+}else if($page == "edit_geset"){
+	include "data_tahunan/edit_geset.php";
+}else if($page == "delete_geset"){
+	include "data_tahunan/hapus_geset.php";
+}else if($page == "pm_ps"){
+	include "data_tahunan/data_pool_sandfilter.php";
+}else if($page == "tambah_ps"){
+	include "data_tahunan/tambah_ps.php";
+}else if($page == "edit_ps"){
+	include "data_tahunan/edit_ps.php";
+}else if($page == "delete_ps"){
+	include "data_tahunan/hapus_ps.php";
 }else{
 	include "views/404.php";
 }

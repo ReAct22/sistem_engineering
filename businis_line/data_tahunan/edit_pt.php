@@ -130,7 +130,7 @@
 			?>
 			<script type="text/javascript">
 				alert("Update data berhasil");
-				window.location.href="?page=pc_air";
+				window.location.href="?page=pm_pt";
 			</script>
 			<?php 
 		}else{

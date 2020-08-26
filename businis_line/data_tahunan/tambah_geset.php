@@ -1,13 +1,13 @@
 <?php 
-	$query = mysqli_query($koneksi,"select max(id_pt) as kodePMT from pm_pt");
+	$query = mysqli_query($koneksi,"select max(id_geset) as kodePML from pm_geset");
 		$data = mysqli_fetch_array($query);
-		$kodePMT = $data['kodePMT'];
+		$kodePML = $data['kodePML'];
 
-		$urutan = (int) substr($kodePMT, 3, 3);
+		$urutan = (int) substr($kodePML, 3, 3);
 
 		$urutan++;
 
-		$huruf = "KPT";
+		$huruf = "PMG";
 		$kodeData = $huruf.sprintf("%03s", $urutan);
 ?>
 <div class="card-body">
@@ -132,11 +132,11 @@
 		}else{
 			$pindah = move_uploaded_file($sumber, $target.$nama_gambar);
 			if($pindah){
-				mysqli_query($koneksi,"insert into pm_pt values('$no_pm','$periode','$nama_utilitas','$lokasi_utilitas','$rencana','$realisasi','$nama_vendor','$alamat_vendor','$nama_teknisi','$jenis_kerjaan','$nama_gambar','$rekomendasi')");
+				mysqli_query($koneksi,"insert into pm_geset values('$no_pm','$periode','$nama_utilitas','$lokasi_utilitas','$rencana','$realisasi','$nama_vendor','$alamat_vendor','$nama_teknisi','$jenis_kerjaan','$nama_gambar','$rekomendasi')");
 				?>
 				<script type="text/javascript">
 					alert("Input Data berhasil");
-					window.location.href="?page=pm_pt";
+					window.location.href="?page=pm_geset";
 				</script>
 				<?php
 			}else{

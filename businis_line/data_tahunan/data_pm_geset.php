@@ -7,14 +7,14 @@
 		<a href="?page=pm_trafo" class="w3-bar-item w3-button">PM TRAFO</a>
 		<a href="?page=pm_pl" class="w3-bar-item w3-button">PM PANEL LVMDP</a>
 		<a href="?page=pm_geset" class="w3-bar-item w3-button">PM GESET</a>
-		<a href="?page=pm_mecha" class="w3-bar-item w3-button">PM POOL SANDFILTER</a>
+		<a href="?page=pm_ps" class="w3-bar-item w3-button">PM POOL SANDFILTER</a>
 		<a href="?page=pm_mecha" class="w3-bar-item w3-button">PM INFRARED</a>
 		<a href="?page=pm_mecha" class="w3-bar-item w3-button">PM TES UDARA</a>
 		<a href="?page=pm_mecha" class="w3-bar-item w3-button">PM ROOF TANK</a>
 		<a href="?page=pm_mecha" class="w3-bar-item w3-button">PM GROUND TANK</a>
 	</nav>
-	<h1 style="margin-left: 30px;">PREVENTIF MAINTENANCE TRAFO</h1>
-	<a href="?page=tambah_pmtrafo" class="w3-bar-item w3-button w3-green"><i class="fas fa-plus"></i>Tambah Data</a>
+	<h1 style="margin-left: 30px;">PREVENTIF MAINTENANCE PANLE TM</h1>
+	<a href="?page=tambah_geset" class="w3-bar-item w3-button w3-green"><i class="fas fa-plus"></i>Tambah Data</a>
 	<a href="" class="w3bar-item w3-button w3-blue"><i class="fas fa-print"></i>Print</a>
 
 	<form action="" method="post" class="d-none d-sm-inline-block form-inline ml-md-3 my-2 my-md-0 mw-100 navbar-search" style="float: right; margin-right: 50px;">
@@ -60,12 +60,12 @@
 	$cari_barang = @$_POST['cari_barang'];
 	if($cari_barang){
 		if($cari != ""){
-			$sql = mysqli_query($koneksi,"select *from pm_trafo where id_trafo like '%$cari%' or nama_utilitas like '%$cari%' or lokasi_utilitas like '%$cari%'");
+			$sql = mysqli_query($koneksi,"select *from pm_geset where id_geset like '%$cari%' or nama_utilitas like '%$cari%' or lokasi_utilitas like '%$cari%'");
 		}else{
-			$sql = mysqli_query($koneksi,"select *from pm_trafo");
+			$sql = mysqli_query($koneksi,"select *from pm_geset");
 		}
 	}else{
-		$sql = mysqli_query($koneksi,"select *from pm_trafo LIMIT $posisi, $batas");
+		$sql = mysqli_query($koneksi,"select *from pm_geset LIMIT $posisi, $batas");
 	}
 
 	$cek = mysqli_num_rows($sql);
@@ -79,7 +79,7 @@
 		while($data = mysqli_fetch_array($sql)){
 		?>
 		<tr>
-			<td><?php echo $data['id_trafo']; ?></td>
+			<td><?php echo $data['id_geset']; ?></td>
 			<td><?php echo $data['periode'] ?></td>
 			<td><?php echo $data['nama_utilitas'] ?></td>
 			<td><?php echo $data['lokasi_utilitas'] ?></td>
@@ -92,8 +92,8 @@
 			<td><img src="img/<?php echo $data['gambar'] ?>" width="100" ></td>
 			<td><?php echo $data['rekomendasi'] ?></td>
 			<td>
-				<a href="?page=edit_pmtrafo&id=<?php echo $data['id_trafo']; ?>" class="btn btn-sm btn-primary"><i class="fas fa-edit"></i>Edit</a>
-				<a href="?page=delete_pmtrafo&id=<?php echo $data['id_trafo']; ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i>Hapus</a>
+				<a href="?page=edit_geset&id=<?php echo $data['id_geset']; ?>" class="btn btn-sm btn-primary"><i class="fas fa-edit"></i>Edit</a>
+				<a href="?page=delete_geset&id=<?php echo $data['id_geset']; ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i>Hapus</a>
 			</td>
 		</tr>
 		<?php 
@@ -103,7 +103,7 @@
 	</table>
 		<div style="margin-top: 10px;float: left;">
         <?php 
-        $jml = mysqli_num_rows(mysqli_query($koneksi,"select *from pm_trafo"));
+        $jml = mysqli_num_rows(mysqli_query($koneksi,"select *from pm_geset"));
         
         ?>
       </div>

@@ -5,9 +5,9 @@
 	<nav class="w3-blok-item w3-padding">
 		<a href="?page=pm_pt" class="w3-bar-item w3-button">PM PANLE TM</a>
 		<a href="?page=pm_trafo" class="w3-bar-item w3-button">PM TRAFO</a>
-		<a href="?page=pm_mecha" class="w3-bar-item w3-button">PM PANEL LVMDP</a>
-		<a href="?page=pm_mecha" class="w3-bar-item w3-button">PM GESET</a>
-		<a href="?page=pm_mecha" class="w3-bar-item w3-button">PM POOL SANDFILTER</a>
+		<a href="?page=pm_pl" class="w3-bar-item w3-button">PM PANEL LVMDP</a>
+		<a href="?page=pm_geset" class="w3-bar-item w3-button">PM GESET</a>
+		<a href="?page=pm_ps" class="w3-bar-item w3-button">PM POOL SANDFILTER</a>
 		<a href="?page=pm_mecha" class="w3-bar-item w3-button">PM INFRARED</a>
 		<a href="?page=pm_mecha" class="w3-bar-item w3-button">PM TES UDARA</a>
 		<a href="?page=pm_mecha" class="w3-bar-item w3-button">PM ROOF TANK</a>
