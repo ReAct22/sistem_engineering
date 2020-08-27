@@ -8,7 +8,7 @@
 		<a href="?page=pm_pl" class="w3-bar-item w3-button">PM PANEL LVMDP</a>
 		<a href="?page=pm_geset" class="w3-bar-item w3-button">PM GESET</a>
 		<a href="?page=pm_ps" class="w3-bar-item w3-button">PM POOL SANDFILTER</a>
-		<a href="?page=pm_mecha" class="w3-bar-item w3-button">PM INFRARED</a>
+		<a href="?page=pm_infrared" class="w3-bar-item w3-button">PM INFRARED</a>
 		<a href="?page=pm_mecha" class="w3-bar-item w3-button">PM TES UDARA</a>
 		<a href="?page=pm_mecha" class="w3-bar-item w3-button">PM ROOF TANK</a>
 		<a href="?page=pm_mecha" class="w3-bar-item w3-button">PM GROUND TANK</a>
@@ -112,7 +112,7 @@
           $jml_hal = ceil($jml / $batas);
           for($i=1; $i<=$jml_hal; $i++){
         ?>
-        <a href="?page=preasure_fan&hal=<?php echo $i; ?>" class="btn btn-outline-primary"><?php echo $i; ?></a>
+        <a href="?page=pm_pl&hal=<?php echo $i; ?>" class="btn btn-outline-primary"><?php echo $i; ?></a>
         <?php
           }
         ?>

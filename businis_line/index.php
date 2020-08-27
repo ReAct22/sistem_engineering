@@ -248,6 +248,14 @@ if($page == ""){
 	include "data_tahunan/edit_ps.php";
 }else if($page == "delete_ps"){
 	include "data_tahunan/hapus_ps.php";
+}else if($page == "pm_infrared"){
+	include "data_tahunan/data_infrared.php";
+}else if($page == "tambah_infrared"){
+	include "data_tahunan/tambah_infrared.php";
+}else if($page == "edit_infrared"){
+	include "data_tahunan/edit_infrared.php";
+}else if($page == "delete_infrared"){
+	include "data_tahunan/hapus_infrared.php";
 }else{
 	include "views/404.php";
 }

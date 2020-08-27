@@ -13,8 +13,8 @@
 		<a href="?page=pm_mecha" class="w3-bar-item w3-button">PM ROOF TANK</a>
 		<a href="?page=pm_mecha" class="w3-bar-item w3-button">PM GROUND TANK</a>
 	</nav>
-	<h1 style="margin-left: 30px;">PREVENTIF MAINTENANCE PANLE TM</h1>
-	<a href="?page=tambah_pt" class="w3-bar-item w3-button w3-green"><i class="fas fa-plus"></i>Tambah Data</a>
+	<h1 style="margin-left: 30px;">PREVENTIF MAINTENANCE INFRARED</h1>
+	<a href="?page=tambah_infrared" class="w3-bar-item w3-button w3-green"><i class="fas fa-plus"></i>Tambah Data</a>
 	<a href="" class="w3bar-item w3-button w3-blue"><i class="fas fa-print"></i>Print</a>
 
 	<form action="" method="post" class="d-none d-sm-inline-block form-inline ml-md-3 my-2 my-md-0 mw-100 navbar-search" style="float: right; margin-right: 50px;">
@@ -60,12 +60,12 @@
 	$cari_barang = @$_POST['cari_barang'];
 	if($cari_barang){
 		if($cari != ""){
-			$sql = mysqli_query($koneksi,"select *from pm_pt where id_pt like '%$cari%' or nama_utilitas like '%$cari%' or lokasi_utilitas like '%$cari%'");
+			$sql = mysqli_query($koneksi,"select *from pm_infrared where id_infrared like '%$cari%' or nama_utilitas like '%$cari%' or lokasi_utilitas like '%$cari%'");
 		}else{
-			$sql = mysqli_query($koneksi,"select *from pm_pt");
+			$sql = mysqli_query($koneksi,"select *from pm_infrared");
 		}
 	}else{
-		$sql = mysqli_query($koneksi,"select *from pm_pt LIMIT $posisi, $batas");
+		$sql = mysqli_query($koneksi,"select *from pm_infrared LIMIT $posisi, $batas");
 	}
 
 	$cek = mysqli_num_rows($sql);
@@ -79,7 +79,7 @@
 		while($data = mysqli_fetch_array($sql)){
 		?>
 		<tr>
-			<td><?php echo $data['id_pt']; ?></td>
+			<td><?php echo $data['id_infrared']; ?></td>
 			<td><?php echo $data['periode'] ?></td>
 			<td><?php echo $data['nama_utilitas'] ?></td>
 			<td><?php echo $data['lokasi_utilitas'] ?></td>
@@ -92,8 +92,8 @@
 			<td><img src="img/<?php echo $data['gambar'] ?>" width="100" ></td>
 			<td><?php echo $data['rekomendasi'] ?></td>
 			<td>
-				<a href="?page=edit_pt&id=<?php echo $data['id_pt']; ?>" class="btn btn-sm btn-primary"><i class="fas fa-edit"></i>Edit</a>
-				<a href="?page=delete_pt&id=<?php echo $data['id_pt']; ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i>Hapus</a>
+				<a href="?page=edit_infrared&id=<?php echo $data['id_infrared']; ?>" class="btn btn-sm btn-primary"><i class="fas fa-edit"></i>Edit</a>
+				<a href="?page=delete_infrared&id=<?php echo $data['id_infrared']; ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i>Hapus</a>
 			</td>
 		</tr>
 		<?php 
@@ -103,7 +103,7 @@
 	</table>
 		<div style="margin-top: 10px;float: left;">
         <?php 
-        $jml = mysqli_num_rows(mysqli_query($koneksi,"select *from pm_pt"));
+        $jml = mysqli_num_rows(mysqli_query($koneksi,"select *from pm_infrared"));
         
         ?>
       </div>
@@ -112,7 +112,7 @@
           $jml_hal = ceil($jml / $batas);
           for($i=1; $i<=$jml_hal; $i++){
         ?>
-        <a href="?page=pm_pt&hal=<?php echo $i; ?>" class="btn btn-outline-primary"><?php echo $i; ?></a>
+        <a href="?page=pm_infrared&hal=<?php echo $i; ?>" class="btn btn-outline-primary"><?php echo $i; ?></a>
         <?php
           }
         ?>
