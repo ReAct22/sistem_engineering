@@ -11,7 +11,7 @@
 		$kodeData = $huruf.sprintf("%03s", $urutan);
 ?>
 <div class="card-body">
-	<h2>Input data PM Trafo</h2>
+	<h2>Input data PM TRAFO</h2>
 	<form action="" method="post" enctype="multipart/form-data" class="form-group">
 		<div class="input-group mb-3">
 	  <div class="input-group-prepend">
@@ -35,7 +35,17 @@
 	  <div class="input-group-prepend">
 	  <span class="input-group-text">Nama Utilitas</span>
 	  </div>
-			<input type="text" name="nama_utilitas" class="form-control">
+			<select name="nama_utilitas" class="form-control">
+				<option></option>
+				<?php 
+				$sql = mysqli_query($koneksi,"select *from du_trafo");
+				while($d = mysqli_fetch_array($sql)){
+				?>
+				<option value="<?php echo $d['nama_utilitas'] ?>"><?php echo $d['nama_utilitas'] ?></option>
+				<?php 
+					}
+				?>
+			</select>
 		</div>
 
 		<div class="input-group mb-3">

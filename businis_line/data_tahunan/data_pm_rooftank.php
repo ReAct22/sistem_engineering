@@ -13,8 +13,8 @@
 		<a href="?page=pm_rt" class="w3-bar-item w3-button">PM ROOF TANK</a>
 		<a href="?page=pm_mecha" class="w3-bar-item w3-button">PM GROUND TANK</a>
 	</nav>
-	<h1 style="margin-left: 30px;">PREVENTIF MAINTENANCE POOL SANDFILTER</h1>
-	<a href="?page=tambah_ps" class="w3-bar-item w3-button w3-green"><i class="fas fa-plus"></i>Tambah Data</a>
+	<h1 style="margin-left: 30px;">PREVENTIF MAINTENANCE INFRARED</h1>
+	<a href="?page=tambah_rt" class="w3-bar-item w3-button w3-green"><i class="fas fa-plus"></i>Tambah Data</a>
 	<a href="" class="w3bar-item w3-button w3-blue"><i class="fas fa-print"></i>Print</a>
 
 	<form action="" method="post" class="d-none d-sm-inline-block form-inline ml-md-3 my-2 my-md-0 mw-100 navbar-search" style="float: right; margin-right: 50px;">
@@ -36,8 +36,6 @@
 			<th>Lokasi Utilitas</th>
 			<th>Rencana Perkerjaan</th>
 			<th>Realisasi Perkarjaan</th>
-			<th>Nama Vendor</th>
-			<th>Alamat Vendor</th>
 			<th>Nama Teknisi</th>
 			<th>Jenis Perkerjaan</th>
 			<th>Foto Perkerjaan</th>
@@ -60,40 +58,38 @@
 	$cari_barang = @$_POST['cari_barang'];
 	if($cari_barang){
 		if($cari != ""){
-			$sql = mysqli_query($koneksi,"select *from pm_ps where id_ps like '%$cari%' or nama_utilitas like '%$cari%' or lokasi_utilitas like '%$cari%'");
+			$sql = mysqli_query($koneksi,"select *from pm_rt where id_rt like '%$cari%' or nama_utilitas like '%$cari%' or lokasi_utilitas like '%$cari%'");
 		}else{
-			$sql = mysqli_query($koneksi,"select *from pm_ps");
+			$sql = mysqli_query($koneksi,"select *from pm_rt");
 		}
 	}else{
-		$sql = mysqli_query($koneksi,"select *from pm_ps LIMIT $posisi, $batas");
+		$sql = mysqli_query($koneksi,"select *from pm_rt LIMIT $posisi, $batas");
 	}
 
 	$cek = mysqli_num_rows($sql);
 	if($cek < 1){
 		?>
 			<tr>
-				<td colspan="7" style="padding: 10px; text-align: center;">Data Tidak Ditemukan</td>
+				<td colspan="11" style="padding: 10px; text-align: center;">Data Tidak Ditemukan</td>
 			</tr>
 		<?php
 	}else{
 		while($data = mysqli_fetch_array($sql)){
 		?>
 		<tr>
-			<td><?php echo $data['id_ps']; ?></td>
+			<td><?php echo $data['id_rt']; ?></td>
 			<td><?php echo $data['periode'] ?></td>
 			<td><?php echo $data['nama_utilitas'] ?></td>
 			<td><?php echo $data['lokasi_utilitas'] ?></td>
 			<td><?php echo date('d-m-y', strtotime($data['rencana'])) ?></td>
 			<td><?php echo date('d-m-y', strtotime($data['realisasi'])) ?></td>
-			<td><?php echo $data['nama_vendor'] ?></td>
-			<td><?php echo $data['alamat_vendor'] ?></td>
 			<td><?php echo $data['nama_teknisi'] ?></td>
 			<td><?php echo $data['jenis_kerjaan'] ?></td>
 			<td><img src="img/<?php echo $data['gambar'] ?>" width="100" ></td>
 			<td><?php echo $data['rekomendasi'] ?></td>
 			<td>
-				<a href="?page=edit_ps&id=<?php echo $data['id_ps']; ?>" class="btn btn-sm btn-primary"><i class="fas fa-edit"></i>Edit</a>
-				<a href="?page=delete_ps&id=<?php echo $data['id_ps']; ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i>Hapus</a>
+				<a href="?page=edit_rt&id=<?php echo $data['id_rt']; ?>" class="btn btn-sm btn-primary"><i class="fas fa-edit"></i>Edit</a>
+				<a href="?page=delete_rt&id=<?php echo $data['id_rt']; ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i>Hapus</a>
 			</td>
 		</tr>
 		<?php 
@@ -103,7 +99,7 @@
 	</table>
 		<div style="margin-top: 10px;float: left;">
         <?php 
-        $jml = mysqli_num_rows(mysqli_query($koneksi,"select *from pm_ps"));
+        $jml = mysqli_num_rows(mysqli_query($koneksi,"select *from pm_rt"));
         
         ?>
       </div>
@@ -112,7 +108,7 @@
           $jml_hal = ceil($jml / $batas);
           for($i=1; $i<=$jml_hal; $i++){
         ?>
-        <a href="?page=pm_ps&hal=<?php echo $i; ?>" class="btn btn-outline-primary"><?php echo $i; ?></a>
+        <a href="?page=pm_rt&hal=<?php echo $i; ?>" class="btn btn-outline-primary"><?php echo $i; ?></a>
         <?php
           }
         ?>

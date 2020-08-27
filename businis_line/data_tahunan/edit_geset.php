@@ -5,7 +5,7 @@
 	$data = mysqli_fetch_array($sql);
 ?>
 <div class="card-body">
-	<h2>Input data GWT</h2>
+	<h2>Input data GESET</h2>
 	<form action="" method="post" enctype="multipart/form-data" class="form-group">
 		<div class="input-group mb-3">
 	  <div class="input-group-prepend">
@@ -149,7 +149,7 @@
 					 rekomendasi = '$rekomendasi' where id_geset = '$idgeset'");
 				?>
 					<script type="text/javascript">
-						alert("Data berhasil di tambah kan");
+						alert("Update data berhasil");
 						window.location.href="?page=pm_geset";
 					</script>
 				<?php

@@ -11,7 +11,7 @@
 		$kodeData = $huruf.sprintf("%03s", $urutan);
 ?>
 <div class="card-body">
-	<h2>Input data PANEL TM</h2>
+	<h2>Input data INFRARED</h2>
 	<form action="" method="post" enctype="multipart/form-data" class="form-group">
 		<div class="input-group mb-3">
 	  <div class="input-group-prepend">

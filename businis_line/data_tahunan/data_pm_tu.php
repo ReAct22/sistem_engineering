@@ -10,7 +10,7 @@
 		<a href="?page=pm_ps" class="w3-bar-item w3-button">PM POOL SANDFILTER</a>
 		<a href="?page=pm_infrared" class="w3-bar-item w3-button">PM INFRARED</a>
 		<a href="?page=pm_tu" class="w3-bar-item w3-button">PM TES UDARA</a>
-		<a href="?page=pm_mecha" class="w3-bar-item w3-button">PM ROOF TANK</a>
+		<a href="?page=pm_rt" class="w3-bar-item w3-button">PM ROOF TANK</a>
 		<a href="?page=pm_mecha" class="w3-bar-item w3-button">PM GROUND TANK</a>
 	</nav>
 	<h1 style="margin-left: 30px;">PREVENTIF MAINTENANCE TES UDARA</h1>

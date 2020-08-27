@@ -264,6 +264,10 @@ if($page == ""){
 	include "data_tahunan/edit_tu.php";
 }else if($page == "delete_tu"){
 	include "data_tahunan/hapus_tu.php";
+}else if($page == "pm_rt"){
+	include "data_tahunan/data_pm_rooftank.php";
+}else if($page == "tambah_rt"){
+	include "data_tahunan/tambah_rt.php";
 }else{
 	include "views/404.php";
 }

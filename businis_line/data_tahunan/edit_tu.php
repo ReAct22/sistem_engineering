@@ -149,7 +149,7 @@
 					 rekomendasi = '$rekomendasi' where id_tu = '$idtu'");
 				?>
 					<script type="text/javascript">
-						alert("Data berhasil di tambah kan");
+						alert("Update data berhasil");
 						window.location.href="?page=pm_tu";
 					</script>
 				<?php

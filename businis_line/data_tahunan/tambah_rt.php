@@ -1,5 +1,5 @@
 <?php 
-	$query = mysqli_query($koneksi,"select max(id_ps) as kodePML from pm_ps");
+	$query = mysqli_query($koneksi,"select max(id_rt) as kodePML from pm_rt");
 		$data = mysqli_fetch_array($query);
 		$kodePML = $data['kodePML'];
 
@@ -7,11 +7,11 @@
 
 		$urutan++;
 
-		$huruf = "KPS";
+		$huruf = "PRT";//untuk membuat kode otomatis
 		$kodeData = $huruf.sprintf("%03s", $urutan);
 ?>
 <div class="card-body">
-	<h2>Input data POOL SANDFILTER</h2>
+	<h2>Input data INFRARED</h2>
 	<form action="" method="post" enctype="multipart/form-data" class="form-group">
 		<div class="input-group mb-3">
 	  <div class="input-group-prepend">
@@ -24,11 +24,10 @@
 	  <div class="input-group-prepend">
 	  <span class="input-group-text">Periode Preventif</span>
 	  </div>
-	  <select name="periode" class="form-control">
-	  	<option value="3 Bulanan">3 Bulanan</option>
-	  	<option value="6 Bulanan">6 Bulanan</option>
-	  	<option value="Tahunan">Tahunan</option>
-	  </select>
+	  		<select name="periode" class="form-control">
+	  			<option></option>
+	  			<option value="1 Tahun">1 Tahun</option>
+	  		</select>
 		</div>
 
 		<div class="input-group mb-3">
@@ -42,7 +41,10 @@
 	  <div class="input-group-prepend">
 	  <span class="input-group-text">Lokasi Utilitas</span>
 	  </div>
-			<input type="text" name="lokasi_utilitas" class="form-control">
+			<select name="lokasi_utilitas" class="form-control">
+				<option value="Tower A">Tower A</option>
+				<option value="Tower B">Tower B</option>
+			</select>
 		</div>
 
 		<div class="input-group mb-3">
@@ -57,20 +59,6 @@
 	  <span class="input-group-text">Realisasi Perkerjaan</span>
 	  </div>
 			<input type="date" name="realisasi" class="form-control">
-		</div>
-
-		<div class="input-group mb-3">
-	  <div class="input-group-prepend">
-	  <span class="input-group-text">Nama Vendor</span>
-	  </div>
-			<input type="text" name="nama_vendor" class="form-control">
-		</div>
-
-		<div class="input-group mb-3">
-	  <div class="input-group-prepend">
-	  <span class="input-group-text">Alamat Vendor</span>
-	  </div>
-			<textarea rows="3" name="alamat" style="width: 500px; border-color:currentColor; "></textarea>
 		</div>
 
 		<div class="input-group mb-3">
@@ -111,8 +99,6 @@
 	$lokasi_utilitas = @$_POST['lokasi_utilitas'];
 	$rencana = @$_POST['rencana'];
 	$realisasi = @$_POST['realisasi'];
-	$nama_vendor = @$_POST['nama_vendor'];
-	$alamat_vendor = @$_POST['alamat'];
 	$nama_teknisi = @$_POST['nama_teknisi'];
 	$jenis_kerjaan = @$_POST['jenis_kerjaan'];
 
@@ -123,7 +109,7 @@
 	$rekomendasi = @$_POST['rekomendasi'];
 	$tambah_data = @$_POST['tambah'];
 	if($tambah_data){
-		if($no_pm == "" || $periode == "" || $nama_utilitas == "" || $lokasi_utilitas == "" || $rencana == "" || $realisasi == "" || $nama_vendor == "" || $alamat_vendor == "" || $nama_teknisi == "" || $jenis_kerjaan == "" ||  $nama_gambar == "" || $rekomendasi == "" ){
+		if($no_pm == "" || $periode == "" || $nama_utilitas == "" || $lokasi_utilitas == "" || $rencana == "" || $realisasi == "" || $nama_teknisi == "" || $jenis_kerjaan == "" ||  $nama_gambar == "" || $rekomendasi == "" ){
 			?>
 			<script type="text/javascript">
 				alert("Inputan tidak boleh Kosong");
@@ -132,11 +118,11 @@
 		}else{
 			$pindah = move_uploaded_file($sumber, $target.$nama_gambar);
 			if($pindah){
-				mysqli_query($koneksi,"insert into pm_ps values('$no_pm','$periode','$nama_utilitas','$lokasi_utilitas','$rencana','$realisasi','$nama_vendor','$alamat_vendor','$nama_teknisi','$jenis_kerjaan','$nama_gambar','$rekomendasi')");
+				mysqli_query($koneksi,"insert into pm_rt values('$no_pm','$periode','$nama_utilitas','$lokasi_utilitas','$rencana','$realisasi','$nama_teknisi','$jenis_kerjaan','$nama_gambar','$rekomendasi')");
 				?>
 				<script type="text/javascript">
 					alert("Input Data berhasil");
-					window.location.href="?page=pm_ps";
+					window.location.href="?page=pm_rt";
 				</script>
 				<?php
 			}else{
