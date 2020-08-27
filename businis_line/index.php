@@ -256,6 +256,14 @@ if($page == ""){
 	include "data_tahunan/edit_infrared.php";
 }else if($page == "delete_infrared"){
 	include "data_tahunan/hapus_infrared.php";
+}else if($page == "pm_tu"){
+	include "data_tahunan/data_pm_tu.php";
+}else if($page == "tambah_tu"){
+	include "data_tahunan/tambah_tu.php";
+}else if($page == "edit_tu"){
+	include "data_tahunan/edit_tu.php";
+}else if($page == "delete_tu"){
+	include "data_tahunan/hapus_tu.php";
 }else{
 	include "views/404.php";
 }
