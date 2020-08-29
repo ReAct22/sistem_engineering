@@ -36,10 +36,10 @@
 	  </div>
 		<select name="nama" class="form-control">
 			<?php 
-			$sql = mysqli_query($koneksi,"select *from du_elektrical");
+			$sql = mysqli_query($koneksi,"select *from du_me");
 			while($data = mysqli_fetch_array($sql)){
 			?>
-			<option value="<?php echo $data['nama_utilitas'] ?>"><?php echo $data['nama_utilitas'] ?></option>
+			<option value="<?php echo $data['nama_equipment'] ?>"><?php echo $data['nama_equipment'] ?></option>
 			<?php 
 				}
 			?>
@@ -51,7 +51,7 @@
 	  </div>
 		<select name="lokasi" class="form-control">
 			<?php 
-			$sql = mysqli_query($koneksi,"select *from du_elektrical");
+			$sql = mysqli_query($koneksi,"select *from du_me");
 			while($data = mysqli_fetch_array($sql)){
 			?>
 			<option value="<?php echo $data['lokasi_utilitas'] ?>"><?php echo $data['lokasi_utilitas'] ?></option>

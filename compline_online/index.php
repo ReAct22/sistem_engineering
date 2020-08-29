@@ -7,7 +7,7 @@ if(@$_SESSION['username']){
 <html>
 <head>
 	<title>Bukit Golf Pondok Indah - Jakarta Selatan</title>
-	<link rel="icon" type="image/x-icon" href="assets/img/icon.png">
+	<link rel="icon" type="image/x-icon" href="img/icon.jpg">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">

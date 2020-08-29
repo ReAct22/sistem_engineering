@@ -8,7 +8,7 @@ if(@$_SESSION['engineering']){
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Bukit Golf Pondok Indah - Jakarta Selatan</title>
-	<link rel="icon" type="image/x-icon" href="assets/img/icon1.png">
+	<link rel="icon" type="image/x-icon" href="img/icon.jpg">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
@@ -32,6 +32,7 @@ if(@$_SESSION['engineering']){
     <a href="?page=generator" class="w3-bar-item w3-button">Generator Set</a>
     <a href="?page=trafo" class="w3-bar-item w3-button">Trafo</a>
     <a href="?page=pompa" class="w3-bar-item w3-button">Pompa</a>
+    <a href="?page=me" class="w3-bar-item w3-button">ME</a>
   </div>
 </div>
       <div class="w3-dropdown-hover">
@@ -53,7 +54,7 @@ if(@$_SESSION['engineering']){
 	 <div class="w3-dropdown-hover">
 	  <button class="w3-button ">Data Engineering</button>
 	  <div class="w3-dropdown-content w3-bar-block w3-border">
-	    <a href="?page=sipil" class="w3-bar-item w3-button">Karyawana Engineering</a>
+	    <a href="?page=data_ke" class="w3-bar-item w3-button">Karyawana Engineering</a>
 	  </div>
 	</div>
 	<div class="w3-dropdown-hover">
@@ -150,6 +151,7 @@ if($page == ""){
 	include "data/hapus_mecha.php";
 }else if($page == "delete_pmelektrik"){
 	include "data/hapus_elektrik.php";
+//Aksi data untuk Print
 }else if($page == "print_acpa"){
 	include "print_data/print_acpa.php";
 }else if($page == "print_elektrical"){
@@ -163,11 +165,26 @@ if($page == ""){
 }else if($page == "print_pompa"){
 	include "print_data/print_pompa.php";
 }else if($page == "print_pmac"){
-	include "print_data/print_pompa.php";
+	include "print_data/print_pmac.php";
 }else if($page == "print_pmtenant"){
-	include "print_data/print_pompa.php";
+	include "print_data/print_pmtenant.php";
 }else if($page == "print_pmlift"){
-	include "print_data/print_pompa.php";
+	include "print_data/print_pmlift.php";
+}else if($page == "print_pmel"){
+	include "print_data/print_pmel.php";
+}else if($page == "print_pmmecha"){
+	include "print_data/print_pmel.php";
+}else if($page == "print_pmfa"){
+	include "print_data/print_pmmecha.php";
+}else if($page == "print_pmli"){
+	include "print_data/print_pmlift.php";
+
+}else if($page == "print_gwt"){
+	include "print_data/print_gwt.php";
+//berakhir Sampai Sini
+}else if($page == "print_pf"){
+	include "print_data/print_pf.php";
+//berakhir Sampai Sini
 }else if($page == "pmfa"){
 	include "data/pm_fire.php";
 }else if($page == "pc_air"){
@@ -268,6 +285,38 @@ if($page == ""){
 	include "data_tahunan/data_pm_rooftank.php";
 }else if($page == "tambah_rt"){
 	include "data_tahunan/tambah_rt.php";
+}else if($page == "edit_rt"){
+	include "data_tahunan/edit_rt.php";
+}else if($page == "delete_rt"){
+	include "data_tahunan/hapus_rt.php";
+}else if($page == "pm_gt"){
+	include "data_tahunan/data_pm_gt.php";
+}else if($page == "tambah_gt"){
+	include "data_tahunan/tambah_gt.php";
+}else if($page == "edit_gt"){
+	include "data_tahunan/edit_gt.php";
+}else if($page == "delete_gt"){
+	include "data_tahunan/hapus_gt.php";
+}else if($page == "data_ke"){
+	include "data_karyawaan/data_ke.php";
+}else if($page == "tambah_ke"){
+	include "data_karyawaan/tambah_ke.php";
+}else if($page == "edit_ke"){
+	include "data_karyawaan/edit_ke.php";
+}else if($page == "delete_ke"){
+	include "data_karyawaan/hapus_ke.php";
+}else if($page == "me"){
+	include "views/data_me.php";
+}else if($page == "tambah_me"){
+	include "views/tambah_me.php";
+}else if($page == "edit_me"){
+	include "views/edit_me.php";
+}else if($page == "delete_me"){
+	include "views/hapus_me.php";
+}else if($page == "pm_stp"){
+	include "views/data_stp.php";
+}else if($page == "tambah_stp"){
+	include "views/tambah_stp.php";
 }else{
 	include "views/404.php";
 }

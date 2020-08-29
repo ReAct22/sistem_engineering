@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Bukit Golf Pondok Indah - Jakarta Selatan</title>
-	<link rel="icon" type="image/x-icon" href="assets/img/icon1.png">
+	<link rel="icon" type="image/x-icon" href="img/icon.jpg">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <body>

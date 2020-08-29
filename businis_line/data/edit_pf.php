@@ -29,8 +29,18 @@
 	  <div class="input-group-prepend">
 	  <span class="input-group-text">Nama Utilitas</span>
 	  </div>
-			<input type="text" name="nama_utilitas" value="<?php echo $data['nama_utilitas'] ?>" class="form-control">
-		</div>
+		<select name="nama_utilitas" class="form-control">
+			<option><?php echo $data['nama_utilitas'] ?></option>
+			<?php 
+			$sql = mysqli_query($koneksi,"select *from du_me");
+			while($d = mysqli_fetch_array($sql)){
+			?>
+			<option value="<?php echo $d['nama_equipment'] ?>"><?php echo $d['nama_equipment'] ?></option>
+			<?php 
+				}
+			?>
+		</select>
+	</div>
 
 		<div class="input-group mb-3">
 	  <div class="input-group-prepend">

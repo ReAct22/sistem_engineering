@@ -6,6 +6,7 @@
 		<a href="?page=bulanan" class="w3-bar-item w3-button">Ac Public Area</a>
 		<a href="?page=acten" class="w3-bar-item w3-button">Ac Tenant</a>
 		<a href="?page=pmlift" class="w3-bar-item w3-button">Lift</a>
+		<a href="?page=pm_stp" class="w3-bar-item w3-button">STP</a>
 	</nav>
 	<h1 style="margin-left: 30px;">PREVENTIF MAINTENANCE AC Public Area</h1>
 	<a href="?page=tambah_pmac" class="w3-bar-item w3-button w3-green"><i class="fas fa-plus"></i>Tambah Data</a>

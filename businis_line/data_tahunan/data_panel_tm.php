@@ -11,7 +11,7 @@
 		<a href="?page=pm_infrared" class="w3-bar-item w3-button">PM INFRARED</a>
 		<a href="?page=pm_tu" class="w3-bar-item w3-button">PM TES UDARA</a>
 		<a href="?page=pm_rt" class="w3-bar-item w3-button">PM ROOF TANK</a>
-		<a href="?page=pm_mecha" class="w3-bar-item w3-button">PM GROUND TANK</a>
+		<a href="?page=pm_gt" class="w3-bar-item w3-button">PM GROUND TANK</a>
 	</nav>
 	<h1 style="margin-left: 30px;">PREVENTIF MAINTENANCE PANLE TM</h1>
 	<a href="?page=tambah_pt" class="w3-bar-item w3-button w3-green"><i class="fas fa-plus"></i>Tambah Data</a>

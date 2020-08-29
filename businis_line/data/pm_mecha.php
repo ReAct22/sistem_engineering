@@ -6,10 +6,11 @@
 		<a href="?page=3bulan" class="w3-bar-item w3-button">PM Elektrical</a>
 		<a href="?page=pmfa" class="w3-bar-item w3-button">PM Fire Alarm</a>
 		<a href="?page=pm_mecha" class="w3-bar-item w3-button">PM Mechanical</a>
+		
 	</nav>
 	<h1 style="margin-left: 30px;">PREVENTIF MAINTENANCE MECHANICAL</h1>
 	<a href="?page=tambah_mecha" class="w3-bar-item w3-button w3-green"><i class="fas fa-plus"></i>Tambah Data</a>
-	<a href="" class="w3bar-item w3-button w3-blue"><i class="fas fa-print"></i>Print</a>
+	<a href="?page=print_pmmecha" class="w3bar-item w3-button w3-blue"><i class="fas fa-print"></i>Print</a>
 
 	<form action="" method="post" class="d-none d-sm-inline-block form-inline ml-md-3 my-2 my-md-0 mw-100 navbar-search" style="float: right; margin-right: 50px;">
             <div class="input-group">

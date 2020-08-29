@@ -38,7 +38,7 @@ if(@$_SESSION['username']){
                 </div>
                 <div class="form-group">
                   <input type="submit" name="login" value="Login" class="btn btn-primary btn-block">
-                  <a href="" class="btn btn-success btn-block">Register </a>
+                  <a href="register.php" class="btn btn-success btn-block">Register </a>
                 </div>
               </form>
               <?php 
@@ -49,7 +49,11 @@ if(@$_SESSION['username']){
 
               if($login){
                 if($username == "" || $password == ""){
-                  echo "Email / Password tidak boleh kosong";
+                  ?>
+                    <script type="text/javascript">
+                      alert("Username / Password Tidak Boleh kosong");
+                    </script>
+                  <?php
                 }else{
                   $sql = mysqli_query($koneksi,"select *from tb_user where username = '$username' and password = md5('$password')");
                   $data = mysqli_fetch_array($sql);
