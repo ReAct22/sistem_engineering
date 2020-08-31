@@ -1,8 +1,8 @@
 <?php 
 	include "config/koneksi.php";
 ?>
-<div style="margin-left: 30px;">
-
+<div style="margin-left: 5px;">
+	
 	<h1 style="margin-left: 30px;">PREVENTIF MAINTENANCE INFRARED</h1>
 	<a href="?page=tambah_infrared" class="w3-bar-item w3-button w3-green"><i class="fas fa-plus"></i>Tambah Data</a>
 	<a href="?page=print_infrared" class="w3bar-item w3-button w3-blue"><i class="fas fa-print"></i>Print</a>
@@ -79,7 +79,7 @@
 			<td><?php echo $data['alamat_vendor'] ?></td>
 			<td><?php echo $data['nama_teknisi'] ?></td>
 			<td><?php echo $data['jenis_kerjaan'] ?></td>
-			<td><img src="img/<?php echo $data['gambar'] ?>" width="100" ></td>
+			<td><img src="assets/img/<?php echo $data['gambar'] ?>" width="100" ></td>
 			<td><?php echo $data['rekomendasi'] ?></td>
 			<td>
 				<a href="?page=edit_infrared&id=<?php echo $data['id_infrared']; ?>" class="btn btn-sm btn-primary"><i class="fas fa-edit"></i>Edit</a>

@@ -2,6 +2,10 @@
 	include "config/koneksi.php";
 ?>
 <div style="margin-left: 30px;">
+	<nav class="w3-blok-item w3-padding">
+		<a href="?page=6bulan" class="w3-bar-item w3-button">GWT</a>
+		<a href="?page=preasure_fan" class="w3-bar-item w3-button">PREASURE FAN</a>
+	</nav>
 	<h1 style="margin-left: 30px;">PREVENTIF MAINTENANCE ELECTRICAL</h1>
 	<a href="?page=tambah_preasure_fan" class="w3-bar-item w3-button w3-green"><i class="fas fa-plus"></i>Tambah Data</a>
 	<a href="?page=print_pf" class="w3bar-item w3-button w3-blue"><i class="fas fa-print"></i>Print</a>
@@ -78,7 +82,7 @@
 			<td><?php echo $data['alamat_vendor'] ?></td>
 			<td><?php echo $data['nama_teknisi'] ?></td>
 			<td><?php echo $data['jenis_kerjaan'] ?></td>
-			<td><img src="img/<?php echo $data['gambar'] ?>" width="100" ></td>
+			<td><img src="assets/img/<?php echo $data['gambar'] ?>" width="100" ></td>
 			<td><?php echo $data['rekomendasi'] ?></td>
 			<td>
 				<a href="?page=edit_pf&id=<?php echo $data['id_pf']; ?>" class="btn btn-sm btn-primary"><i class="fas fa-edit"></i>Edit</a>
