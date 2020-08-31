@@ -1,17 +1,12 @@
 <?php 
 	include "config/koneksi.php";
-	$query = mysqli_query($koneksi,"select max(id_listrik) as kodePC from dc_listrik");
-		$data = mysqli_fetch_array($query);
-		$kodePC = $data['kodePC'];
-
-		$urutan = (int) substr($kodePC, 3, 3);
-
-		$urutan++;
-
-		$huruf = "PCL";
-		$kodeData = $huruf.sprintf("%03s", $urutan);
 ?>
 <div class="card-body">
+	<?php 
+	$id = @$_GET['id'];
+	$sql = mysqli_query($koneksi,"select *from dc_air where id_air = '$id'");
+	$data = mysqli_fetch_array($sql)
+	?>
 	<h2>Input data Pencatatan Air</h2>
 	<script type="text/javascript">
 		function sum() {
@@ -23,13 +18,14 @@
       }
 }
 	</script>
+
 	<br>
 	<form action="" method="post" enctype="multipart/form-data">
 		<div class="input-group mb-3">
 	  <div class="input-group-prepend">
 	  <span class="input-group-text">NO. Unit</span>
 	  </div>
-			<input type="text" name="no_cek" value="<?php echo $kodeData ?>" class="form-control">
+			<input type="text" name="no_cek" class="form-control" value="<?php echo $data['id_air'] ?>" disabled="disabled">
 		</div>
 
 		<div class="input-group mb-3">
@@ -38,12 +34,12 @@
 	  </div>
 
 			<select name="unit" class="form-control">
-				<option></option>
+				<option><?php echo $data['unit'] ?></option>
 				<?php 
 			  		$sql = mysqli_query($koneksi,"select *from tb_unit");
-					while($data = mysqli_fetch_array($sql)){	  		
+					while($d = mysqli_fetch_array($sql)){	  		
 		  		?>
-				<option value="<?php echo $data['unit'] ?>"><?php echo $data['unit'] ?></option>
+				<option value="<?php echo $d['unit'] ?>"><?php echo $d['unit']; ?></option>
 				<?php 
 					}
 				?>
@@ -54,7 +50,7 @@
 	  <div class="input-group-prepend">
 	  <span class="input-group-text">Meter Awal</span>
 	  </div>
-			<input type="text" name="meter_awal" id="txt1" onkeyup="sum();" class="form-control">
+			<input type="text" name="meter_awal" id="txt1" onkeyup="sum();"  class="form-control" value="<?php echo $data['meter_awal']; ?>">
 		</div>
 
 
@@ -62,7 +58,7 @@
 	  <div class="input-group-prepend">
 	  <span class="input-group-text">Meter Akhir</span>
 	  </div>
-			<input type="text" name="meter_akhir" id="txt2" onkeyup="sum();" class="form-control">
+			<input type="text" name="meter_akhir" id="txt2" onkeyup="sum();" value="<?php echo $data['meter_akhir']; ?>" class="form-control">
 		</div>
 
 
@@ -77,7 +73,7 @@
 	  <div class="input-group-prepend">
 	  <span class="input-group-text">Total Pemakaian</span>
 	  </div>
-			<input type="text" name="total" id="txt3" class="form-control">
+			<input type="text" name="total" id="txt3" value="<?php echo $data['total']; ?>" class="form-control">
 		</div>
 
 
@@ -85,41 +81,42 @@
 	  <div class="input-group-prepend">
 	  <span class="input-group-text">Keterangan</span>
 	  </div>
-			<textarea rows="3" class="form-control" name="keterangan"></textarea>
+			<textarea rows="3" class="form-control" name="keterangan"><?php echo $data['keterangan']; ?></textarea>
 		</div>
 
-		<input type="submit" name="tambah" class="btn btn-md btn-success" value="Tambah">
+		<input type="submit" name="edit" class="btn btn-md btn-success" value="Tambah">
 		<input type="reset" name="" class="btn btn-md btn-danger">
 	</form>
 	<?php 
-	$no_cek = @$_POST['no_cek'];
 	$unit = @$_POST['unit'];
 	$meter_awal = @$_POST['meter_awal'];
 	$meter_akhir = @$_POST['meter_akhir'];
 
 	$sumber = @$_FILES['gambar']['tmp_name'];
-	$target = 'img/';
+	$target = 'assets/img/';
 	$nama_gambar = @$_FILES['gambar']['name'];
 
 	$total = @$_POST['total'];
 	$keterangan = @$_POST['keterangan'];
 
-	$tambah_data = @$_POST['tambah'];
-	if($tambah_data){
-		if($no_cek == "" || $unit == "" || $meter_awal == "" || $meter_akhir == "" || $nama_gambar == "" || $total == "" || $keterangan == ""){
+	$edit_data = @$_POST['edit'];
+	if($edit_data){
+		if($nama_gambar == ""){
+			mysqli_query($koneksi,"update dc_air set unit = '$unit', meter_awal = '$meter_awal', meter_akhir = '$meter_akhir', total = '$total', keterangan = '$keterangan' where id_air = '$id'");
 			?>
 			<script type="text/javascript">
-				alert("Input Data tidak boleh ada yang kosong");
+				alert("Update data berhasil");
+				window.location.href="?page=pc_air";
 			</script>
 			<?php 
 		}else{
 			$pindah = move_uploaded_file($sumber, $target.$nama_gambar);
 			if($pindah){
-				mysqli_query($koneksi,"insert into dc_listrik values('$no_cek','$unit','$meter_awal','$meter_akhir','$nama_gambar','$total','$keterangan')");
+				mysqli_query($koneksi,"update dc_air set unit = '$unit', meter_awal = '$meter_awal', meter_akhir = '$meter_akhir', gambar = '$gambar', total = '$total', keterangan = '$keterangan' where id_air = '$id'");
 				?>
 					<script type="text/javascript">
 						alert("Data berhasil di tambah kan");
-						window.location.href="?page=pc_listrik";
+						window.location.href="?page=pc_air";
 					</script>
 				<?php
 			}else{

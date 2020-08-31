@@ -71,8 +71,8 @@
             <a class="collapse-item" href="?page=">Data Air</a>
             <a class="collapse-item" href="?page=">Data Listrik</a>
             <h6 class="collapse-header">Data Pencatatan</h6>
-            <a class="collapse-item" href="?page=">Data Air</a>
-            <a class="collapse-item" href="?page=">Data Listrik</a>
+            <a class="collapse-item" href="?page=pc_dcair">Data Air</a>
+            <a class="collapse-item" href="?page=pc_dclistrik">Data Listrik</a>
           </div>
         </div>
       </li>
@@ -144,11 +144,15 @@
         </div>
       </li>
 
+      <div class="sidebar-heading">
+        Data Karyawan
+      </div>
+
       <!-- Nav Item - Charts -->
       <li class="nav-item">
-        <a class="nav-link" href="charts.html">
+        <a class="nav-link" href="?page=data_ke">
           <i class="fas fa-fw fa-chart-area"></i>
-          <span>Charts</span></a>
+          <span>Data Karyawan</span></a>
       </li>
 
       <!-- Nav Item - Tables -->
@@ -409,9 +413,9 @@ else if($page == "print_pt"){
 //berakhir Sampai Sini
 }else if($page == "pmfa"){
   include "data/pm_fire.php";
-}else if($page == "pc_air"){
+}else if($page == "pc_dcair"){
   include "catatan/data_dcair.php";
-}else if($page == "tambah_air"){
+}else if($page == "tambah_dcair"){
   include "catatan/tambah_dcair.php";
 }else if($page == "edit_dcair"){
   include "catatan/edit_dcair.php";

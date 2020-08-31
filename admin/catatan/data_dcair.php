@@ -3,7 +3,7 @@
 ?>
 <div style="margin-left: 30px;">
 	<h1 style="margin-left: 30px;">DATA PENCATATAN AIR</h1>
-	<a href="?page=tambah_air" class="w3-bar-item w3-button w3-green"><i class="fas fa-plus"></i>Tambah Data</a>
+	<a href="?page=tambah_dcair" class="w3-bar-item w3-button w3-green"><i class="fas fa-plus"></i>Tambah Data</a>
 	<a href="?page=print_dcair" class="w3bar-item w3-button w3-blue"><i class="fas fa-print"></i>Print</a>
 
 	<form action="" method="post" class="d-none d-sm-inline-block form-inline ml-md-3 my-2 my-md-0 mw-100 navbar-search" style="float: right; margin-right: 50px;">
@@ -68,12 +68,12 @@
 			<td><?php echo $data['unit'] ?></td>
 			<td><?php echo $data['meter_awal'] ?></td>
 			<td><?php echo $data['meter_akhir'] ?></td>
-			<td><img src="img/<?php echo $data['gambar'] ?>" width="100" heigh="50"></td>
+			<td><img src="assets/img/<?php echo $data['gambar'] ?>" width="100" heigh="50"></td>
 			<td><?php echo $data['total'] ?></td>
 			<td><?php echo $data['keterangan'] ?></td>
 			<td>
-				<a href="?page=edit_air&id=<?php echo $data['id_air'] ?>" class="btn btn-sm btn-primary"><i class="fas fa-edit"></i>Edit</a>
-				<a href="?page=delete_air&id=<?php echo $data['id_air'] ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i>Hapus</a>
+				<a href="?page=edit_dcair&id=<?php echo $data['id_air'] ?>" class="btn btn-sm btn-primary"><i class="fas fa-edit"></i>Edit</a>
+				<a href="?page=delete_dcair&id=<?php echo $data['id_air'] ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i>Hapus</a>
 			</td>
 		</tr>
 		<?php 
