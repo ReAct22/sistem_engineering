@@ -88,7 +88,7 @@
 	$realisasi = @$_POST['realisasi'];
 
 	$sumber = @$_FILES['gambar']['tmp_name'];
-	$target = 'assets/img/';
+	$target = '../assets/img/';
 	$nama_gambar = @$_FILES['gambar']['name'];
 
 	$edit_data = @$_POST['edit'];
