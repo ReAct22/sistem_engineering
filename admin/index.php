@@ -154,13 +154,25 @@
           <i class="fas fa-fw fa-chart-area"></i>
           <span>Data Karyawan</span></a>
       </li>
+       <!-- Divider -->
+      <hr class="sidebar-divider d-none d-md-block">
 
-      <!-- Nav Item - Tables -->
+       <div class="sidebar-heading">
+        Data Akun
+      </div>
+
       <li class="nav-item">
-        <a class="nav-link" href="tables.html">
-          <i class="fas fa-fw fa-table"></i>
-          <span>Tables</span></a>
+        <a class="nav-link" href="?page=data_ke">
+          <i class="fas fa-fw fa-user"></i>
+          <span>Data staff</span></a>
       </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="?page=data_ke">
+          <i class="fas fa-fw fa-user"></i>
+          <span>Data staff</span></a>
+      </li>
+
 
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
@@ -543,6 +555,22 @@ else if($page == "print_pt"){
   include "views/data_stp.php";
 }else if($page == "tambah_stp"){
   include "views/tambah_stp.php";
+}else if($page == "edit_pmacpa"){
+  include "data/edit_pmacpa.php";
+}else if($page == "delete_pmacpa"){
+  include "data/hapus_pmacpa.php";
+}else if($page == "edit_acten"){
+  include "data/edit_acten.php";
+}else if($page == "delete_acten"){
+  include "data/hapus_acten.php";
+}else if($page == "edit_pmlift"){
+  include "data/edit_pmlift.php";
+}else if($page == "delete_pmlift"){
+  include "data/hapus_pmlift.php";
+}else if($page == "edit_stp"){
+  include "data/edit_stp.php";
+}else if($page == "delete_stp"){
+  include "data/hapus_stp.php";
 }else{
   include "views/404.php";
 }

@@ -1,5 +1,5 @@
 <?php include 'config/koneksi.php'; ?>
-<h2 align="center"><img src="img/icon.jpg" width="100" height="100" style="margin-left: 30px;">Aprtement Bukit Golf Pondok indah</h2>
+<h2 align="center"><img src="assets/img/icon.jpg" width="100" height="100" style="margin-left: 30px;">Aprtement Bukit Golf Pondok indah</h2>
 <h3 align="center">Data Utilitas Elektrical</h3>
 <div class="card-body">
 		<table class="w3-table w3-striped" border="1">

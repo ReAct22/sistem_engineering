@@ -29,6 +29,7 @@
 				<th>ALAMAT VENDOR</th>
 				<th>PROGRES</th>
 				<th>KETERANGAN </th>
+				<th>Opsi</th>
 			</tr>
 			<?php
 			$no =1;
@@ -75,6 +76,10 @@
 				<td><?php echo $data['alamat_vendor'] ?></td>
 				<td><?php echo $data['progres'] ?></td>
 				<td><?php echo $data['keterangan'] ?></td>
+				<td>
+					<a href="?page=edit_pmlift&id=<?php echo $data['id_pmlift'] ?>" class="btn btn-sm btn-primary">Edit</a>
+					<a href="?page=delete_pmlift&id=<?php echo $data['id_pmlift'] ?>" class="btn btn-sm btn-danger">Delete</a>
+				</td>
 			</tr>
 			<?php 
 			}

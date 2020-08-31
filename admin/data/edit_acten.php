@@ -1,18 +1,11 @@
 <?php 
 	include "config/koneksi.php";
-	$query = mysqli_query($koneksi,"select max(id_acten) as kodePMT from pm_acten");
-		$data = mysqli_fetch_array($query);
-		$kodePMT = $data['kodePMT'];
-
-		$urutan = (int) substr($kodePMT, 3, 3);
-
-		$urutan++;
-
-		$huruf = "PMT";
-		$kodeData = $huruf.sprintf("%03s", $urutan);
+	$idten = @$_GET['id'];
+	$sql = mysqli_query($koneksi,"select *from pm_acten where id_acten = '$idten'");
+	$data = mysqli_fetch_array($sql);
 ?>
 <div style="margin-left: 30px;">
-	<h1>Tambah Data PREVENTIF MAINTENANCE AC Tenant</h1>
+	<h1>Update Data PREVENTIF MAINTENANCE AC Tenant</h1>
 	<br>
 	<div class="card-body">
 		<form action="" method="post" class="form-group">
@@ -20,21 +13,21 @@
 	  <div class="input-group-prepend">
 	  <span class="input-group-text">NO.AC Tenant</span>
 	  </div>
-		<input type="text" name="no_pmten" class="form-control" value="<?php echo $kodeData ?>">
+		<input type="text" name="no_pmten" class="form-control" disabled="disabled" value="<?php echo $data['id_acten'] ?>">
 		</div>
 
 		<div class="input-group mb-3">
 	  <div class="input-group-prepend">
 	  <span class="input-group-text">Tangga Rencana</span>
 	  </div>
-		<input type="date" name="tanggal_rencana" class="form-control">
+		<input type="date" name="tanggal_rencana" value="<?php echo $data['tanggal_rencana'] ?>" class="form-control">
 		</div>
 
 		<div class="input-group mb-3">
 	  <div class="input-group-prepend">
 	  <span class="input-group-text">Tanggal Realisasi</span>
 	  </div>
-		<input type="date" name="tanggal_realisasi" class="form-control">
+		<input type="date" name="tanggal_realisasi" value="<?php echo $data['tanggal_realisasi'] ?>" class="form-control">
 		</div>
 
 		<div class="input-group mb-3">
@@ -42,12 +35,12 @@
 	  <span class="input-group-text">Unit</span>
 	  </div>
 		<select name="unit" class="form-control">
-			<option label="">Pilih Nomer Unit</option>
+			<option label=""><?php echo $data['unit'] ?></option>
 			<?php 
 			$sql = mysqli_query($koneksi,"select *from tb_unit");
-			while($data = mysqli_fetch_array($sql)){
+			while($d = mysqli_fetch_array($sql)){
 			?>
-			<option value="<?php echo $data['unit'] ?>"><?php echo $data['unit'] ?></option>
+			<option value="<?php echo $d['unit'] ?>"><?php echo $d['unit'] ?></option>
 			<?php 
 				}
 			?>
@@ -58,36 +51,25 @@
 	  <div class="input-group-prepend">
 	  <span class="input-group-text">Nama Teknisi</span>
 	  </div>
-		<select name="nama_teknisi" class="form-control">
-			<option label="Nama Teknisi">Nama Teknisi</option>
-			<?php 
-				$sql = mysqli_query($koneksi,"select *from pm_acap");
-				while($d = mysqli_fetch_array($sql)){
-			?>
-			<option value="<?php echo $d['nama_teknisi'] ?>"><?php echo $d['nama_teknisi'] ?></option>
-			<?php 
-				}
-			?>
-		</select>
+			<input type="text" name="nama_teknisi" class="form-control" value="<?php echo $data['nama_teknisi'] ?>">
 		</div>
 
 		<div class="input-group mb-3">
 	  <div class="input-group-prepend">
 	  <span class="input-group-text">Progres</span>
 	  </div>
-		<input type="text" name="progres" class="form-control">
+		<input type="text" name="progres" value="<?php echo $data['progres'] ?>" class="form-control">
 		</div>
 		<div class="input-group mb-3">
 	  <div class="input-group-prepend">
 	  <span class="input-group-text">keterangan</span>
 	  </div>
-		<textarea name="keterangan" rows="3" class="form-control"></textarea>
+		<textarea name="keterangan" rows="3" class="form-control"><?php echo $data['keterangan'] ?></textarea>
 		</div>
 		<input type="submit" name="tambah" class="w3-bar-item w3-button w3-green">
 		<input type="reset" name="" class="w3-bar-item w3-button w3-red">
 	</form>
 	<?php 
-	$no_pmten = @$_POST['no_pmten'];
 	$tanggal_rencana = @$_POST['tanggal_rencana'];
 	$tanggal_realisasi = @$_POST['tanggal_realisasi'];
 	$unit = @$_POST['unit'];
@@ -97,21 +79,18 @@
 
 	$tambah_data = @$_POST['tambah'];
 	if($tambah_data){
-		if($no_pmten == "" || $tanggal_rencana == "" || $tanggal_realisasi == "" || $unit == "" || $nama_teknisi == "" || $progres == "" || $keterangan == ""){
+			mysqli_query($koneksi,"update pm_acten set tanggal_rencana = '$tanggal_rencana',
+				tanggal_realisasi = '$tanggal_realisasi',
+				unit = '$unit',
+				nama_teknisi = '$nama_teknisi',
+				progres = '$progres',
+				keterangan = '$keterangan' where id_acten = '$idten'");
 			?>
 			<script type="text/javascript">
-				alert("Data tidak boleh ada yang kosong");
-			</script>
-			<?php
-		}else{
-			mysqli_query($koneksi,"insert into pm_acten values('$no_pmten','$tanggal_rencana','$tanggal_realisasi','$unit','$nama_teknisi','$progres','$keterangan')");
-			?>
-			<script type="text/javascript">
-				alert("Tambah data berhasil");
+				alert("Update data berhasil");
 				window.location.href="?page=acten";
 			</script>
 			<?php
-		}
 	}
 	?>
 	</div>

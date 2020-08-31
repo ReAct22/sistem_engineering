@@ -28,6 +28,7 @@
 				<th>NAMA TEKNISI</th>
 				<th>PROGRES</th>
 				<th>KETERANGAN </th>
+				<th>Opsi</th>
 			</tr>
 			<?php 
 			$no =1;
@@ -73,6 +74,10 @@
 				<td><?php echo $data['nama_teknisi']; ?></td>
 				<td><?php echo $data['progres']; ?></td>
 				<td><?php echo $data['keterangan']; ?></td>
+				<td>
+					<a href="?page=edit_stp&id=<?php echo $data['id_stp'] ?>" class="btn btn-sm btn-primary">Edit</a>
+					<a href="?page=delete_stp&id=<?php echo $data['id_stp'] ?>" class="btn btn-sm btn-danger">Delete</a>
+				</td>
 			</tr>
 			<?php 
 			}

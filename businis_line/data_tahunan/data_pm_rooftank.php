@@ -85,7 +85,7 @@
 			<td><?php echo date('d-m-y', strtotime($data['realisasi'])) ?></td>
 			<td><?php echo $data['nama_teknisi'] ?></td>
 			<td><?php echo $data['jenis_kerjaan'] ?></td>
-			<td><img src="assets/img/<?php echo $data['gambar'] ?>" width="100" ></td>
+			<td><img src="../assets/img/<?php echo $data['gambar'] ?>" width="100" ></td>
 			<td><?php echo $data['rekomendasi'] ?></td>
 			<td>
 				<a href="?page=edit_rt&id=<?php echo $data['id_rt']; ?>" class="btn btn-sm btn-primary"><i class="fas fa-edit"></i>Edit</a>

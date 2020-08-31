@@ -27,6 +27,7 @@
 				<th>NAMA TEKNISI</th>
 				<th>PROGRES</th>
 				<th>KETERANGAN </th>
+				<th>Opsi</th>
 			</tr>
 			<?php 
 			$no =1;
@@ -56,7 +57,7 @@
 	if($cek < 1){
 		?>
 			<tr>
-				<td colspan="7" style="padding: 10px; text-align: center;">Data Tidak Ditemukan</td>
+				<td colspan="9" style="padding: 10px; text-align: center;">Data Tidak Ditemukan</td>
 			</tr>
 		<?php
 	}else{
@@ -71,6 +72,10 @@
 				<td><?php echo $data['nama_teknisi']; ?></td>
 				<td><?php echo $data['progres']; ?></td>
 				<td><?php echo $data['keterangan']; ?></td>
+				<td>
+					<a href="?page=edit_pmacpa&id=<?php echo $data['id_pmac'] ?>" class="btn btn-sm btn-primary">Edit</a>
+					<a href="?page=delete_pmacpa&id=<?php echo $data['id_pmac'] ?>" class="btn btn-sm btn-danger">Delete</a>
+				</td>
 			</tr>
 			<?php 
 			}

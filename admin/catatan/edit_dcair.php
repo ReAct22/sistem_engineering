@@ -93,7 +93,7 @@
 	$meter_akhir = @$_POST['meter_akhir'];
 
 	$sumber = @$_FILES['gambar']['tmp_name'];
-	$target = 'assets/img/';
+	$target = '../assets/img/';
 	$nama_gambar = @$_FILES['gambar']['name'];
 
 	$total = @$_POST['total'];
@@ -112,7 +112,7 @@
 		}else{
 			$pindah = move_uploaded_file($sumber, $target.$nama_gambar);
 			if($pindah){
-				mysqli_query($koneksi,"update dc_air set unit = '$unit', meter_awal = '$meter_awal', meter_akhir = '$meter_akhir', gambar = '$gambar', total = '$total', keterangan = '$keterangan' where id_air = '$id'");
+				mysqli_query($koneksi,"update dc_air set unit = '$unit', meter_awal = '$meter_awal', meter_akhir = '$meter_akhir', gambar = '$nama_gambar', total = '$total', keterangan = '$keterangan' where id_air = '$id'");
 				?>
 					<script type="text/javascript">
 						alert("Data berhasil di tambah kan");

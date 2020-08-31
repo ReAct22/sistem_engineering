@@ -98,7 +98,7 @@
 	$meter_akhir = @$_POST['meter_akhir'];
 
 	$sumber = @$_FILES['gambar']['tmp_name'];
-	$target = 'img/';
+	$target = '../assets/img/';
 	$nama_gambar = @$_FILES['gambar']['name'];
 
 	$total = @$_POST['total'];
