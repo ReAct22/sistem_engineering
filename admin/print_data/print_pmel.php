@@ -1,5 +1,5 @@
 <?php include 'config/koneksi.php'; ?>
-<h2 align="center"><img src="img/icon.jpg" width="100" height="100" style="margin-left: 30px;">Aprtement Bukit Golf Pondok indah</h2>
+<h2 align="center"><img src="assets/img/icon.jpg" width="100" height="100" style="margin-left: 30px;">Aprtement Bukit Golf Pondok indah</h2>
 <h3 align="center">PREVENTIF MAINTENANCE ELECTRICAL</h3>
 <div class="card-body">
 		<table class="w3-table w3-striped" border="1">
@@ -23,7 +23,7 @@
 				<td><?php echo $data['lokasi_utilitas'] ?></td>
 				<td><?php echo date('d-m-y',strtotime($data['rencana'])) ?></td>
 				<td><?php echo date('d-m-y',strtotime($data['realisasi'])) ?></td>
-				<td><img src="img/<?php echo $data['gambar'] ?>" width="100" height="50"></td>
+				<td><img src="assets/img/<?php echo $data['gambar'] ?>" width="100" height="50"></td>
 			</tr>
 			<?php 
 				}
