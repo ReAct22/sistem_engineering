@@ -93,7 +93,7 @@
 	$realisasi = @$_POST['realisasi'];
 
 	$sumber = @$_FILES['gambar']['tmp_name'];
-	$target = 'img/';
+	$target = 'assets/img/';
 	$nama_gambar = @$_FILES['gambar']['name'];
 
 	$tambah_data = @$_POST['tambah'];

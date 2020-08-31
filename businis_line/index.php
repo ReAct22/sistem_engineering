@@ -60,6 +60,15 @@ if(@$_SESSION['engineering']){
 	<div class="w3-dropdown-hover">
   <button class="w3-button">Selamat Datang</button>
   <div class="w3-dropdown-content w3-bar-block w3-border">
+  	<?php 
+  if(@$_SESSION['engineering']){
+    $user_login = @$_SESSION['engineering'];
+  }
+
+  $sql_login = mysqli_query($koneksi,"select *from tb_staff where id_staff = '$user_login'");
+  $data = mysqli_fetch_array($sql_login);
+  ?>
+  	<a href="" class="w3-bar-item w3-button"><?php echo $data['nama_staff'] ?></a>
     <a href="?page=air" class="w3-bar-item w3-button">Setting</a>
     <a href="logout.php" class="w3-bar-item w3-button">LogOut</a>
   </div>
@@ -184,6 +193,43 @@ if($page == ""){
 //berakhir Sampai Sini
 }else if($page == "print_pf"){
 	include "print_data/print_pf.php";
+//berakhir Sampai Sini
+}else if($page == "print_infrared"){
+	include "print_data/print_infrared.php";
+//berakhir Sampai Sini
+}else if($page == "print_pl"){
+	include "print_data/print_pl.php";
+//berakhir Sampai Sini
+}else if($page == "print_geset"){
+	include "print_data/print_geset.php";
+//berakhir Sampai Sini
+}else if($page == "print_gt"){
+	include "print_data/print_gt.php";
+//berakhir Sampai Sini
+}else if($page == "print_rt"){
+	include "print_data/print_rt.php";
+//berakhir Sampai Sini
+}else if($page == "print_pmt"){
+	include "print_data/print_pmt.php";
+//berakhir Sampai Sini
+}else if($page == "print_tu"){
+	include "print_data/print_tu.php";
+//berakhir Sampai Sini
+}else if($page == "print_ps"){
+	include "print_data/print_ps.php";
+//berakhir Sampai Sini
+}
+else if($page == "print_pt"){
+	include "print_data/print_pt.php";
+//berakhir Sampai Sini
+}else if($page == "print_dcair"){
+	include "print_data/print_dcair.php";
+//berakhir Sampai Sini
+}else if($page == "print_dclistrik"){
+	include "print_data/print_dclistrik.php";
+//berakhir Sampai Sini
+}else if($page == "print_ke"){
+	include "print_data/print_ke.php";
 //berakhir Sampai Sini
 }else if($page == "pmfa"){
 	include "data/pm_fire.php";

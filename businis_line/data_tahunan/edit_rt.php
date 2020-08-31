@@ -98,7 +98,7 @@
 	$jenis_kerjaan = @$_POST['jenis_kerjaan'];
 
 	$sumber = @$_FILES['gambar']['tmp_name'];
-	$target = 'img/';
+	$target = 'assets/img/';
 	$nama_gambar = @$_FILES['gambar']['name'];
 
 	$rekomendasi = @$_POST['rekomendasi'];

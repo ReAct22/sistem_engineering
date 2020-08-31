@@ -13,9 +13,9 @@
 		<a href="?page=pm_rt" class="w3-bar-item w3-button">PM ROOF TANK</a>
 		<a href="?page=pm_gt" class="w3-bar-item w3-button">PM GROUND TANK</a>
 	</nav>
-	<h1 style="margin-left: 30px;">PREVENTIF MAINTENANCE GRPUND TANK</h1>
+	<h1 style="margin-left: 30px;">PREVENTIF MAINTENANCE GROUND TANK</h1>
 	<a href="?page=tambah_gt" class="w3-bar-item w3-button w3-green"><i class="fas fa-plus"></i>Tambah Data</a>
-	<a href="" class="w3bar-item w3-button w3-blue"><i class="fas fa-print"></i>Print</a>
+	<a href="?page=print_gt" class="w3bar-item w3-button w3-blue"><i class="fas fa-print"></i>Print</a>
 
 	<form action="" method="post" class="d-none d-sm-inline-block form-inline ml-md-3 my-2 my-md-0 mw-100 navbar-search" style="float: right; margin-right: 50px;">
             <div class="input-group">
@@ -85,7 +85,7 @@
 			<td><?php echo date('d-m-y', strtotime($data['realisasi'])) ?></td>
 			<td><?php echo $data['nama_teknisi'] ?></td>
 			<td><?php echo $data['jenis_kerjaan'] ?></td>
-			<td><img src="img/<?php echo $data['gambar'] ?>" width="100" ></td>
+			<td><img src="assets/img/<?php echo $data['gambar'] ?>" width="100" ></td>
 			<td><?php echo $data['rekomendasi'] ?></td>
 			<td>
 				<a href="?page=edit_gt&id=<?php echo $data['id_gt']; ?>" class="btn btn-sm btn-primary"><i class="fas fa-edit"></i>Edit</a>

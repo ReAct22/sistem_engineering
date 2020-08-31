@@ -75,7 +75,7 @@
 			<td><?php echo $data['lokasi_utilitas'] ?></td>
 			<td><?php echo date('d-m-y',strtotime($data['rencana'])) ?></td>
 			<td><?php echo date('d-m-y',strtotime($data['realisasi'])) ?></td>
-			<td><img src="img/<?php echo $data['gambar'] ?>" width="100" height="50"></td>
+			<td><img src="assets/img/<?php echo $data['gambar'] ?>" width="100" height="50"></td>
 			<td>
 				<a href="?page=edit_pmelektrik&id=<?php echo $data['id_pmelektrik'] ?>" class="btn btn-sm btn-primary"><i class="fas fa-edit"></i>Edit</a>
 				<a href="?page=delete_pmelektrik&id=<?php echo $data['id_pmelektrik'] ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i>Hapus</a>

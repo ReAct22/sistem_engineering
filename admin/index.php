@@ -13,6 +13,7 @@
 
   <!-- Custom fonts for this template-->
   <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <!-- Custom styles for this template-->
@@ -29,11 +30,11 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/sistem_engineering/admin">
         <div class="sidebar-brand-icon rotate-n-15">
-          <i class="fas fa-laugh-wink"></i>
+          <i class="fas fa-cog"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+        <div class="sidebar-brand-text mx-3">Admin <sup></sup></div>
       </a>
 
       <!-- Divider -->
@@ -41,7 +42,7 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="/sistem_engineering/admin">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
       </li>
@@ -58,13 +59,20 @@
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
           <i class="fas fa-fw fa-cog"></i>
-          <span>Components</span>
+          <span>Complaine Online</span>
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Custom Components:</h6>
-            <a class="collapse-item" href="buttons.html">Buttons</a>
-            <a class="collapse-item" href="cards.html">Cards</a>
+            <h6 class="collapse-header">Compline</h6>
+            <a class="collapse-item" href="?page=">Sipil</a>
+            <a class="collapse-item" href="?page=">ME</a>
+            <a class="collapse-item" href="?page=">AC</a>
+            <h6 class="collapse-header">Data Pemakaian</h6>
+            <a class="collapse-item" href="?page=">Data Air</a>
+            <a class="collapse-item" href="?page=">Data Listrik</a>
+            <h6 class="collapse-header">Data Pencatatan</h6>
+            <a class="collapse-item" href="?page=">Data Air</a>
+            <a class="collapse-item" href="?page=">Data Listrik</a>
           </div>
         </div>
       </li>
@@ -77,14 +85,19 @@
         </a>
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Custom Utilities:</h6>
-            <a class="collapse-item" href="utilities-color.html">Colors</a>
-            <a class="collapse-item" href="utilities-border.html">Borders</a>
-            <a class="collapse-item" href="utilities-animation.html">Animations</a>
-            <a class="collapse-item" href="utilities-other.html">Other</a>
+            <h6 class="collapse-header">Data Utilities:</h6>
+            <a class="collapse-item" href="?page=elektrical">Electrical</a>
+            <a class="collapse-item" href="?page=lift">Lift</a>
+            <a class="collapse-item" href="?page=ac_pa">AC Public Area</a>
+            <a class="collapse-item" href="?page=generator">Generator Set</a>
+            <a class="collapse-item" href="?page=du_trafo">Trafo</a>
+            <a class="collapse-item" href="?page=pompa">Pompa</a>
+            <a class="collapse-item" href="?page=dume">ME</a>
           </div>
         </div>
       </li>
+
+
 
       <!-- Divider -->
       <hr class="sidebar-divider">
@@ -98,18 +111,35 @@
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
           <i class="fas fa-fw fa-folder"></i>
-          <span>Pages</span>
+          <span>Preventif Maintenance</span>
         </a>
         <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Login Screens:</h6>
-            <a class="collapse-item" href="login.html">Login</a>
-            <a class="collapse-item" href="register.html">Register</a>
-            <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
+            <h6 class="collapse-header">Bulanan</h6>
+            <a class="collapse-item" href="?page=bulanan">PM AC Pubic Area</a>
+            <a class="collapse-item" href="?page=acten">PM AC Tenant</a>
+            <a class="collapse-item" href="?page=pmlift">PM Lift</a>
+            <a class="collapse-item" href="?page=pm_stp">PM STP</a>
             <div class="collapse-divider"></div>
-            <h6 class="collapse-header">Other Pages:</h6>
-            <a class="collapse-item" href="404.html">404 Page</a>
-            <a class="collapse-item" href="blank.html">Blank Page</a>
+            <h6 class="collapse-header">3 Bulanan:</h6>
+            <a class="collapse-item" href="?page=3bulan">PM Elektrical</a>
+            <a class="collapse-item" href="?page=pmfa">PM Fire Alarm</a>
+            <a class="collapse-item" href="?page=pm_mecha">PM Mechanical</a>
+            <div class="collapse-divider"></div>
+            <h6 class="collapse-header">6 Bulanan:</h6>
+            <a class="collapse-item" href="?page=6bulan">PM GWT</a>
+            <a class="collapse-item" href="?page=preasure_fan">PM Preasure Fan</a>
+            <div class="collapse-divider"></div>
+            <h6 class="collapse-header">Tahunan</h6>
+            <a class="collapse-item" href="?page=pm_pt">PM PANLE TM</a>
+            <a class="collapse-item" href="?page=pm_trafo">PM TRAFO</a>
+            <a class="collapse-item" href="?page=pm_pl">PM PANEL LVMDP</a>
+            <a class="collapse-item" href="?page=pm_geset">PM GESET</a>
+            <a class="collapse-item" href="?page=pm_ps">PM POOL SANDFILTER</a>
+            <a class="collapse-item" href="?page=pm_infrared">PM INFRARED</a>
+            <a class="collapse-item" href="?page=pm_tu">PM TES UDARA</a>
+            <a class="collapse-item" href="?page=pm_rt">PM ROOF TANK</a>
+            <a class="collapse-item" href="?page=pm_gt">PM GROUND TANK</a>
           </div>
         </div>
       </li>
@@ -154,16 +184,7 @@
           </button>
 
           <!-- Topbar Search -->
-          <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-            <div class="input-group">
-              <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
-              <div class="input-group-append">
-                <button class="btn btn-primary" type="button">
-                  <i class="fas fa-search fa-sm"></i>
-                </button>
-              </div>
-            </div>
-          </form>
+          
 
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
@@ -189,110 +210,7 @@
             </li>
 
             <!-- Nav Item - Alerts -->
-            <li class="nav-item dropdown no-arrow mx-1">
-              <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-bell fa-fw"></i>
-                <!-- Counter - Alerts -->
-                <span class="badge badge-danger badge-counter">3+</span>
-              </a>
-              <!-- Dropdown - Alerts -->
-              <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
-                <h6 class="dropdown-header">
-                  Alerts Center
-                </h6>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <div class="mr-3">
-                    <div class="icon-circle bg-primary">
-                      <i class="fas fa-file-alt text-white"></i>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="small text-gray-500">December 12, 2019</div>
-                    <span class="font-weight-bold">A new monthly report is ready to download!</span>
-                  </div>
-                </a>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <div class="mr-3">
-                    <div class="icon-circle bg-success">
-                      <i class="fas fa-donate text-white"></i>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="small text-gray-500">December 7, 2019</div>
-                    $290.29 has been deposited into your account!
-                  </div>
-                </a>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <div class="mr-3">
-                    <div class="icon-circle bg-warning">
-                      <i class="fas fa-exclamation-triangle text-white"></i>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="small text-gray-500">December 2, 2019</div>
-                    Spending Alert: We've noticed unusually high spending for your account.
-                  </div>
-                </a>
-                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
-              </div>
-            </li>
-
-            <!-- Nav Item - Messages -->
-            <li class="nav-item dropdown no-arrow mx-1">
-              <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-envelope fa-fw"></i>
-                <!-- Counter - Messages -->
-                <span class="badge badge-danger badge-counter">7</span>
-              </a>
-              <!-- Dropdown - Messages -->
-              <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
-                <h6 class="dropdown-header">
-                  Message Center
-                </h6>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <div class="dropdown-list-image mr-3">
-                    <img class="rounded-circle" src="https://source.unsplash.com/fn_BT9fwg_E/60x60" alt="">
-                    <div class="status-indicator bg-success"></div>
-                  </div>
-                  <div class="font-weight-bold">
-                    <div class="text-truncate">Hi there! I am wondering if you can help me with a problem I've been having.</div>
-                    <div class="small text-gray-500">Emily Fowler · 58m</div>
-                  </div>
-                </a>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <div class="dropdown-list-image mr-3">
-                    <img class="rounded-circle" src="https://source.unsplash.com/AU4VPcFN4LE/60x60" alt="">
-                    <div class="status-indicator"></div>
-                  </div>
-                  <div>
-                    <div class="text-truncate">I have the photos that you ordered last month, how would you like them sent to you?</div>
-                    <div class="small text-gray-500">Jae Chun · 1d</div>
-                  </div>
-                </a>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <div class="dropdown-list-image mr-3">
-                    <img class="rounded-circle" src="https://source.unsplash.com/CS2uCrpNzJY/60x60" alt="">
-                    <div class="status-indicator bg-warning"></div>
-                  </div>
-                  <div>
-                    <div class="text-truncate">Last month's report looks great, I am very happy with the progress so far, keep up the good work!</div>
-                    <div class="small text-gray-500">Morgan Alvarez · 2d</div>
-                  </div>
-                </a>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <div class="dropdown-list-image mr-3">
-                    <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60" alt="">
-                    <div class="status-indicator bg-success"></div>
-                  </div>
-                  <div>
-                    <div class="text-truncate">Am I a good boy? The reason I ask is because someone told me that people say this to all dogs, even if they aren't good...</div>
-                    <div class="small text-gray-500">Chicken the Dog · 2w</div>
-                  </div>
-                </a>
-                <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
-              </div>
-            </li>
-
+            
             <div class="topbar-divider d-none d-sm-block"></div>
 
             <!-- Nav Item - User Information -->
@@ -331,299 +249,300 @@
         <!-- Begin Page Content -->
         <div class="container-fluid">
 
-          <!-- Page Heading -->
-          <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
-          </div>
 
-          <!-- Content Row -->
-          <div class="row">
-
-            <!-- Earnings (Monthly) Card Example -->
-            <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-primary shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Earnings (Monthly)</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
-                    </div>
-                    <div class="col-auto">
-                      <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Earnings (Monthly) Card Example -->
-            <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-success shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Earnings (Annual)</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">$215,000</div>
-                    </div>
-                    <div class="col-auto">
-                      <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Earnings (Monthly) Card Example -->
-            <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-info shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Tasks</div>
-                      <div class="row no-gutters align-items-center">
-                        <div class="col-auto">
-                          <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
-                        </div>
-                        <div class="col">
-                          <div class="progress progress-sm mr-2">
-                            <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-auto">
-                      <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Pending Requests Card Example -->
-            <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-warning shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Pending Requests</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
-                    </div>
-                    <div class="col-auto">
-                      <i class="fas fa-comments fa-2x text-gray-300"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          
 
           <!-- Content Row -->
 
-          <div class="row">
 
-            <!-- Area Chart -->
-            <div class="col-xl-8 col-lg-7">
-              <div class="card shadow mb-4">
-                <!-- Card Header - Dropdown -->
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6>
-                  <div class="dropdown no-arrow">
-                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                      <div class="dropdown-header">Dropdown Header:</div>
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                  </div>
-                </div>
-                <!-- Card Body -->
-                <div class="card-body">
-                  <div class="chart-area">
-                    <canvas id="myAreaChart"></canvas>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <?php 
+$page = @$_GET['page'];
 
-            <!-- Pie Chart -->
-            <div class="col-xl-4 col-lg-5">
-              <div class="card shadow mb-4">
-                <!-- Card Header - Dropdown -->
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Revenue Sources</h6>
-                  <div class="dropdown no-arrow">
-                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                      <div class="dropdown-header">Dropdown Header:</div>
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                  </div>
-                </div>
-                <!-- Card Body -->
-                <div class="card-body">
-                  <div class="chart-pie pt-4 pb-2">
-                    <canvas id="myPieChart"></canvas>
-                  </div>
-                  <div class="mt-4 text-center small">
-                    <span class="mr-2">
-                      <i class="fas fa-circle text-primary"></i> Direct
-                    </span>
-                    <span class="mr-2">
-                      <i class="fas fa-circle text-success"></i> Social
-                    </span>
-                    <span class="mr-2">
-                      <i class="fas fa-circle text-info"></i> Referral
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+if($page == ""){
+  include "views/beranda.php";
+}else if($page == "bulanan"){
+  include "views/data_bulanan.php";
+}else if($page == "elektrical"){
+  include "views/data_elektrical.php";
+}else if($page == "lift"){
+  include "views/data_lift.php";
+}else if($page == "ac_pa"){
+  include "views/data_acpa.php";
+}else if($page == "generator"){
+  include "views/data_generator.php";
+}else if($page == "du_trafo"){
+  include "views/data_dutrafo.php";
+}else if($page == "pompa"){
+  include "views/data_pompa.php";
+}else if($page == "tambah_elektrical"){
+  include "views/tambah_elektrical.php";
+}else if($page == "edit_elektrical"){
+  include "views/edit_elektrical.php";
+}else if($page == "hapus_elektrical"){
+  include "views/hapus_elektrical.php";
+}else if($page == "tambah_lift"){
+  include "views/tambah_lift.php";
+}else if($page == "edit_lift"){
+  include "views/edit_lift.php";
+}else if($page == "delete_lift"){
+  include "views/hapus_lift.php";
+}else if($page == "tambah_acpa"){
+  include "views/tambah_acpa.php";
+}else if($page == "edit_acpa"){
+  include "views/edit_acpa.php";
+}else if($page == "delete_acpa"){
+  include "views/hapus_acpa.php";
+}else if($page == "tambah_generator"){
+  include "views/tambah_generator.php";
+}else if($page == "edit_genset"){
+  include "views/edit_genset.php";
+}else if($page == "delete_genset"){
+  include "views/hapus_genset.php";
+}else if($page == "tambah_dutrafo"){
+  include "views/tambah_dutrafo.php";
+}else if($page == "edit_dutrafo"){
+  include "views/edit_dutrafo.php";
+}else if($page == "delete_dutrafo"){
+  include "views/hapus_dutrafo.php";
+}else if($page == "tambah_pompa"){
+  include "views/tambah_pompa.php";
+}else if($page == "edit_pompa"){
+  include "views/edit_pompa.php";
+}else if($page == "delete_pompa"){
+  include "views/hapus_pompa.php";
+}else if($page == "acten"){
+  include "data/tenant.php";
+}else if($page == "pmlift"){
+  include "data/pmlift.php";
+}else if($page == "tambah_pmlift"){
+  include "data/tambah_pmlift.php";
+}else if($page == "tambah_actenant"){
+  include "data/tambah_tenant.php";
+}else if($page == "tambah_pmac"){
+  include "data/tambah_pmac.php";
+}else if($page == "3bulan"){
+  include "data/data_3bulanan.php";
+}else if($page == "tambah_pmelek"){
+  include "data/tambah_pmelektrik.php";
+}else if($page == "pm_mecha"){
+  include "data/pm_mecha.php";
+}else if($page == "tambah_mecha"){
+  include "data/tambah_pm_mecha.php";
+}else if($page == "edit_pmelektrik"){
+  include "data/edit_pmelektrik.php";
+}else if($page == "edit_mecha"){
+  include "data/edit_mecha.php";
+}else if($page == "delete_mecha"){
+  include "data/hapus_mecha.php";
+}else if($page == "delete_pmelektrik"){
+  include "data/hapus_elektrik.php";
+//Aksi data untuk Print
+}else if($page == "print_acpa"){
+  include "print_data/print_acpa.php";
+}else if($page == "print_elektrical"){
+  include "print_data/print_elektrical.php";
+}else if($page == "print_lift"){
+  include "print_data/print_lift.php";
+}else if($page == "print_genset"){
+  include "print_data/print_genset.php";
+}else if($page == "print_trafo"){
+  include "print_data/print_trafo.php";
+}else if($page == "print_pompa"){
+  include "print_data/print_pompa.php";
+}else if($page == "print_pmac"){
+  include "print_data/print_pmac.php";
+}else if($page == "print_pmtenant"){
+  include "print_data/print_pmtenant.php";
+}else if($page == "print_pmlift"){
+  include "print_data/print_pmlift.php";
+}else if($page == "print_pmel"){
+  include "print_data/print_pmel.php";
+}else if($page == "print_pmmecha"){
+  include "print_data/print_pmel.php";
+}else if($page == "print_pmfa"){
+  include "print_data/print_pmmecha.php";
+}else if($page == "print_pmli"){
+  include "print_data/print_pmlift.php";
 
-          <!-- Content Row -->
-          <div class="row">
-
-            <!-- Content Column -->
-            <div class="col-lg-6 mb-4">
-
-              <!-- Project Card Example -->
-              <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">Projects</h6>
-                </div>
-                <div class="card-body">
-                  <h4 class="small font-weight-bold">Server Migration <span class="float-right">20%</span></h4>
-                  <div class="progress mb-4">
-                    <div class="progress-bar bg-danger" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <h4 class="small font-weight-bold">Sales Tracking <span class="float-right">40%</span></h4>
-                  <div class="progress mb-4">
-                    <div class="progress-bar bg-warning" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <h4 class="small font-weight-bold">Customer Database <span class="float-right">60%</span></h4>
-                  <div class="progress mb-4">
-                    <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <h4 class="small font-weight-bold">Payout Details <span class="float-right">80%</span></h4>
-                  <div class="progress mb-4">
-                    <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <h4 class="small font-weight-bold">Account Setup <span class="float-right">Complete!</span></h4>
-                  <div class="progress">
-                    <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Color System -->
-              <div class="row">
-                <div class="col-lg-6 mb-4">
-                  <div class="card bg-primary text-white shadow">
-                    <div class="card-body">
-                      Primary
-                      <div class="text-white-50 small">#4e73df</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                  <div class="card bg-success text-white shadow">
-                    <div class="card-body">
-                      Success
-                      <div class="text-white-50 small">#1cc88a</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                  <div class="card bg-info text-white shadow">
-                    <div class="card-body">
-                      Info
-                      <div class="text-white-50 small">#36b9cc</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                  <div class="card bg-warning text-white shadow">
-                    <div class="card-body">
-                      Warning
-                      <div class="text-white-50 small">#f6c23e</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                  <div class="card bg-danger text-white shadow">
-                    <div class="card-body">
-                      Danger
-                      <div class="text-white-50 small">#e74a3b</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                  <div class="card bg-secondary text-white shadow">
-                    <div class="card-body">
-                      Secondary
-                      <div class="text-white-50 small">#858796</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                  <div class="card bg-light text-black shadow">
-                    <div class="card-body">
-                      Light
-                      <div class="text-black-50 small">#f8f9fc</div>
-                    </div>
-                  </div>
-              </div>
-              <div class="col-lg-6 mb-4">
-                <div class="card bg-dark text-white shadow">
-                  <div class="card-body">
-                      Dark
-                      <div class="text-white-50 small">#5a5c69</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            </div>
-
-            <div class="col-lg-6 mb-4">
-
-              <!-- Illustrations -->
-              <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">Illustrations</h6>
-                </div>
-                <div class="card-body">
-                  <div class="text-center">
-                    <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;" src="img/undraw_posting_photo.svg" alt="">
-                  </div>
-                  <p>Add some quality, svg illustrations to your project courtesy of <a target="_blank" rel="nofollow" href="https://undraw.co/">unDraw</a>, a constantly updated collection of beautiful svg images that you can use completely free and without attribution!</p>
-                  <a target="_blank" rel="nofollow" href="https://undraw.co/">Browse Illustrations on unDraw &rarr;</a>
-                </div>
-              </div>
-
-              <!-- Approach -->
-              <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">Development Approach</h6>
-                </div>
-                <div class="card-body">
-                  <p>SB Admin 2 makes extensive use of Bootstrap 4 utility classes in order to reduce CSS bloat and poor page performance. Custom CSS classes are used to create custom components and custom utility classes.</p>
-                  <p class="mb-0">Before working with this theme, you should become familiar with the Bootstrap framework, especially the utility classes.</p>
-                </div>
-              </div>
-
-            </div>
-          </div>
+}else if($page == "print_gwt"){
+  include "print_data/print_gwt.php";
+//berakhir Sampai Sini
+}else if($page == "print_pf"){
+  include "print_data/print_pf.php";
+//berakhir Sampai Sini
+}else if($page == "print_infrared"){
+  include "print_data/print_infrared.php";
+//berakhir Sampai Sini
+}else if($page == "print_pl"){
+  include "print_data/print_pl.php";
+//berakhir Sampai Sini
+}else if($page == "print_geset"){
+  include "print_data/print_geset.php";
+//berakhir Sampai Sini
+}else if($page == "print_gt"){
+  include "print_data/print_gt.php";
+//berakhir Sampai Sini
+}else if($page == "print_rt"){
+  include "print_data/print_rt.php";
+//berakhir Sampai Sini
+}else if($page == "print_pmt"){
+  include "print_data/print_pmt.php";
+//berakhir Sampai Sini
+}else if($page == "print_tu"){
+  include "print_data/print_tu.php";
+//berakhir Sampai Sini
+}else if($page == "print_ps"){
+  include "print_data/print_ps.php";
+//berakhir Sampai Sini
+}
+else if($page == "print_pt"){
+  include "print_data/print_pt.php";
+//berakhir Sampai Sini
+}else if($page == "print_dcair"){
+  include "print_data/print_dcair.php";
+//berakhir Sampai Sini
+}else if($page == "print_dclistrik"){
+  include "print_data/print_dclistrik.php";
+//berakhir Sampai Sini
+}else if($page == "print_ke"){
+  include "print_data/print_ke.php";
+//berakhir Sampai Sini
+}else if($page == "pmfa"){
+  include "data/pm_fire.php";
+}else if($page == "pc_air"){
+  include "catatan/data_dcair.php";
+}else if($page == "tambah_air"){
+  include "catatan/tambah_dcair.php";
+}else if($page == "edit_dcair"){
+  include "catatan/edit_dcair.php";
+}else if($page == "delete_air"){
+  include "catatan/hapus_dcair.php";
+}else if($page == "pc_dclistrik"){
+  include "catatan/data_dclistrik.php";
+}else if($page == "tambah_dclistrik"){
+  include "catatan/tambah_dclistrik.php";
+}else if($page == "edit_dclistrik"){
+  include "catatan/edit_dclistrik.php";
+}else if($page == "delete_dclistrik"){
+  include "catatan/hapus_dclistrik.php";
+}else if($page == "tambah_fa"){
+  include "data/tambah_fa.php";
+}else if($page == "edit_fa"){
+  include "data/edit_fa.php";
+}else if($page == "delete_fa"){
+  include "data/hapus_fa.php";
+}else if($page == "6bulan"){
+  include "data/6bulanan.php";
+}else if($page == "tambah_gwt"){
+  include "data/tambah_gwt.php";
+}else if($page == "edit_gwt"){
+  include "data/edit_gwt.php";
+}else if($page == "delete_gwt"){
+  include "data/hapus_gwt.php";
+}else if($page == "preasure_fan"){
+  include "data/data_preasure_fan.php";
+}else if($page == "tambah_preasure_fan"){
+  include "data/tambah_preasure_fan.php";
+}else if($page == "edit_pf"){
+  include "data/edit_pf.php";
+}else if($page == "delete_pf"){
+  include "data/hapus_pf.php";
+}else if($page == "pm_pt"){
+  include "data_tahunan/data_panel_tm.php";
+}else if($page == "tambah_pt"){
+  include "data_tahunan/tambah_pt.php";
+}else if($page == "edit_pt"){
+  include "data_tahunan/edit_pt.php";
+}else if($page == "delete_pt"){
+  include "data_tahunan/hapus_pt.php";
+}else if($page == "pm_trafo"){
+  include "data_tahunan/data_pm_trafo.php";
+}else if($page == "tambah_pmtrafo"){
+  include "data_tahunan/tambah_pmtrafo.php";
+}else if($page == "edit_pmtrafo"){
+  include "data_tahunan/edit_pmtrafo.php";
+}else if($page == "delete_pmtrafo"){
+  include "data_tahunan/hapus_pmtrafo.php";
+}else if($page == "pm_pl"){
+  include "data_tahunan/data_panel_lvmdp.php";
+}else if($page == "tambah_pl"){
+  include "data_tahunan/tambah_pl.php";
+}else if($page == "edit_pl"){
+  include "data_tahunan/edit_pl.php";
+}else if($page == "delete_pl"){
+  include "data_tahunan/hapus_pl.php";
+}else if($page == "pm_geset"){
+  include "data_tahunan/data_pm_geset.php";
+}else if($page == "tambah_geset"){
+  include "data_tahunan/tambah_geset.php";
+}else if($page == "edit_geset"){
+  include "data_tahunan/edit_geset.php";
+}else if($page == "delete_geset"){
+  include "data_tahunan/hapus_geset.php";
+}else if($page == "pm_ps"){
+  include "data_tahunan/data_pool_sandfilter.php";
+}else if($page == "tambah_ps"){
+  include "data_tahunan/tambah_ps.php";
+}else if($page == "edit_ps"){
+  include "data_tahunan/edit_ps.php";
+}else if($page == "delete_ps"){
+  include "data_tahunan/hapus_ps.php";
+}else if($page == "pm_infrared"){
+  include "data_tahunan/data_infrared.php";
+}else if($page == "tambah_infrared"){
+  include "data_tahunan/tambah_infrared.php";
+}else if($page == "edit_infrared"){
+  include "data_tahunan/edit_infrared.php";
+}else if($page == "delete_infrared"){
+  include "data_tahunan/hapus_infrared.php";
+}else if($page == "pm_tu"){
+  include "data_tahunan/data_pm_tu.php";
+}else if($page == "tambah_tu"){
+  include "data_tahunan/tambah_tu.php";
+}else if($page == "edit_tu"){
+  include "data_tahunan/edit_tu.php";
+}else if($page == "delete_tu"){
+  include "data_tahunan/hapus_tu.php";
+}else if($page == "pm_rt"){
+  include "data_tahunan/data_pm_rooftank.php";
+}else if($page == "tambah_rt"){
+  include "data_tahunan/tambah_rt.php";
+}else if($page == "edit_rt"){
+  include "data_tahunan/edit_rt.php";
+}else if($page == "delete_rt"){
+  include "data_tahunan/hapus_rt.php";
+}else if($page == "pm_gt"){
+  include "data_tahunan/data_pm_gt.php";
+}else if($page == "tambah_gt"){
+  include "data_tahunan/tambah_gt.php";
+}else if($page == "edit_gt"){
+  include "data_tahunan/edit_gt.php";
+}else if($page == "delete_gt"){
+  include "data_tahunan/hapus_gt.php";
+}else if($page == "data_ke"){
+  include "data_karyawaan/data_ke.php";
+}else if($page == "tambah_ke"){
+  include "data_karyawaan/tambah_ke.php";
+}else if($page == "edit_ke"){
+  include "data_karyawaan/edit_ke.php";
+}else if($page == "delete_ke"){
+  include "data_karyawaan/hapus_ke.php";
+}else if($page == "dume"){
+  include "views/data_dume.php";
+}else if($page == "tambah_dume"){
+  include "views/tambah_dume.php";
+}else if($page == "edit_dume"){
+  include "views/edit_dume.php";
+}else if($page == "delete_dume"){
+  include "views/hapus_dume.php";
+}else if($page == "pm_stp"){
+  include "views/data_stp.php";
+}else if($page == "tambah_stp"){
+  include "views/tambah_stp.php";
+}else{
+  include "views/404.php";
+}
+?>     
 
         </div>
         <!-- /.container-fluid -->
