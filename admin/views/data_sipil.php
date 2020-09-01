@@ -26,6 +26,7 @@ include "config/koneksi.php";
 		<th>Unit</th>
 		<th>Kompline</th>
 		<th>Keterangan</th>
+		<th>Opsi</th>
 	</tr>
 	<?php 
 	$no =1;
@@ -69,6 +70,10 @@ include "config/koneksi.php";
 		<td><?php echo $data['unit']; ?></td>
 		<td><?php echo $data['complaine']; ?></td>
 		<td><?php echo $data['keterangan']; ?></td>
+		<td>
+			<a href="" class="btn btn-sm btn-primary">Edit</a>
+			<a href="" class="btn btn-sm btn-danger">DELETE</a>
+		</td>
 	</tr>
 	<?php 
 		}
