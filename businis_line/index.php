@@ -231,6 +231,12 @@ else if($page == "print_pt"){
 }else if($page == "print_ke"){
 	include "print_data/print_ke.php";
 //berakhir Sampai Sini
+}else if($page == "print_stp"){
+	include "print_data/print_stp.php";
+//berakhir Sampai Sini
+}else if($page == "print_dume"){
+	include "print_data/print_dume.php";
+//berakhir Sampai Sini
 }else if($page == "pmfa"){
 	include "data/pm_fire.php";
 }else if($page == "pc_air"){

@@ -1,3 +1,8 @@
+<?php 
+@session_start();
+include "../config/koneksi.php";
+if(@$_SESSION['admin']){
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -228,11 +233,19 @@
             <!-- Nav Item - Alerts -->
             
             <div class="topbar-divider d-none d-sm-block"></div>
+            <?php 
+            if(@$_SESSION['admin']){
+              $user_login = @$_SESSION['admin'];
+            }
+
+            $sql_login = mysqli_query($koneksi,"select *from tb_staff where id_staff = '$user_login'");
+            $data = mysqli_fetch_array($sql_login);
+            ?>
 
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Valerie Luna</span>
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $data['nama_staff'] ?></span>
                 <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
               </a>
               <!-- Dropdown - User Information -->
@@ -250,7 +263,7 @@
                   Activity Log
                 </a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                <a class="dropdown-item" href="logout.php" data-toggle="modal" data-target="#logoutModal">
                   <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                   Logout
                 </a>
@@ -635,8 +648,12 @@ else if($page == "print_pt"){
   include "views/hapus_sipil.php";
 }else if($page == "edit_listrik"){
   include "views/edit_listrik.php";
-}else if($page == "hapus_dplistrik"){
-  include "views/hapus_dplistrik.php";
+}else if($page == "print_stp"){
+  include "print_data/print_stp.php";
+//berakhir Sampai Sini
+}else if($page == "print_dume"){
+  include "print_data/print_dume.php";
+//berakhir Sampai Sini
 }else{
   include "views/404.php";
 }
@@ -676,7 +693,7 @@ else if($page == "print_pt"){
         <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="login.html">Logout</a>
+          <a class="btn btn-primary" href="logout.php">Logout</a>
         </div>
       </div>
     </div>
@@ -702,3 +719,8 @@ else if($page == "print_pt"){
 </body>
 
 </html>
+<?php
+}else{
+  header("location: login.php");
+}
+?>

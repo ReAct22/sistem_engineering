@@ -1,3 +1,10 @@
+<?php 
+  @session_start();
+include "../config/koneksi.php";
+if(@$_SESSION['admin']){
+  header("location:index.php");
+}else{
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,12 +46,12 @@
                   <div class="text-center">
                     <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                   </div>
-                  <form class="user">
+                  <form action="" method="post" class="user">
                     <div class="form-group">
-                      <input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address...">
+                      <input type="text" name="username" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address...">
                     </div>
                     <div class="form-group">
-                      <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
+                      <input type="password" name="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
                     </div>
                     <div class="form-group">
                       <div class="custom-control custom-checkbox small">
@@ -52,24 +59,40 @@
                         <label class="custom-control-label" for="customCheck">Remember Me</label>
                       </div>
                     </div>
-                    <a href="index.html" class="btn btn-primary btn-user btn-block">
-                      Login
-                    </a>
-                    <hr>
-                    <a href="index.html" class="btn btn-google btn-user btn-block">
-                      <i class="fab fa-google fa-fw"></i> Login with Google
-                    </a>
-                    <a href="index.html" class="btn btn-facebook btn-user btn-block">
-                      <i class="fab fa-facebook-f fa-fw"></i> Login with Facebook
-                    </a>
+                    <input type="submit" name="login" class="btn btn-primary btn-user btn-block">
                   </form>
-                  <hr>
-                  <div class="text-center">
-                    <a class="small" href="forgot-password.html">Forgot Password?</a>
-                  </div>
-                  <div class="text-center">
-                    <a class="small" href="register.html">Create an Account!</a>
-                  </div>
+                  <?php 
+                  $user = @$_POST['username'];
+                  $pass = @$_POST['password'];
+                  $login = @$_POST['login'];
+
+                  if($login){
+                    if($user == "" || $pass == ""){
+                      ?>
+                        <script type="text/javascript">
+                          alert("Username atau Password tidak boleh kosong");
+                        </script>
+                      <?php
+                    }else{
+                  $sql = mysqli_query($koneksi,"select *from tb_staff where username = '$user' and password = '$pass'");
+                  $data = mysqli_fetch_array($sql);
+                  $cek = mysqli_num_rows($sql);
+
+                  if($cek >=1){
+                    if($data['level'] == "admin"){
+                      @$_SESSION['admin'] = $data['id_staff'];
+                      header("location: index.php");
+                    }
+                  }else{
+                    ?>
+                    <script type="text/javascript">
+                      alert("Password / username salah");
+                    </script>
+                    <?php
+                  }
+                }
+                  }
+                  ?>
                 </div>
               </div>
             </div>
@@ -95,3 +118,6 @@
 </body>
 
 </html>
+<?php 
+}
+?>
