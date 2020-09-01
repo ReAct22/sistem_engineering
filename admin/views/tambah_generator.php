@@ -1,5 +1,5 @@
 <?php 
-include "config/koneksi.php";
+include "../config/koneksi.php";
 $query = mysqli_query($koneksi,"select max(id_generator_set) as kodeGenset from du_generator_set");
 		$data = mysqli_fetch_array($query);
 		$kodeGen = $data['kodeGenset'];

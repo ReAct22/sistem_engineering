@@ -1,5 +1,5 @@
 <?php 
-include "config/koneksi.php";
+include "../config/koneksi.php";
 $query = mysqli_query($koneksi,"select max(id_trafo) as kodeTrafo from du_trafo");
 		$data = mysqli_fetch_array($query);
 		$kodeTrafo = $data['kodeTrafo'];

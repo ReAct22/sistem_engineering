@@ -1,5 +1,5 @@
 <?php 
-	include "config/koneksi.php";
+	include "../config/koneksi.php";
 ?>
 <div class="card-body">
 	<h2>Input data PM ELEKTRICAL</h2>

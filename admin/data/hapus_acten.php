@@ -1,5 +1,5 @@
 <?php 
-	include "config/koneksi.php";
+	include "../config/koneksi.php";
 
 	$idten = @$_GET['id'];
 	mysqli_query($koneksi,"delete from pm_acten where id_acten = '$idten'");

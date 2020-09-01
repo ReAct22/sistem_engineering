@@ -1,5 +1,5 @@
 <?php 
-include "config/koneksi.php";
+include "../config/koneksi.php";
 	 $idcom = @$_GET['id'];
 	 $sql = mysqli_query($koneksi,"select *from co_me where id_complaine = '$idcom'");
 	 $data = mysqli_fetch_array($sql);

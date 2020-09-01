@@ -1,5 +1,5 @@
 <?php 
-	include "config/koneksi.php";
+	include "../config/koneksi.php";
 ?>
 <div style="margin-left: 30px;">
 	<h1 style="margin-left: 30px;">DATA PENCATATAN LISTRIK</h1>
@@ -56,7 +56,7 @@
 	if($cek < 1){
 		?>
 			<tr>
-				<td colspan="7" style="padding: 10px; text-align: center;">Data Tidak Ditemukan</td>
+				<td colspan="8" style="padding: 10px; text-align: center;">Data Tidak Ditemukan</td>
 			</tr>
 		<?php
 	}else{

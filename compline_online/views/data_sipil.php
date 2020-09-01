@@ -1,5 +1,5 @@
 <?php 
-include "config/koneksi.php";
+include "../config/koneksi.php";
 ?>
 <h3 style="margin-top: 100px;" class="ml-3">Data Sipil</h3>
 <br>

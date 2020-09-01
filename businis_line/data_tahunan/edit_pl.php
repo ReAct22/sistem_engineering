@@ -1,5 +1,5 @@
 <?php
-
+include "../config/koneksi.php";
 	$idpl = @$_GET['id'];
 	$sql = mysqli_query($koneksi,"select *from pm_pl where id_pl = '$idpl'");
 	$data = mysqli_fetch_array($sql);

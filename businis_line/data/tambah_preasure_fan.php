@@ -1,4 +1,5 @@
 <?php 
+include "../config/koneksi.php";
 	$query = mysqli_query($koneksi,"select max(id_pf) as kodePMP from pm_preasure_fan");
 		$data = mysqli_fetch_array($query);
 		$kodePMP = $data['kodePMP'];

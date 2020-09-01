@@ -1,5 +1,5 @@
 <?php 
-	include "config/koneksi.php";
+	include "../config/koneksi.php";
 	$query = mysqli_query($koneksi,"select max(id_acten) as kodePMT from pm_acten");
 		$data = mysqli_fetch_array($query);
 		$kodePMT = $data['kodePMT'];

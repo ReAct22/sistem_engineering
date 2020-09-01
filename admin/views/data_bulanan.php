@@ -1,5 +1,5 @@
 <?php 
-	include "config/koneksi.php";
+	include "../config/koneksi.php";
 ?>
 <div style="margin-left: 30px;">
 	<h1 style="margin-left: 30px;">PREVENTIF MAINTENANCE AC Public Area</h1>

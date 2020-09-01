@@ -1,5 +1,5 @@
 <?php 
-	include "config/koneksi.php";
+	include "../config/koneksi.php";
 ?>
 <div style="margin-left: 30px;">
 	<nav class="w3-blok-item w3-padding">

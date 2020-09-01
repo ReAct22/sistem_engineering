@@ -1,5 +1,5 @@
  <?php 
-  include "config/koneksi.php";
+  include "../config/koneksi.php";
   $iduser = @$_GET['id'];
   $sql = mysqli_query($koneksi,"select *from tb_user where id_user = '$iduser'");
   $data = mysqli_fetch_array($sql);

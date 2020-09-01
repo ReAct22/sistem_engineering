@@ -1,5 +1,5 @@
 <?php 
-include "config/koneksi.php";
+include "../config/koneksi.php";
 ?>
 <h3 style="margin-top: 70px;" class="ml-3">Data Pemakaian Listrik</h3>
 <br>

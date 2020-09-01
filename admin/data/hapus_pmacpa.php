@@ -1,5 +1,5 @@
 <?php 
-include "config/koneksi.php";
+include "../config/koneksi.php";
 	$idac = @$_GET['id'];
 
 	mysqli_query($koneksi,"delete from pm_acap where id_pmac = '$idac'");

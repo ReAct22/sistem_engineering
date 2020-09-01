@@ -1,5 +1,5 @@
 <?php 
-	include "config/koneksi.php";
+	include "../config/koneksi.php";
 ?>
 <h3 class="ml-3" style="margin-top: 70px;">Insert Compline ME</h3>
 <?php 

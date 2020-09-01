@@ -1,5 +1,5 @@
 <?php
-
+include "../config/koneksi.php";
 	$idpf = @$_GET['id'];
 	$sql = mysqli_query($koneksi,"select *from pm_preasure_fan where id_pf = '$idpf'");
 	$data = mysqli_fetch_array($sql);

@@ -1,5 +1,5 @@
 <?php 
-	include "config/koneksi.php";
+	include "../config/koneksi.php";
 	$iduser = @$_GET['id'];
 	mysqli_query($koneksi,"delete from tb_user where id_user = '$iduser'");
 ?>

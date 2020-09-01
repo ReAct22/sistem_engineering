@@ -1,5 +1,5 @@
 <?php
-
+include "../config/koneksi.php";
 	$idif = @$_GET['id'];
 	$sql = mysqli_query($koneksi,"select *from pm_infrared where id_infrared = '$idif'");
 	$data = mysqli_fetch_array($sql);

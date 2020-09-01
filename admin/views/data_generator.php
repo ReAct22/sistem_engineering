@@ -1,5 +1,5 @@
 <?php 
-	include "config/koneksi.php";
+	include "../config/koneksi.php";
 ?>
 <div style="margin-left: 30px;">
 	<h2>Data Generator Set</h2>

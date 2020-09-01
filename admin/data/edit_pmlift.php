@@ -1,5 +1,5 @@
 <?php 
-	include "config/koneksi.php";
+	include "../config/koneksi.php";
 	$idlift = @$_GET['id'];
 	$sql = mysqli_query($koneksi,"select *from pm_lift where id_pmlift = '$idlift'");
 	$data = mysqli_fetch_array($sql);

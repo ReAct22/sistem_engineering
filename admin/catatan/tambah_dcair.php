@@ -1,5 +1,5 @@
 <?php 
-	include "config/koneksi.php";
+	include "../config/koneksi.php";
 	$query = mysqli_query($koneksi,"select max(id_air) as kodePC from dc_air");
 		$data = mysqli_fetch_array($query);
 		$kodePC = $data['kodePC'];

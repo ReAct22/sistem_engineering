@@ -1,5 +1,5 @@
 <?php 
-    include "config/koneksi.php";
+    include "../config/koneksi.php";
 ?>
  <div class="card-header bg-transparent mb-0"><h5 class="text-center">Please <span class="font-weight-bold text-primary">Register</span></h5></div>
             <div class="card-body">

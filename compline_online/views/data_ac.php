@@ -1,5 +1,5 @@
 <?php 
-	include "config/koneksi.php";
+	include "../config/koneksi.php";
 ?>
 <h3 style="margin-top: 70px;" class="ml-3">Data Air Conditioner</h3>
 <br>

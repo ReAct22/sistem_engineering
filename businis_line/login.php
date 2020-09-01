@@ -1,6 +1,6 @@
 <?php 
 @session_start();
-include "config/koneksi.php";
+include "../config/koneksi.php";
 if(@$_SESSION['engineering'] || @$_SESSION['tenant'] || @$_SESSION['security'] || @$_SESSION['gudang']){
   header("location:index.php");
 }else{

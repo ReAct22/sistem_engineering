@@ -1,5 +1,5 @@
 <?php 
-	include "config/koneksi.php";
+	include "../config/koneksi.php";
 	$idac = @$_GET['id'];
 	$sql = mysqli_query($koneksi,"select *from pm_acap where id_pmac = '$idac'");
 	$data = mysqli_fetch_array($sql);

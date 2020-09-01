@@ -1,5 +1,5 @@
 <?php 
-include "config/koneksi.php";
+include "../config/koneksi.php";
 $query = mysqli_query($koneksi,"select max(id_lift) as kodeLift from du_lift");
 		$data = mysqli_fetch_array($query);
 		$kodeLift = $data['kodeLift'];

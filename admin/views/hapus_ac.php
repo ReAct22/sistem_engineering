@@ -1,5 +1,5 @@
 <?php 
-	include "config/koneksi.php";
+	include "../config/koneksi.php";
 	$idcom = @$_GET['id'];
 	mysqli_query($koneksi,"delete from co_ac where id_complaine = '$idcom'");
 ?>

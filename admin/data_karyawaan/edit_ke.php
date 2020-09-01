@@ -1,4 +1,5 @@
 <?php 
+include "../config/koneksi.php";
 	$idke = @$_GET['id'];
 	$sql = mysqli_query($koneksi,"select *from tb_ke where id_ke = '$idke'");
 	$data = mysqli_fetch_array($sql);

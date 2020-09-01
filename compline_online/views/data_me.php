@@ -1,5 +1,5 @@
 <?php 
-	include "config/koneksi.php";
+	include "../config/koneksi.php";
 ?>
 <h3 style="margin-top: 100px;" class="ml-3">Data ME</h3>
 <br>

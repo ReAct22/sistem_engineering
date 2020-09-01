@@ -1,3 +1,6 @@
+<?php 
+include "../config/koneksi.php";
+?>
 <h3 class="ml-3" style="margin-top: 70px;">Insert Compline Air Condotioner</h3>
 <?php 
 $query = mysqli_query($koneksi,"select max(id_complaine) as kodeAC from co_ac");

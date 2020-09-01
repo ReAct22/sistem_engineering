@@ -1,4 +1,5 @@
 <?php 
+include "../config/koneksi.php";
 	$query = mysqli_query($koneksi,"select max(id_rt) as kodePML from pm_rt");
 		$data = mysqli_fetch_array($query);
 		$kodePML = $data['kodePML'];

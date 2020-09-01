@@ -1,3 +1,6 @@
+<?php 
+	include "../config/koneksi.php";
+?>
 <div style="margin-left: 30px;">
 <h1 style="margin-left: 30px;">DATA KARYAWAN ENGINEERING</h1>
 	<a href="?page=tambah_ke" class="w3-bar-item w3-button w3-green"><i class="fas fa-plus"></i>Tambah Data</a>

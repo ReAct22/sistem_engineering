@@ -1,5 +1,5 @@
 <?php 
-include "config/koneksi.php";
+include "../config/koneksi.php";
 ?>
 <div style="70px; margin-left: 30px;">
 	<h2>Data Electrical</h2>
