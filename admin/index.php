@@ -431,7 +431,7 @@ else if($page == "print_pt"){
   include "catatan/tambah_dcair.php";
 }else if($page == "edit_dcair"){
   include "catatan/edit_dcair.php";
-}else if($page == "delete_air"){
+}else if($page == "delete_dcair"){
   include "catatan/hapus_dcair.php";
 }else if($page == "pc_dclistrik"){
   include "catatan/data_dclistrik.php";
@@ -617,6 +617,26 @@ else if($page == "print_pt"){
   include "print_data/print_air.php";
 }else if($page == "print_listrik"){
   include "print_data/print_listrik.php";
+}else if($page == "edit_ac"){
+  include "views/edit_ac.php";
+}else if($page == "delete_ac"){
+  include "views/hapus_ac.php";
+}else if($page == "edit_air"){
+  include "views/edit_air.php";
+}else if($page == "delete_air"){
+  include "views/hapus_air.php";
+}else if($page == "edit_me"){
+  include "views/edit_me.php";
+}else if($page == "delete_me"){
+  include "views/hapus_me.php";
+}else if($page == "edit_sipil"){
+  include "views/edit_sipil.php";
+}else if($page == "delete_sipil"){
+  include "views/hapus_sipil.php";
+}else if($page == "edit_listrik"){
+  include "views/edit_listrik.php";
+}else if($page == "hapus_dplistrik"){
+  include "views/hapus_dplistrik.php";
 }else{
   include "views/404.php";
 }

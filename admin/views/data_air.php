@@ -72,8 +72,8 @@ include "config/koneksi.php";
 			<td><?php echo $data['pemakaian'] ?></td>
 			<td><?php echo $data['keterangan'] ?></td>
 			<td>
-				<a href="" class="btn btn-sm btn-primary">Edit</a>
-				<a href="" class="btn btn-sm btn-danger">DELETE</a>
+				<a href="?page=edit_air&id=<?php echo $data['id_cek'] ?>" class="btn btn-sm btn-primary">Edit</a>
+				<a href="?page=delete_air&id=<?php echo $data['id_cek'] ?>" class="btn btn-sm btn-danger">DELETE</a>
 			</td>
 		</tr>
 		<?php 

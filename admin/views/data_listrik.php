@@ -1,5 +1,5 @@
 <?php 
-include "config/koneksi.php";
+include "../config/koneksi.php";
 ?>
 <h3 style="margin-top: 70px;" class="ml-3">Data Pemakaian Listrik</h3>
 <br>
@@ -70,8 +70,8 @@ include "config/koneksi.php";
 			<td><?php echo $data['pemakaian'] ?></td>
 			<td><?php echo $data['keterangan'] ?></td>
 			<td>
-				<a href="" class="btn btn-sm btn-primary">Edit</a>
-				<a href="" class="btn btn-sm btn-danger">DELETE</a>
+				<a href="?page=edit_listrik&id=<?php echo $data['id_cek'] ?>" class="btn btn-sm btn-primary">Edit</a>
+				<a href="?page=hapus_dplistrik&id=<?php echo $data['id_cek'] ?>" class="btn btn-sm btn-danger">DELETE</a>
 			</td>
 		</tr>
 		<?php 

@@ -1,7 +1,7 @@
 <?php 
 include "config/koneksi.php";
 ?>
-<h3 style="margin-top: 100px;" class="ml-3">Data Sipil</h3>
+<h3>Data Sipil</h3>
 <br>
 <a href="?page=tambah_sipil" class="btn btn-md btn-success ml-3"><i class="fas fa-plus"></i> Compline</a>
 <a href="?page=print_sipil" class="btn btn-md btn-primary ml-3"><i class="fas fa-print"></i> Print</a>
@@ -71,8 +71,8 @@ include "config/koneksi.php";
 		<td><?php echo $data['complaine']; ?></td>
 		<td><?php echo $data['keterangan']; ?></td>
 		<td>
-			<a href="" class="btn btn-sm btn-primary">Edit</a>
-			<a href="" class="btn btn-sm btn-danger">DELETE</a>
+			<a href="?page=edit_sipil&id=<?php echo $data['id_complaine']; ?>" class="btn btn-sm btn-primary">Edit</a>
+			<a href="?page=delete_sipil&id=<?php echo $data['id_complaine']; ?>" class="btn btn-sm btn-danger">DELETE</a>
 		</td>
 	</tr>
 	<?php 

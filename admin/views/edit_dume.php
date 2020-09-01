@@ -61,7 +61,7 @@ include "config/koneksi.php";
 				?>
 				<script type="text/javascript">
 					alert("Update data Success");
-					window.location.href="?page=me";
+					window.location.href="?page=dume";
 				</script>
 				<?php
 		}

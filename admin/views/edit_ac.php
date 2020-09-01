@@ -1,18 +1,8 @@
 <?php 
-	include "config/koneksi.php";
-?>
-<h3 class="ml-3" style="margin-top: 70px;">Insert Compline ME</h3>
-<?php 
-$query = mysqli_query($koneksi,"select max(id_complaine) as kodeME from co_ME");
-		$data = mysqli_fetch_array($query);
-		$kodeME = $data['kodeME'];
-
-		$urutan = (int) substr($kodeME, 3, 3);
-
-		$urutan++;
-
-		$huruf = "ME";
-		$kodeData = $huruf.sprintf("%03s", $urutan);
+include "config/koneksi.php";
+	$idcom = @$_GET['id'];
+	$sql = mysqli_query($koneksi,"select *from co_ac where id_complaine = '$idcom'");
+	$data = mysqli_fetch_array($sql);
 ?>
 <form action="" method="post">
 	<div class="card-body">
@@ -20,33 +10,33 @@ $query = mysqli_query($koneksi,"select max(id_complaine) as kodeME from co_ME");
 	  <div class="input-group-prepend">
 	  <span class="input-group-text">NO.Complaine</span>
 	  </div>
-		<input type="text" name="id_complaine" class="form-control" value="<?php echo $kodeData ?>">
+		<input type="text" name="id_compline" disabled="disabled" class="form-control" value="<?php echo $data['id_complaine'] ?>">
 		</div>
 
 		<div class="input-group mb-3">
 	  <div class="input-group-prepend">
 	  <span class="input-group-text">Nama Tenant</span>
 	  </div>
-		<input type="text" name="nama_tenant" class="form-control" placeholder="Insert Name Tenant">
+		<input type="text" name="name" class="form-control" value="<?php echo $data['name_tenant'] ?>">
 		</div>
 
 		<div class="input-group mb-3">
 	  <div class="input-group-prepend">
-	  <span class="input-group-text">Pilih Tower</span>
+	  <span class="input-group-text">Tower</span>
 	  </div>
 		<select name="tower" class="form-control">
-			<option>Select Tower</option>
+			<option><?php echo $data['tower'] ?></option>
 			<option value="A">A</option>
 			<option value="B">B</option>
 		</select>
-	</div>
-		
+		</div>
+
 		<div class="input-group mb-3">
 	  <div class="input-group-prepend">
-	  <span class="input-group-text">Pilih Lantai</span>
+	  <span class="input-group-text">Lantai</span>
 	  </div>
 		<select name="lantai" class="form-control">
-			<option>Select Lantai</option>
+			<option><?php echo $data['lantai'] ?></option>
 			<option value="Ground">Ground</option>
 			<option value="Lantai 2">Lantai 2</option>
 			<option value="Lantai 3">Lantai 3</option>
@@ -66,14 +56,14 @@ $query = mysqli_query($koneksi,"select max(id_complaine) as kodeME from co_ME");
 			<option value="Lantai 17">Lantai 17</option>
 			<option value="Lantai PH">Lantai PH</option>
 		</select>
-	</div>
-		
-	<div class="input-group mb-3">
+		</div>
+
+		<div class="input-group mb-3">
 	  <div class="input-group-prepend">
-	  <span class="input-group-text">Pilih Unit</span>
+	  <span class="input-group-text">NO.Unit</span>
 	  </div>
 		<select name="unit" class="form-control">
-			<option>Select Unit</option>
+			<option><?php echo $data['unit'] ?></option>
 				<?php 
 					$sql = mysqli_query($koneksi,"select *from tb_unit");
 					while($d = mysqli_fetch_array($sql)){
@@ -83,58 +73,49 @@ $query = mysqli_query($koneksi,"select max(id_complaine) as kodeME from co_ME");
 				}
 			?>
 		</select>
-	</div>
-		
-		<div class="input-group mb-3">
-	  <div class="input-group-prepend">
-	  <span class="input-group-text">Compalaine</span>
-	  </div>
-		<input type="text" name="complaine" class="form-control" placeholder="Insert your Complain">
 		</div>
 
 		<div class="input-group mb-3">
 	  <div class="input-group-prepend">
-	  <span class="input-group-text">Nama Barang</span>
+	  <span class="input-group-text">Complaine</span>
 	  </div>
-		<input type="text" name="barang" class="form-control" placeholder="insert your item">
+		<input type="text" name="komplain" class="form-control" value="<?php echo $data['complaine'] ?>">
 		</div>
 
 		<div class="input-group mb-3">
 	  <div class="input-group-prepend">
 	  <span class="input-group-text">Keterangan</span>
 	  </div>
-		<textarea name="keterangan" rows="3" class="form-control" placeholder="Insert your Description"></textarea>
+		<textarea name="keterangan" rows="3" class="form-control" ><?php echo $data['keterangan'] ?></textarea>
 		</div>
-
 		<input type="submit" name="tambah" class="btn btn-md btn-success" value="Send">
 		<input type="reset" name="" class="btn btn-md btn-danger" value="Cancel">
 	</div>
 	
 </form>
 <?php 
-	$id_complaine = @$_POST['id_complaine'];
-	$nama_tenant = @$_POST['nama_tenant'];
+	$name = @$_POST['name'];
 	$tower = @$_POST['tower'];
 	$lantai = @$_POST['lantai'];
 	$unit = @$_POST['unit'];
-	$complaine = @$_POST['complaine'];
-	$barang = @$_POST['barang'];
+	$komplain = @$_POST['komplain'];
 	$keterangan = @$_POST['keterangan'];
 
 	$tambah_data = @$_POST['tambah'];
-
 	if($tambah_data){
-		if($id_complaine == "" || $nama_tenant == "" || $tower == "" || $lantai == "" || $unit == "" || $complaine == "" || $keterangan == ""){
-			echo "Data Input tidak boleh kosong";
-		}else{
-			mysqli_query($koneksi,"insert into co_me values('$id_complaine','$nama_tenant','$tower','$lantai','$unit','$complaine','$barang','$keterangan')");
+			mysqli_query($koneksi,"update co_ac set name_tenant = '$name',
+				tower = '$tower',
+				lantai = '$lantai',
+				unit = '$unit',
+				complaine = '$komplain',
+				keterangan = '$keterangan' where id_complaine = '$idcom'");
 			?>
 			<script type="text/javascript">
-				alert("Input Data berhasil");
-				window.location.href="?page=me";
+				alert("Update data berhasil");
+				window.location.href="?page=ac";
 			</script>
 			<?php
-		}
+		
 	}
 
 ?>

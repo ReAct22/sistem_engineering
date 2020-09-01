@@ -7,5 +7,5 @@
 ?>
 <script type="text/javascript">
 	alert("Data berhasil Di hapus");
-	window.location.href="?page=pc_listrik";
+	window.location.href="?page=pc_dclistrik";
 </script>

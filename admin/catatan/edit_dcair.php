@@ -106,7 +106,7 @@
 			?>
 			<script type="text/javascript">
 				alert("Update data berhasil");
-				window.location.href="?page=pc_air";
+				window.location.href="?page=pc_dcair";
 			</script>
 			<?php 
 		}else{
@@ -116,7 +116,7 @@
 				?>
 					<script type="text/javascript">
 						alert("Data berhasil di tambah kan");
-						window.location.href="?page=pc_air";
+						window.location.href="?page=pc_dcair";
 					</script>
 				<?php
 			}else{

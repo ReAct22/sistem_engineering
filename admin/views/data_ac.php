@@ -1,5 +1,5 @@
 <?php 
-	include "config/koneksi.php";
+	include "../config/koneksi.php";
 ?>
 <h3 style="margin-top: 70px;" class="ml-3">Data Air Conditioner</h3>
 <br>
@@ -74,8 +74,8 @@
 		<td><?php echo $data['complaine']; ?></td>
 		<td><?php echo $data['keterangan']; ?></td>
 		<td>
-			<a href="" class="btn btn-sm btn-primary">Edit</a>
-			<a href="" class="btn btn-sm btn-danger">DELETE</a>
+			<a href="?page=edit_ac&id=<?php echo $data['id_complaine']; ?>" class="btn btn-sm btn-primary">Edit</a>
+			<a href="?page=delete_ac&id=<?php echo $data['id_complaine']; ?>" class="btn btn-sm btn-danger">DELETE</a>
 		</td>
 	</tr>
 	<?php 

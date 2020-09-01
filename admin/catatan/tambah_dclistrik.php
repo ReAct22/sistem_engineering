@@ -119,7 +119,7 @@
 				?>
 					<script type="text/javascript">
 						alert("Data berhasil di tambah kan");
-						window.location.href="?page=pc_listrik";
+						window.location.href="?page=pc_dclistrik";
 					</script>
 				<?php
 			}else{
