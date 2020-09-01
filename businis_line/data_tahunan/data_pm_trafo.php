@@ -15,7 +15,7 @@
 	</nav>
 	<h1 style="margin-left: 30px;">PREVENTIF MAINTENANCE TRAFO</h1>
 	<a href="?page=tambah_pmtrafo" class="w3-bar-item w3-button w3-green"><i class="fas fa-plus"></i>Tambah Data</a>
-	<a href="?page=print_pmt" class="w3bar-item w3-button w3-blue"><i class="fas fa-print"></i>Print</a>
+	<a href="print_data/print_pmt.php" class="w3bar-item w3-button w3-blue"><i class="fas fa-print"></i>Print</a>
 
 	<form action="" method="post" class="d-none d-sm-inline-block form-inline ml-md-3 my-2 my-md-0 mw-100 navbar-search" style="float: right; margin-right: 50px;">
             <div class="input-group">
