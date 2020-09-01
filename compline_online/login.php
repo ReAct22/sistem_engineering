@@ -55,7 +55,7 @@ if(@$_SESSION['username']){
                     </script>
                   <?php
                 }else{
-                  $sql = mysqli_query($koneksi,"select *from tb_user where username = '$username' and password = md5('$password')");
+                  $sql = mysqli_query($koneksi,"select *from tb_user where username = '$username' and password = '$password'");
                   $data = mysqli_fetch_array($sql);
                   $cek = mysqli_num_rows($sql);
 
@@ -63,7 +63,11 @@ if(@$_SESSION['username']){
                     @$_SESSION['username'] = $data['id_user'];
                     header("location:index.php");
                   }else{
-                    echo "Login Gagal";
+                    ?>
+                      <script type="text/javascript">
+                        alert("username / Password anda salah");
+                      </script>
+                    <?php
                   }
                 }
               }

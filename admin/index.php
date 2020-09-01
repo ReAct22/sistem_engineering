@@ -162,15 +162,15 @@
       </div>
 
       <li class="nav-item">
-        <a class="nav-link" href="?page=data_ke">
+        <a class="nav-link" href="?page=data_staff">
           <i class="fas fa-fw fa-user"></i>
           <span>Data staff</span></a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="?page=data_ke">
+        <a class="nav-link" href="?page=data_user">
           <i class="fas fa-fw fa-user"></i>
-          <span>Data staff</span></a>
+          <span>Data user</span></a>
       </li>
 
 
@@ -571,6 +571,52 @@ else if($page == "print_pt"){
   include "data/edit_stp.php";
 }else if($page == "delete_stp"){
   include "data/hapus_stp.php";
+}else if($page == "data_user"){
+  include "akun/data_user.php";
+}else if($page == "edit_user"){
+  include "akun/edit_user.php";
+}else if($page == "delete_user"){
+  include "akun/hapus_user.php";
+}else if($page == "data_staff"){
+  include "akun/data_staff.php";
+}else if($page == "tambah_staff"){
+  include "akun/tambah_staff.php";
+}else if($page == "edit_staff"){
+  include "akun/edit_staff.php";
+}else if($page == "delete_staff"){
+  include "akun/hapus_staff.php";
+}else if($page == "contact"){
+  include "views/contact.php";
+}else if($page == "sipil"){
+  include "views/data_sipil.php";
+}else if($page == "tambah_sipil"){
+  include "views/tambah_sipil.php";
+}else if($page == "me"){
+  include "views/data_me.php";
+}else if($page == "tambah_me"){
+  include "views/tambah_me.php";
+}else if($page == "ac"){
+  include "views/data_ac.php";
+}else if($page == "tambah_ac"){
+  include "views/tambah_ac.php";
+}else if($page == "air"){
+  include "views/data_air.php";
+}else if($page == "listrik"){
+  include "views/data_listrik.php";
+}else if($page == "tambah_air"){
+  include "views/tambah_air.php";
+}else if($page == "tambah_listrik"){
+  include "views/tambah_listrik.php";
+}else if($page == "print_sipil"){
+  include "print_data/print_sipil.php";
+}else if($page == "print_me"){
+  include "print_data/print_me.php";
+}else if($page == "print_ac"){
+  include "print_data/print_ac.php";
+}else if($page == "print_air"){
+  include "print_data/print_air.php";
+}else if($page == "print_listrik"){
+  include "print_data/print_listrik.php";
 }else{
   include "views/404.php";
 }

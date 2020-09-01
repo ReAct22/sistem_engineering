@@ -50,7 +50,7 @@ if(@$_SESSION['engineering'] || @$_SESSION['tenant'] || @$_SESSION['security'] |
                     </script>
                   <?php 
                 }else{
-                  $sql = mysqli_query($koneksi,"select *from tb_staff where username = '$user' and password = md5('$pass')");
+                  $sql = mysqli_query($koneksi,"select *from tb_staff where username = '$user' and password = '$pass'");
                   $data = mysqli_fetch_array($sql);
                   $cek = mysqli_num_rows($sql);
 

@@ -90,7 +90,7 @@
                       </script>
                     <?php
                   }else{
-                    mysqli_query($koneksi,"insert into tb_user values('','$email',md5('$password'),'$full_name','$jk','$negara','$tanggal_lahir')");
+                    mysqli_query($koneksi,"insert into tb_user values('','$email','$password','$full_name','$jk','$negara','$tanggal_lahir')");
                     ?>
                       <script type="text/javascript">
                         alert("Selamat Anda berhasil Register");
