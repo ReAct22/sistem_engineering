@@ -4,7 +4,8 @@ include "../config/koneksi.php";
 <h3 style="margin-top: 70px;" class="ml-3">Data Pemakaian Listrik</h3>
 <br>
 <a href="?page=tambah_listrik" class="btn btn-md btn-success ml-3"><i class="fas fa-plus"></i> Compline</a>
-<a href="?page=print_listrik" class="btn btn-md btn-primary ml-3"><i class="fas fa-print"></i> Print</a>
+<a href="print_data/print_listrik.php" class="btn btn-md btn-primary ml-3"><i class="fas fa-print"></i> Print</a>
+
 <form action="" method="post" class="d-none d-sm-inline-block form-inline ml-md-3 my-2 my-md-0 mw-100 navbar-search" style="float: right; margin-right: 50px;">
             <div class="input-group">
               <input type="text" name="inputan_pencarian" class="form-control bg-light border-1 mb-3 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
