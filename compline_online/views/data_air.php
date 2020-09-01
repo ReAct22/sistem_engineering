@@ -67,7 +67,7 @@ include "config/koneksi.php";
 			<td><?php echo $data['unit'] ?></td>
 			<td><?php echo $data['meter_awal'] ?></td>
 			<td><?php echo $data['meter_akhir'] ?></td>
-			<td><img src="assets/img/<?php echo $data['gambar'] ?>" width="100" heigh="50"></td>
+			<td><img src="../assets/img/<?php echo $data['gambar'] ?>" width="100" heigh="50"></td>
 			<td><?php echo $data['pemakaian'] ?></td>
 			<td><?php echo $data['keterangan'] ?></td>
 		</tr>

@@ -64,12 +64,12 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Compline</h6>
-            <a class="collapse-item" href="?page=">Sipil</a>
-            <a class="collapse-item" href="?page=">ME</a>
-            <a class="collapse-item" href="?page=">AC</a>
+            <a class="collapse-item" href="?page=sipil">Sipil</a>
+            <a class="collapse-item" href="?page=me">ME</a>
+            <a class="collapse-item" href="?page=ac">AC</a>
             <h6 class="collapse-header">Data Pemakaian</h6>
-            <a class="collapse-item" href="?page=">Data Air</a>
-            <a class="collapse-item" href="?page=">Data Listrik</a>
+            <a class="collapse-item" href="?page=air">Data Air</a>
+            <a class="collapse-item" href="?page=listrik">Data Listrik</a>
             <h6 class="collapse-header">Data Pencatatan</h6>
             <a class="collapse-item" href="?page=pc_dcair">Data Air</a>
             <a class="collapse-item" href="?page=pc_dclistrik">Data Listrik</a>
