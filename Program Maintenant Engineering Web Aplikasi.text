@@ -35,3 +35,33 @@ terdapat beberapa halaman di aplikasi ini sebagai berikut:
 - Data Karyawan
 
 #admin
+
+# Account Complaaine Online
+
+Email : contoh@gmail.com
+Password : user1
+
+# Account Businis Line
+
+Username : andrean
+Password : staff1
+
+*jika password salah coba dengan staff2
+
+# Account Admin
+
+username : admin
+Password : admin
+
+cara membuka halaman admin:
+
+tulis di link bar browser dengan ketik :
+*jika sudah di online kan
+https://nama_domain/admin
+*jika belom
+localhost:sistem_engineering/admin
+
+fitur di halaman admin:
+dapat mengedit semua data yang ada seperti edit data user maupun data staff
+
+untuk akun data staff harus di buat di dalam admin
