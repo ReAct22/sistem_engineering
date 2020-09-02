@@ -147,7 +147,7 @@ include "../config/koneksi.php";
 					 nama_teknisi = '$nama_teknisi',
 					 jenis_kerjaan = '$jenis_kerjaan',
 					 gambar = '$nama_gambar', 
-					 rekomendasi = '$rekomendasi' where id_pf = '$idpf')");
+					 rekomendasi = '$rekomendasi' where id_pf = '$idpf'");
 				?>
 				<script type="text/javascript">
 					alert("Input Data berhasil");

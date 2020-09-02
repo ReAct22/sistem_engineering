@@ -10,9 +10,9 @@ if(@$_SESSION['engineering'] || @$_SESSION['tenant'] || @$_SESSION['security'] |
 <head>
     <title>Login Page</title>
     <link rel="icon" type="image/x-icon" href="assets/img/icon.png">
-    <link rel="stylesheet" type="text/css" href="assets/w3.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css"> 
+    <link rel="stylesheet" type="text/css" href="asset/w3.css">
+    <link rel="stylesheet" type="text/css" href="asset/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="asset/css/bootstrap.min.css"> 
 </head>
 <body>
 

@@ -1,0 +1,37 @@
+Program Maintenant Engineering Web Aplikasi
+
+Aplikasi ini berfungsi untuk mempermudah perkerjaan seperti 
+input data dan pencatatan secara digital dan aplikasi ini sudah terhubung dangan database untuk mempermudah pencrian data.
+
+teknologi yg di gunakan untuk aplikasi ini :
+
+- PHP Native.
+- Javascript.
+- HTML 5.
+- CC3
+-Bootstrap 4 plugin
+
+terdapat beberapa halaman di aplikasi ini sebagai berikut:
+
+# Halaman Home:
+- Complaine menu
+- Businis Line Menu
+- Contact
+
+#Compline menu:
+- Complaine Online
+	*Complaine Sipil
+	*Complaine AC
+	*Compline ME
+
+- Data Pemakaian: 
+	*Pemakaian Air
+	*Pemakaian Listrik
+
+#Businis Line:
+- Data Utilitas
+- Data Prefentive Maintenant
+- Data Pencatatan
+- Data Karyawan
+
+#admin

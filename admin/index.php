@@ -648,6 +648,8 @@ else if($page == "print_pt"){
   include "views/hapus_sipil.php";
 }else if($page == "edit_listrik"){
   include "views/edit_listrik.php";
+}else if($page == "hapus_dplistrik"){
+  include "views/hapus_dplistrik.php";
 }else if($page == "print_stp"){
   include "print_data/print_stp.php";
 //berakhir Sampai Sini

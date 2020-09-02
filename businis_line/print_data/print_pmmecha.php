@@ -36,7 +36,7 @@
 				<td><?php echo $data['lokasi_utilitas'] ?></td>
 				<td><?php echo date('d-m-y',strtotime($data['rencana'])) ?></td>
 				<td><?php echo date('d-m-y',strtotime($data['realisasi'])) ?></td>
-				<td><img src="img/<?php echo $data['gambar'] ?>" width="100" height="50"></td>
+				<td><img src="../assets/img/<?php echo $data['gambar'] ?>" width="100" height="50"></td>
 			</tr>
 			<?php 
 				}

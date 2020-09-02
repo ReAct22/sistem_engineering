@@ -41,7 +41,7 @@
 			<td><?php echo date('d-m-y', strtotime($data['realisasi'])) ?></td>
 			<td><?php echo $data['nama_teknisi'] ?></td>
 			<td><?php echo $data['jenis_kerjaan'] ?></td>
-			<td><img src="img/<?php echo $data['gambar'] ?>" width="100" ></td>
+			<td><img src="../assets/img/<?php echo $data['gambar'] ?>" width="100" ></td>
 			<td><?php echo $data['rekomendasi'] ?></td>
 			</tr>
 			<?php 

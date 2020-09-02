@@ -5,7 +5,7 @@ include "../config/koneksi.php";
 	$data = mysqli_fetch_array($sql);
 ?>
 <div class="card-body">
-	<h2>Input data ROOF TANK</h2>
+	<h2>Input data Ground TANK</h2>
 	<form action="" method="post" enctype="multipart/form-data" class="form-group">
 		<div class="input-group mb-3">
 	  <div class="input-group-prepend">

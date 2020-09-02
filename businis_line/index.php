@@ -10,8 +10,8 @@ if(@$_SESSION['engineering']){
 	<title>Bukit Golf Pondok Indah - Jakarta Selatan</title>
 	<link rel="icon" type="image/x-icon" href="img/icon.jpg">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="asset/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="asset/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" 
     integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
 </head>
@@ -182,9 +182,9 @@ if($page == ""){
 }else if($page == "print_pmel"){
 	include "print_data/print_pmel.php";
 }else if($page == "print_pmmecha"){
-	include "print_data/print_pmel.php";
-}else if($page == "print_pmfa"){
 	include "print_data/print_pmmecha.php";
+}else if($page == "print_pmfa"){
+	include "print_data/print_pmfa.php";
 }else if($page == "print_pmli"){
 	include "print_data/print_pmlift.php";
 

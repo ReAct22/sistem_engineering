@@ -158,7 +158,7 @@ include "../config/koneksi.php";
 					 jenis_kerjaan = '$jenis_kerjaan',
 					 gambar = '$nama_gambar', 
 					 rekomendasi = '$rekomendasi'
-					  where id_pmgwt = '$idgwt')");
+					  where id_pmgwt = '$idgwt'");
 				?>
 				<script type="text/javascript">
 					alert("Input Data berhasil");

@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 24, 2020 at 12:44 AM
--- Server version: 10.4.14-MariaDB
--- PHP Version: 7.4.9
+-- Waktu pembuatan: 01 Sep 2020 pada 20.12
+-- Versi server: 10.4.13-MariaDB
+-- Versi PHP: 7.4.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `co_ac`
+-- Struktur dari tabel `co_ac`
 --
 
 CREATE TABLE `co_ac` (
@@ -38,19 +38,19 @@ CREATE TABLE `co_ac` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `co_ac`
+-- Dumping data untuk tabel `co_ac`
 --
 
 INSERT INTO `co_ac` (`id_complaine`, `name_tenant`, `tower`, `lantai`, `unit`, `complaine`, `keterangan`) VALUES
-('AC001', 'Raehan Septian Dwi Putra', 'A', 'Lantai 9', 'A 03-01', 'TV Rusak', 'aaaa'),
-('AC002', 'dgegegedg', 'A', 'Lantai 12', 'A 12-01', 'gegeg', 'egwegg'),
+('AC002', 'dgegegedg', 'A', 'Lantai 2', 'A 02-01', 'gegeg', 'egwegg'),
 ('AC003', 'dgegegedg', 'B', 'Lantai 17', 'A 03-06', 'gegeg', 'aggasgasg'),
-('AC004', 'gasg', 'A', 'Lantai 16', 'A 03-06', 'agsgsg', 'asgwegw');
+('AC004', 'gasg', 'A', 'Lantai 16', 'A 03-06', 'agsgsg', 'asgwegw'),
+('AC005', 'Raehan Septian Dwi Putra', 'A', 'Ground', 'A 01-01', 'TV Rusak', 'sbjsbvsjvb');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `co_me`
+-- Struktur dari tabel `co_me`
 --
 
 CREATE TABLE `co_me` (
@@ -65,17 +65,18 @@ CREATE TABLE `co_me` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `co_me`
+-- Dumping data untuk tabel `co_me`
 --
 
 INSERT INTO `co_me` (`id_complaine`, `name_tenant`, `tower`, `lantai`, `unit`, `complaine`, `nama_barang`, `keterangan`) VALUES
-('ME001', 'Dhimas', 'A', 'Lantai 5', 'A 05-05', 'Ac Rusak', 'AC', 'aaaaa'),
-('ME002', 'Anjuni', 'A', 'Lantai 3', 'A 03-03', 'adadasd', 'agfsaggf', 'saffw3gfeg');
+('ME001', 'Bagas Wijaya FC', 'A', 'Lantai 5', 'A 05-05', 'Ac Rusak', 'AC', 'aaaaa'),
+('ME002', 'Anjuni', 'B', 'Lantai 3', 'B 03-03', 'adadasd', 'agfsaggf', 'saffw3gfeg'),
+('ME003', 'Rasidi', 'A', 'Lantai 3', 'A 03-03', 'Ac Rusak', 'AC', 'jvsbvjabv');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `co_sipil`
+-- Struktur dari tabel `co_sipil`
 --
 
 CREATE TABLE `co_sipil` (
@@ -89,19 +90,19 @@ CREATE TABLE `co_sipil` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `co_sipil`
+-- Dumping data untuk tabel `co_sipil`
 --
 
 INSERT INTO `co_sipil` (`id_complaine`, `nama_tenant`, `tower`, `lantai`, `unit`, `complaine`, `keterangan`) VALUES
-('SPL001', 'Dhimas', 'B', 'Lantai 2', 'B 02-03', 'TV Rusak', 'dgsgsfhdjgfgjgjfdf'),
-('SPL002', 'Andrean', 'A', 'Ground', 'A 01-01', 'TV Rusak', 'rhdfhdfdhrhhwrhf'),
-('SPL003', 'Dhimas', 'A', 'Ground', 'A 01-01', 'TV Rusak', 'adkadalkdna'),
-('SPL004', 'Dhimas', 'B', 'Lantai 13', 'B 13-04', 'TV Rusak', 'BFlkfbakbflKABF');
+('SPL001', 'Andrean gg', 'A', 'Lantai 2', 'A 02-01', 'TV Rusak', 'dgsgsfhdjgfgjgjfdf'),
+('SPL002', 'Andrean', 'A', 'Ground', 'A 01-01', 'TV Rusak', 'apa yang harus lakukan dengan kerusaka ini'),
+('SPL004', 'Dhimas', 'B', 'Lantai 13', 'B 13-04', 'TV Rusak', 'BFlkfbakbflKABF'),
+('SPL005', 'Dhimas', 'B', 'Lantai 14', 'A 14-03', 'TV Rusak', 'scksknkwnvkw');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `dc_air`
+-- Struktur dari tabel `dc_air`
 --
 
 CREATE TABLE `dc_air` (
@@ -115,17 +116,16 @@ CREATE TABLE `dc_air` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `dc_air`
+-- Dumping data untuk tabel `dc_air`
 --
 
 INSERT INTO `dc_air` (`id_air`, `unit`, `meter_awal`, `meter_akhir`, `gambar`, `total`, `keterangan`) VALUES
-('PCA001', 'A 01-02', 12, 33, 'download.jpg', 45, 'sfsnfsnfls'),
-('PCA002', 'A 01-02', 12, 56, 'download.jpg', 68, 'safsfsafasgdgadsg');
+('PCA001', 'A 01-01', 32, 45, '31485-193x278.jpg', 77, 'fnsfnsnfnsd');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `dc_listrik`
+-- Struktur dari tabel `dc_listrik`
 --
 
 CREATE TABLE `dc_listrik` (
@@ -138,18 +138,10 @@ CREATE TABLE `dc_listrik` (
   `keterangan` varchar(1000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `dc_listrik`
---
-
-INSERT INTO `dc_listrik` (`id_listrik`, `unit`, `meter_awal`, `meter_akhir`, `gambar`, `total`, `keterangan`) VALUES
-('PCL001', 'A 01-01', 12, 56, 'download.jpg', 68, 'sfasfgasfsaf'),
-('PCL002', 'A 01-02', 12, 56, 'download.jpg', 68, 'sfsfasfasf');
-
 -- --------------------------------------------------------
 
 --
--- Table structure for table `dp_air`
+-- Struktur dari tabel `dp_air`
 --
 
 CREATE TABLE `dp_air` (
@@ -163,16 +155,17 @@ CREATE TABLE `dp_air` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `dp_air`
+-- Dumping data untuk tabel `dp_air`
 --
 
 INSERT INTO `dp_air` (`id_cek`, `unit`, `meter_awal`, `meter_akhir`, `gambar`, `pemakaian`, `keterangan`) VALUES
-('DPA001', 'A 01-01', '32', '44', '83aae224-a4ef-463b-af1b-a333c97f1379.jpg', '34343', 'ssfsasfasfasf');
+('DPA002', 'A 01-01', '32', '44', '110-no-hanayome-35387.jpg', '76', 'adnkndlsavbsvbasvbvv'),
+('DPA003', 'A 01-01', '32', '45', 'Little-Witch-Nobeta-PC-Version-Full-Game-Setup-Free-Download.jpg', '77', 'snasvjsva');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `dp_listrik`
+-- Struktur dari tabel `dp_listrik`
 --
 
 CREATE TABLE `dp_listrik` (
@@ -186,16 +179,17 @@ CREATE TABLE `dp_listrik` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `dp_listrik`
+-- Dumping data untuk tabel `dp_listrik`
 --
 
 INSERT INTO `dp_listrik` (`id_cek`, `unit`, `meter_awal`, `meter_akhir`, `gambar`, `pemakaian`, `keterangan`) VALUES
-('DPL001', 'A 01-01', '32', '44', '110-no-hanayome-35387.jpg', '34343', 'keterangan');
+('DPL001', 'A 01-01', '32', '44', '110-no-hanayome-35387.jpg', '34343', 'c s ckasvkjsbvjsabvj'),
+('DPL005', 'A 01-02', '11', '44', '31485-193x278.jpg', '55', 'sknvlajsbvjas\r\n');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `du_ac_public_area`
+-- Struktur dari tabel `du_ac_public_area`
 --
 
 CREATE TABLE `du_ac_public_area` (
@@ -207,7 +201,7 @@ CREATE TABLE `du_ac_public_area` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `du_ac_public_area`
+-- Dumping data untuk tabel `du_ac_public_area`
 --
 
 INSERT INTO `du_ac_public_area` (`id_acpa`, `nama_utilitas`, `lokasi_utilitas`, `jumlah`, `keterangan`) VALUES
@@ -216,7 +210,7 @@ INSERT INTO `du_ac_public_area` (`id_acpa`, `nama_utilitas`, `lokasi_utilitas`, 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `du_elektrical`
+-- Struktur dari tabel `du_elektrical`
 --
 
 CREATE TABLE `du_elektrical` (
@@ -228,17 +222,20 @@ CREATE TABLE `du_elektrical` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `du_elektrical`
+-- Dumping data untuk tabel `du_elektrical`
 --
 
 INSERT INTO `du_elektrical` (`id_utilitas`, `nama_utilitas`, `lokasi_utilitas`, `jumlah`, `keterangan`) VALUES
 ('DUE001', 'AC PANASONIC', 'Basemane', 3, 'Saya ngga tau'),
-('DUE002', 'AC Panasonic 1', 'TOWER A', 3, 'Saya ngga tau');
+('DUE002', 'AC Panasonic 1', 'TOWER A', 3, 'Saya ngga tau'),
+('DUE003', 'TV', 'Tower A', 3, 'sansknvaksvalv\r\n'),
+('DUE004', 'AC Panasonic', 'Tower A A 02-06', 1, 'svavadvsveefFsvsvac'),
+('DUE005', 'Andrean Ahmad Fauzi', 'Basemane', 4, 'kvnaskv');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `du_generator_set`
+-- Struktur dari tabel `du_generator_set`
 --
 
 CREATE TABLE `du_generator_set` (
@@ -250,7 +247,7 @@ CREATE TABLE `du_generator_set` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `du_generator_set`
+-- Dumping data untuk tabel `du_generator_set`
 --
 
 INSERT INTO `du_generator_set` (`id_generator_set`, `nama_utilitas`, `lokasi_utilitas`, `jumlah`, `keterangan`) VALUES
@@ -260,7 +257,7 @@ INSERT INTO `du_generator_set` (`id_generator_set`, `nama_utilitas`, `lokasi_uti
 -- --------------------------------------------------------
 
 --
--- Table structure for table `du_lift`
+-- Struktur dari tabel `du_lift`
 --
 
 CREATE TABLE `du_lift` (
@@ -272,16 +269,40 @@ CREATE TABLE `du_lift` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `du_lift`
+-- Dumping data untuk tabel `du_lift`
 --
 
 INSERT INTO `du_lift` (`id_lift`, `nama_utilitas`, `lokasi_utilitas`, `jumlah`, `keterangan`) VALUES
-('DUL001', 'Andrean Ahmad Fauzi', 'Basemane', 3, 'Saya ngga tau');
+('DUL001', 'Andrean Ahmad Fauzi', 'Basemane', 3, 'Saya ngga tau'),
+('DUL002', 'Angga', 'Basemane', 1, 'scsnsknvlja vav'),
+('DUL003', 'Angga', 'A A 03-01', 1, 'vsavqevsvasv'),
+('DUL004', 'Andrean Ahmad Fauzi', 'Basemane', 5, 'fswfwfwqfwcsav');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `du_pompa`
+-- Struktur dari tabel `du_me`
+--
+
+CREATE TABLE `du_me` (
+  `id_me` varchar(10) NOT NULL,
+  `nama_equipment` varchar(50) NOT NULL,
+  `lokasi_utilitas` varchar(50) NOT NULL,
+  `jumlah` int(50) NOT NULL,
+  `spesifikasi` varchar(1000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `du_me`
+--
+
+INSERT INTO `du_me` (`id_me`, `nama_equipment`, `lokasi_utilitas`, `jumlah`, `spesifikasi`) VALUES
+('KME001', 'AC Panasonic', 'Tower A A 02-06', 1, 'Saya ngga tau');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `du_pompa`
 --
 
 CREATE TABLE `du_pompa` (
@@ -293,16 +314,17 @@ CREATE TABLE `du_pompa` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `du_pompa`
+-- Dumping data untuk tabel `du_pompa`
 --
 
 INSERT INTO `du_pompa` (`id_pompa`, `nama_utilitas`, `lokasi_utilitas`, `jumlah`, `keterangan`) VALUES
-('DUP001', 'Angga', 'Tower A A 02-06', 5, 'ddwdwdwd');
+('DUP001', 'Angga', 'Tower A A 02-06', 5, 'ddwdwdwd'),
+('DUP002', 'Andrean Ahmad Fauzi', 'Basemane', 3, 'fndndfn');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `du_trafo`
+-- Struktur dari tabel `du_trafo`
 --
 
 CREATE TABLE `du_trafo` (
@@ -314,7 +336,7 @@ CREATE TABLE `du_trafo` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `du_trafo`
+-- Dumping data untuk tabel `du_trafo`
 --
 
 INSERT INTO `du_trafo` (`id_trafo`, `nama_utilitas`, `lokasi_utilitas`, `jumlah`, `keterangan`) VALUES
@@ -323,7 +345,214 @@ INSERT INTO `du_trafo` (`id_trafo`, `nama_utilitas`, `lokasi_utilitas`, `jumlah`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pm_acap`
+-- Struktur dari tabel `negara1`
+--
+
+CREATE TABLE `negara1` (
+  `negara` varchar(33) DEFAULT NULL,
+  `COL 2` varchar(7) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data untuk tabel `negara1`
+--
+
+INSERT INTO `negara1` (`negara`, `COL 2`) VALUES
+(';', NULL),
+('Afghanistan;', NULL),
+(' Albania;', NULL),
+('Algeria;', NULL),
+('Andorra;', NULL),
+('Angola;', NULL),
+('Antigua & Barbuda;', NULL),
+('Argentina;', NULL),
+('Armenia;', NULL),
+('Australia;', NULL),
+('Austria;', NULL),
+('Azerbaijan;', NULL),
+('Bahamas;', NULL),
+('Bahrain;', NULL),
+('Bangladesh;', NULL),
+('Barbados;', NULL),
+('Belarus;', NULL),
+('Belgium;', NULL),
+('Belize;', NULL),
+('Benin;', NULL),
+('Bhutan;', NULL),
+('Bolivia;', NULL),
+('Bosnia & Herzegovina;', NULL),
+('Botswana;', NULL),
+('Brazil;', NULL),
+('Brunei;', NULL),
+('Bulgaria;', NULL),
+('Burkina Faso;', NULL),
+('Burundi;', NULL),
+('Cambodia;', NULL),
+('Cameroon;', NULL),
+('Canada;', NULL),
+('Cape Verde;', NULL),
+('Central African Republic;', NULL),
+('Chad;', NULL),
+('Chile;', NULL),
+('China;', NULL),
+('Colombia;', NULL),
+('Comoros;', NULL),
+('Republic of the Congo;', NULL),
+('Costa Rica;', NULL),
+('Ivory Coast;', NULL),
+('Croatia;', NULL),
+('Cuba;', NULL),
+('Cyprus;', NULL),
+('Czech Republic;', NULL),
+('Denmark;', NULL),
+('Djibouti;', NULL),
+('Dominica;', NULL),
+('Dominican Republic;', NULL),
+('East Timor;', NULL),
+('Ecuador;', NULL),
+('Egypt;', NULL),
+('El Salvador;', NULL),
+('Equatorial Guinea;', NULL),
+('Eritrea;', NULL),
+('Estonia;', NULL),
+('Ethiopia;', NULL),
+('Fiji;', NULL),
+('Finland;', NULL),
+('France;', NULL),
+('Gabon;', NULL),
+('The Gambia;', NULL),
+('Georgia;', NULL),
+('Germany;', NULL),
+('Ghana;', NULL),
+('Greece;', NULL),
+('Grenada;', NULL),
+('Guatemala;', NULL),
+('Guinea;', NULL),
+('Guinea Bissau;', NULL),
+('Guyana;', NULL),
+('Haiti;', NULL),
+('Honduras;', NULL),
+('Hungary;', NULL),
+('Iceland;', NULL),
+('India;', NULL),
+('Indonesia;', NULL),
+('Iran;', NULL),
+('Iraq;', NULL),
+('Ireland;', NULL),
+('Israel;', NULL),
+('Italy;', NULL),
+('Jamaica;', NULL),
+('Japan;', NULL),
+('Jordan;', NULL),
+('Kazakhstan;', NULL),
+('Kenya;', NULL),
+('Kiribati;', NULL),
+('Korea', ' North;'),
+('Korea', ' South;'),
+('Kuwait;', NULL),
+('Kyrgyzstan;', NULL),
+('Laos;', NULL),
+('Latvia;', NULL),
+('Lebanon;', NULL),
+('Libya;', NULL),
+('Liechtenstein;', NULL),
+('Luxembourg;', NULL),
+('Macedonia;', NULL),
+('Madagascar;', NULL),
+('Malawi;', NULL),
+('Malaysia;', NULL),
+('Maldives;', NULL),
+('Mali;', NULL),
+('Malta;', NULL),
+('Marshall Islands;', NULL),
+('Mauritania;', NULL),
+('Mauritius;', NULL),
+('Mexico;', NULL),
+('Federated States of Micronesia;', NULL),
+('Moldova;', NULL),
+('Monaco;', NULL),
+('Mongolia;', NULL),
+('Montenegro;', NULL),
+('Morocco;', NULL),
+('Mozambique;', NULL),
+('Myanmar;', NULL),
+('Namibia;', NULL),
+('Nauru;', NULL),
+('Nepal;', NULL),
+('Netherlands;', NULL),
+('New Zealand;', NULL),
+('Nicaragua;', NULL),
+('Niger;', NULL),
+('Nigeria;', NULL),
+('Norway;', NULL),
+('Oman;', NULL),
+('Pakistan;', NULL),
+('Palau;', NULL),
+('Panama;', NULL),
+('Papua New Guinea;', NULL),
+('Paraguay;', NULL),
+('Peru;', NULL),
+('Philippines;', NULL),
+('Poland;', NULL),
+('Portugal;', NULL),
+('Qatar;', NULL),
+('Romania;', NULL),
+('Russia;', NULL),
+('Rwanda;', NULL),
+('Saint Kitts and Nevis;', NULL),
+('Saint Lucia;', NULL),
+('Saint Vincent and the Grenadines;', NULL),
+('Samoa;', NULL),
+('San Marino;', NULL),
+('Sao Tome and Principe;', NULL),
+('Saudi Arabia;', NULL),
+('Senegal;', NULL),
+('Serbia;', NULL),
+('Seychelles;', NULL),
+('Sierra Leone;', NULL),
+('Singapore;', NULL),
+('Slovakia;', NULL),
+('Slovenia;', NULL),
+('Solomon Islands;', NULL),
+('Somalia;', NULL),
+('South Africa;', NULL),
+('Spain;', NULL),
+('Sri Lanka;', NULL),
+('Sudan;', NULL),
+('Suriname;', NULL),
+('Swaziland;', NULL),
+('Sweden;', NULL),
+('Switzerland;', NULL),
+('Syria;', NULL),
+('Tajikistan;', NULL),
+('Tanzania;', NULL),
+('Thailand;', NULL),
+('Togo;', NULL),
+('Tonga;', NULL),
+('Trinidad and Tobago;', NULL),
+('Tunisia;', NULL),
+('Turkey;', NULL),
+('Turkmenistan;', NULL),
+('Tuvalu;', NULL),
+('Uganda;', NULL),
+('Ukraine;', NULL),
+('United Arab Emirates;', NULL),
+('United Kingdom;', NULL),
+('United States;', NULL),
+('Uruguay;', NULL),
+('Uzbekistan;', NULL),
+('Vanuatu;', NULL),
+('Vatican City;', NULL),
+('Venezuela;', NULL),
+('Vietnam;', NULL),
+('Yemen;', NULL),
+('Zambia;', NULL),
+('Zimbabwe;', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `pm_acap`
 --
 
 CREATE TABLE `pm_acap` (
@@ -338,17 +567,16 @@ CREATE TABLE `pm_acap` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `pm_acap`
+-- Dumping data untuk tabel `pm_acap`
 --
 
 INSERT INTO `pm_acap` (`id_pmac`, `tanggal_rencana`, `tanggal_realisasi`, `nama_ac`, `lokasi_ac`, `nama_teknisi`, `progres`, `keterangan`) VALUES
-('PMC001', '2020-08-20', '2020-08-13', 'ssdd', 'Tower A A 02-06', 'sasfasfa', 'sfasfs', 'sfsafsf'),
-('PMC002', '2020-08-21', '2020-08-22', 'dasfsafsaf', 'Tower A A 02-06', 'sfasfasfsfsfs', 'sfasfasf', 'sfasfsfwfaf');
+('PMC001', '2020-10-02', '2020-09-25', 'Angga', 'Tower A A 02-06', 'Saya ngga tau', 'saya ngga tau', 'knlavljav');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pm_acten`
+-- Struktur dari tabel `pm_acten`
 --
 
 CREATE TABLE `pm_acten` (
@@ -362,17 +590,16 @@ CREATE TABLE `pm_acten` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `pm_acten`
+-- Dumping data untuk tabel `pm_acten`
 --
 
 INSERT INTO `pm_acten` (`id_acten`, `tanggal_rencana`, `tanggal_realisasi`, `unit`, `nama_teknisi`, `progres`, `keterangan`) VALUES
-('PMT001', '2020-08-19', '2020-08-28', 'A 03-04', 'Andrean', 'saya ngga ', 'fbfbfbfbfbfb'),
-('PMT002', '2020-08-21', '2020-08-30', 'A 03-02', 'Andrean', 'sfasfasf', 'rewtewtwetw');
+('PMT001', '2020-08-20', '2020-08-28', 'A 03-04', 'Andrean', 'saya ngga ', 'fbfbfbfbfbfb');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pm_elektrical`
+-- Struktur dari tabel `pm_elektrical`
 --
 
 CREATE TABLE `pm_elektrical` (
@@ -385,18 +612,10 @@ CREATE TABLE `pm_elektrical` (
   `gambar` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `pm_elektrical`
---
-
-INSERT INTO `pm_elektrical` (`id_pmelektrik`, `periode`, `nama_utilitas`, `lokasi_utilitas`, `rencana`, `realisasi`, `gambar`) VALUES
-('PML001', '3 bulan', 'AC PANASONIC', 'TOWER A', '2020-08-27', '2020-08-28', '83aae224-a4ef-463b-af1b-a333c97f1379.jpg'),
-('PML002', '3 bulan', 'AC PANASONIC', 'Basemane', '2020-08-28', '2020-08-28', 'download.jpg');
-
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pm_fa`
+-- Struktur dari tabel `pm_fa`
 --
 
 CREATE TABLE `pm_fa` (
@@ -415,16 +634,132 @@ CREATE TABLE `pm_fa` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `pm_fa`
+-- Dumping data untuk tabel `pm_fa`
 --
 
 INSERT INTO `pm_fa` (`id_pmfa`, `periode`, `lokasi_pm`, `nama_unit`, `lokasi_utilitas`, `rencana`, `realisasi`, `break_glass`, `bell`, `telphone`, `box_hydrant`, `sprinkle`) VALUES
-('PMF001', '3 Bulanan', 'Tower B', 'B 04-06', 'Basemane', '2020-08-22', '2020-08-30', 'Baik', 'Tidak Baik', 'Baik', 'Baik', 'Baik');
+('PMF001', '3 Bulanan', 'Tower B', 'B 04-06', 'Basemane', '2020-08-22', '2020-08-30', 'Baik', 'Tidak Baik', 'Baik', 'Baik', 'Baik'),
+('PMF002', '3 Bulanan', 'Basemane', 'A 02-04', 'Basemane', '2020-08-24', '2020-08-25', 'Baik', 'Tidak Baik', 'Baik', 'Baik', 'Tidak Baik');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pm_lift`
+-- Struktur dari tabel `pm_geset`
+--
+
+CREATE TABLE `pm_geset` (
+  `id_geset` varchar(10) NOT NULL,
+  `periode` varchar(50) NOT NULL,
+  `nama_utilitas` varchar(50) NOT NULL,
+  `lokasi_utilitas` varchar(50) NOT NULL,
+  `rencana` date NOT NULL,
+  `realisasi` date NOT NULL,
+  `nama_vendor` varchar(50) NOT NULL,
+  `alamat_vendor` text NOT NULL,
+  `nama_teknisi` varchar(50) NOT NULL,
+  `jenis_kerjaan` varchar(50) NOT NULL,
+  `gambar` varchar(100) NOT NULL,
+  `rekomendasi` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `pm_geset`
+--
+
+INSERT INTO `pm_geset` (`id_geset`, `periode`, `nama_utilitas`, `lokasi_utilitas`, `rencana`, `realisasi`, `nama_vendor`, `alamat_vendor`, `nama_teknisi`, `jenis_kerjaan`, `gambar`, `rekomendasi`) VALUES
+('PMG001', 'Tahunan', 'AC Panasonic', 'Basemane', '2020-08-26', '2020-08-28', 'Saya ngga tau', 'Saya ngga tau pak sumpah', 'Saya ngga tau', 'svasvsvsv', 'business-hub-ecommerce-website-template.jpg', 'svsavasvfwfscas'),
+('PMG002', 'Tahunan', 'AC Panasonic', 'Basemane', '2020-08-30', '2020-09-05', 'Saya ngga tau', 'sdshf', 'dbdbdb', 'svasvsvsv', '5LYzTBVoS196gvYvw3zjwDmcfgQNDrjz5dzwZ30U6mc.png', 'svsavasvfwfscas');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `pm_gt`
+--
+
+CREATE TABLE `pm_gt` (
+  `id_gt` varchar(10) NOT NULL,
+  `periode` varchar(10) NOT NULL,
+  `nama_utilitas` varchar(50) NOT NULL,
+  `lokasi_utilitas` varchar(50) NOT NULL,
+  `rencana` date NOT NULL,
+  `realisasi` date NOT NULL,
+  `nama_teknisi` varchar(50) NOT NULL,
+  `jenis_kerjaan` varchar(50) NOT NULL,
+  `gambar` varchar(100) NOT NULL,
+  `rekomendasi` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `pm_gt`
+--
+
+INSERT INTO `pm_gt` (`id_gt`, `periode`, `nama_utilitas`, `lokasi_utilitas`, `rencana`, `realisasi`, `nama_teknisi`, `jenis_kerjaan`, `gambar`, `rekomendasi`) VALUES
+('PGT001', '1 Tahun', 'AC Panasonic 2', 'Tower A', '2020-08-29', '2020-09-04', 'Saya ngga tau', 'svasvsvsv', '31485-193x278.jpg', 'svsavasvfwfscas');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `pm_gwt`
+--
+
+CREATE TABLE `pm_gwt` (
+  `id_pmgwt` varchar(10) NOT NULL,
+  `periode` varchar(10) NOT NULL,
+  `nama_utilitas` varchar(50) NOT NULL,
+  `lokasi_utilitas` varchar(50) NOT NULL,
+  `rencana` date NOT NULL,
+  `realisasi` date NOT NULL,
+  `nama_vendor` varchar(50) NOT NULL,
+  `alamat_vendor` text NOT NULL,
+  `nama_teknisi` varchar(50) NOT NULL,
+  `jenis_kerjaan` varchar(50) NOT NULL,
+  `gambar` varchar(100) NOT NULL,
+  `rekomendasi` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `pm_gwt`
+--
+
+INSERT INTO `pm_gwt` (`id_pmgwt`, `periode`, `nama_utilitas`, `lokasi_utilitas`, `rencana`, `realisasi`, `nama_vendor`, `alamat_vendor`, `nama_teknisi`, `jenis_kerjaan`, `gambar`, `rekomendasi`) VALUES
+('PMG002', '6 Bulanan', 'AC Panasonic 2', 'Basemane', '2020-08-28', '2020-09-05', 'Saya ngga tau', 'svasass', 'Saya ngga tau', 'svasvsvsv', '31485-193x278.jpg', 'svsavasvfwfscas'),
+('PMG003', '6 Bulanan', 'AC Panasonic', 'svsvsav', '2020-08-29', '2020-08-26', 'fnsnd', 'bdbdbebeab', 'babdeb', 'abebe', 'unordinary-193x278.jpg', 'gmmdgmgdm'),
+('PMG004', '6 Bulanan', 'AC Panasonic', 'Basemane', '2020-08-28', '2020-08-26', 'Saya ngga tau', 'ssdsbsb', 'Saya ngga tau', 'svasvsvsv', '673288_d51e13be-b076-4d05-a8b9-8b753ea99344.jpg', 'svsavasvfwfscas');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `pm_infrared`
+--
+
+CREATE TABLE `pm_infrared` (
+  `id_infrared` varchar(10) NOT NULL,
+  `periode` varchar(10) NOT NULL,
+  `nama_utilitas` varchar(50) NOT NULL,
+  `lokasi_utilitas` varchar(50) NOT NULL,
+  `rencana` date NOT NULL,
+  `realisasi` date NOT NULL,
+  `nama_vendor` varchar(50) NOT NULL,
+  `alamat_vendor` text NOT NULL,
+  `nama_teknisi` varchar(50) NOT NULL,
+  `jenis_kerjaan` varchar(50) NOT NULL,
+  `gambar` varchar(100) NOT NULL,
+  `rekomendasi` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `pm_infrared`
+--
+
+INSERT INTO `pm_infrared` (`id_infrared`, `periode`, `nama_utilitas`, `lokasi_utilitas`, `rencana`, `realisasi`, `nama_vendor`, `alamat_vendor`, `nama_teknisi`, `jenis_kerjaan`, `gambar`, `rekomendasi`) VALUES
+('KPI001', 'Tahunan', 'AC Panasonic', 'Basemane', '2020-08-28', '2020-08-29', 'Saya ngga tau', 'dgsfhfhsdhdagasafas', 'Saya ngga tau', 'svasvsvsv', '5LYzTBVoS196gvYvw3zjwDmcfgQNDrjz5dzwZ30U6mc.png', 'afasfsf'),
+('KPI002', 'Tahunan', 'AC PANASONIC', 'Basemane', '2020-08-31', '2020-08-31', 'Saya ngga tau', 'apaan aja', 'ssassv', 'svasvsvsv', '110-no-hanayome-35387.jpg', 'afasfsf'),
+('KPI004', '6 Bulanan', 'AC PANASONIC', 'Basemane', '2020-08-29', '2020-08-31', 'Saya ngga tau', 'knljj', 'ssassv', 'svasvsvsv', 'business-hub-ecommerce-website-template.jpg', 'afasfsf');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `pm_lift`
 --
 
 CREATE TABLE `pm_lift` (
@@ -441,17 +776,16 @@ CREATE TABLE `pm_lift` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `pm_lift`
+-- Dumping data untuk tabel `pm_lift`
 --
 
 INSERT INTO `pm_lift` (`id_pmlift`, `tanggal_rencana`, `tanggal_realisasi`, `nama_equipmen`, `lokasi_equipmen`, `nama_vendor`, `nama_teknisi`, `alamat_vendor`, `progres`, `keterangan`) VALUES
-('PML001', '2020-08-19', '2020-08-28', 'Andrean Ahmad Fauzi', 'Basemane', 'ss', 'sfsf', 'sfsf', 'sfsfs', 'sfsfsf'),
-('PML002', '2020-08-21', '2020-08-29', 'Andrean Ahmad Fauzi', 'Basemane', 'fsafasg', 'fasgfaga', 'sagasgsg', 'gasgasgs', 'sgasgasg');
+('PML001', '2020-08-19', '2020-08-28', 'Angga', 'A A 03-01', 'ss', 'sfsf', 'sfsf', 'sfsfs', 'sfsfsf');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pm_mecha`
+-- Struktur dari tabel `pm_mecha`
 --
 
 CREATE TABLE `pm_mecha` (
@@ -465,7 +799,7 @@ CREATE TABLE `pm_mecha` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `pm_mecha`
+-- Dumping data untuk tabel `pm_mecha`
 --
 
 INSERT INTO `pm_mecha` (`id_mecha`, `periode`, `nama_utilitas`, `lokasi_utilitas`, `rencana`, `realisasi`, `gambar`) VALUES
@@ -475,7 +809,262 @@ INSERT INTO `pm_mecha` (`id_mecha`, `periode`, `nama_utilitas`, `lokasi_utilitas
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_staff`
+-- Struktur dari tabel `pm_pl`
+--
+
+CREATE TABLE `pm_pl` (
+  `id_pl` varchar(10) NOT NULL,
+  `periode` varchar(50) NOT NULL,
+  `nama_utilitas` varchar(50) NOT NULL,
+  `lokasi_utilitas` varchar(50) NOT NULL,
+  `rencana` date NOT NULL,
+  `realisasi` date NOT NULL,
+  `nama_vendor` varchar(50) NOT NULL,
+  `alamat_vendor` text NOT NULL,
+  `nama_teknisi` varchar(50) NOT NULL,
+  `jenis_kerjaan` varchar(50) NOT NULL,
+  `gambar` varchar(100) NOT NULL,
+  `rekomendasi` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `pm_pl`
+--
+
+INSERT INTO `pm_pl` (`id_pl`, `periode`, `nama_utilitas`, `lokasi_utilitas`, `rencana`, `realisasi`, `nama_vendor`, `alamat_vendor`, `nama_teknisi`, `jenis_kerjaan`, `gambar`, `rekomendasi`) VALUES
+('KPL001', 'Tahunan', 'AC Panasonic', 'Basemane', '2020-08-27', '2020-08-29', 'Saya ngga tau', 'Puri Citayam Permai 02 Block C4/11A', 'Saya ngga tau', 'svasvsvsv', '673288_d51e13be-b076-4d05-a8b9-8b753ea99344.jpg', 'svsavasvfwfscas');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `pm_preasure_fan`
+--
+
+CREATE TABLE `pm_preasure_fan` (
+  `id_pf` varchar(10) NOT NULL,
+  `periode` varchar(10) NOT NULL,
+  `nama_utilitas` varchar(50) NOT NULL,
+  `lokasi_utilitas` varchar(50) NOT NULL,
+  `rencana` date NOT NULL,
+  `realisasi` date NOT NULL,
+  `nama_vendor` varchar(50) NOT NULL,
+  `alamat_vendor` text NOT NULL,
+  `nama_teknisi` varchar(50) NOT NULL,
+  `jenis_kerjaan` varchar(50) NOT NULL,
+  `gambar` varchar(100) NOT NULL,
+  `rekomendasi` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `pm_preasure_fan`
+--
+
+INSERT INTO `pm_preasure_fan` (`id_pf`, `periode`, `nama_utilitas`, `lokasi_utilitas`, `rencana`, `realisasi`, `nama_vendor`, `alamat_vendor`, `nama_teknisi`, `jenis_kerjaan`, `gambar`, `rekomendasi`) VALUES
+('PMP001', '6 Bulanan', 'AC Panasonic', 'Basemane', '2020-08-26', '2020-08-29', 'Saya ngga tau', 'Ngga atau Saya', 'Saya ngga tau', 'svasvsvsv', '5LYzTBVoS196gvYvw3zjwDmcfgQNDrjz5dzwZ30U6mc.png', 'svsavasvfwfscas'),
+('PMP002', '6 Bulanan', 'AC Panasonic', 'Basemane', '2020-08-26', '2020-08-27', 'Saya ngga tau', 'csavsvasv', 'sasfasfa', 'svasvsvsv', '1-13633_instagram-png-instagram-icon-transparent-background-instagram-logo.png', 'svsavasvfwfscas');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `pm_ps`
+--
+
+CREATE TABLE `pm_ps` (
+  `id_ps` varchar(10) NOT NULL,
+  `periode` varchar(50) NOT NULL,
+  `nama_utilitas` varchar(50) NOT NULL,
+  `lokasi_utilitas` varchar(50) NOT NULL,
+  `rencana` date NOT NULL,
+  `realisasi` date NOT NULL,
+  `nama_vendor` varchar(50) NOT NULL,
+  `alamat_vendor` text NOT NULL,
+  `nama_teknisi` varchar(50) NOT NULL,
+  `jenis_kerjaan` varchar(50) NOT NULL,
+  `gambar` varchar(100) NOT NULL,
+  `rekomendasi` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `pm_ps`
+--
+
+INSERT INTO `pm_ps` (`id_ps`, `periode`, `nama_utilitas`, `lokasi_utilitas`, `rencana`, `realisasi`, `nama_vendor`, `alamat_vendor`, `nama_teknisi`, `jenis_kerjaan`, `gambar`, `rekomendasi`) VALUES
+('KPS002', 'Tahunan', 'AC Panasonic', 'Basemane', '2020-08-28', '2020-08-29', 'Saya ngga tau', 'bfndfnsbddbsdbadvx d', 'Saya ngga tau', 'svasvsvsv', '5LYzTBVoS196gvYvw3zjwDmcfgQNDrjz5dzwZ30U6mc.png', 'svsavasvfwfscas');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `pm_pt`
+--
+
+CREATE TABLE `pm_pt` (
+  `id_pt` varchar(10) NOT NULL,
+  `periode` varchar(10) NOT NULL,
+  `nama_utilitas` varchar(50) NOT NULL,
+  `lokasi_utilitas` varchar(50) NOT NULL,
+  `rencana` date NOT NULL,
+  `realisasi` date NOT NULL,
+  `nama_vendor` varchar(100) NOT NULL,
+  `alamat_vendor` text NOT NULL,
+  `nama_teknisi` varchar(50) NOT NULL,
+  `jenis_kerjaan` varchar(50) NOT NULL,
+  `gambar` varchar(100) NOT NULL,
+  `rekomendasi` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `pm_pt`
+--
+
+INSERT INTO `pm_pt` (`id_pt`, `periode`, `nama_utilitas`, `lokasi_utilitas`, `rencana`, `realisasi`, `nama_vendor`, `alamat_vendor`, `nama_teknisi`, `jenis_kerjaan`, `gambar`, `rekomendasi`) VALUES
+('KPT001', '3 Bulanan', 'AC Panasonic', 'Basemane', '2021-02-01', '2021-03-02', 'Saya ngga tau', 'PCP 2 Block C4/11A', 'Saya ngga tau', 'svasvsvsv', '1-13633_instagram-png-instagram-icon-transparent-background-instagram-logo.png', 'svsavasvfwfscas'),
+('KPT002', '3 Bulanan', 'AC Panasonic', 'Basemane', '2020-08-26', '2020-09-05', 'Saya ngga tau', 'hvjgchxhfg', 'Saya ngga tau', 'svasvsvsv', 'eqi7w3-u4aammka-bcebf2b4460a80f309ffb48813f7d580_600x400.jpg', 'afasfsf'),
+('KPT003', 'Tahunan', 'AC Panasonic', 'Basemane', '2020-08-26', '2020-08-29', 'Saya ngga tau', 'fdfnfnsfn', 'dbdbdb', 'svasvsvsv', '106392.jpg', 'svsavasvfwfscas');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `pm_rt`
+--
+
+CREATE TABLE `pm_rt` (
+  `id_rt` varchar(10) NOT NULL,
+  `periode` varchar(10) NOT NULL,
+  `nama_utilitas` varchar(50) NOT NULL,
+  `lokasi_utilitas` varchar(10) NOT NULL,
+  `rencana` date NOT NULL,
+  `realisasi` date NOT NULL,
+  `nama_teknisi` varchar(50) NOT NULL,
+  `jenis_kerjaan` varchar(500) NOT NULL,
+  `gambar` varchar(100) NOT NULL,
+  `rekomendasi` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `pm_rt`
+--
+
+INSERT INTO `pm_rt` (`id_rt`, `periode`, `nama_utilitas`, `lokasi_utilitas`, `rencana`, `realisasi`, `nama_teknisi`, `jenis_kerjaan`, `gambar`, `rekomendasi`) VALUES
+('PRT002', '1 Tahun', 'AC Panasonic', 'Tower B', '2020-08-29', '2020-08-30', 'Saya ngga tau', 'svasvsvsv', '673288_d51e13be-b076-4d05-a8b9-8b753ea99344.jpg', 'svsavasvfwfscas');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `pm_stp`
+--
+
+CREATE TABLE `pm_stp` (
+  `id_stp` varchar(10) NOT NULL,
+  `rencana` date NOT NULL,
+  `realisasi` date NOT NULL,
+  `nama_stp` varchar(50) NOT NULL,
+  `lokasi_stp` varchar(50) NOT NULL,
+  `jenis_kerusakan` varchar(50) NOT NULL,
+  `nama_teknisi` text NOT NULL,
+  `progres` varchar(50) NOT NULL,
+  `keterangan` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `pm_stp`
+--
+
+INSERT INTO `pm_stp` (`id_stp`, `rencana`, `realisasi`, `nama_stp`, `lokasi_stp`, `jenis_kerusakan`, `nama_teknisi`, `progres`, `keterangan`) VALUES
+('PMS001', '2020-08-28', '2020-08-29', 'AC Panasonic', 'Tower A A 02-06', 'Saya ngga tau', 'Saya ngga tau', 'saya ngga tau', 'Kabel ada yang putus');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `pm_trafo`
+--
+
+CREATE TABLE `pm_trafo` (
+  `id_trafo` varchar(10) NOT NULL,
+  `periode` varchar(50) NOT NULL,
+  `nama_utilitas` varchar(50) NOT NULL,
+  `lokasi_utilitas` varchar(50) NOT NULL,
+  `rencana` date NOT NULL,
+  `realisasi` date NOT NULL,
+  `nama_vendor` varchar(50) NOT NULL,
+  `alamat_vendor` text NOT NULL,
+  `nama_teknisi` varchar(50) NOT NULL,
+  `jenis_kerjaan` varchar(50) NOT NULL,
+  `gambar` varchar(100) NOT NULL,
+  `rekomendasi` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `pm_trafo`
+--
+
+INSERT INTO `pm_trafo` (`id_trafo`, `periode`, `nama_utilitas`, `lokasi_utilitas`, `rencana`, `realisasi`, `nama_vendor`, `alamat_vendor`, `nama_teknisi`, `jenis_kerjaan`, `gambar`, `rekomendasi`) VALUES
+('PMT001', '3 Bulanan', 'AC Panasonic', 'Tower A', '2020-08-27', '2020-08-29', 'Saya ngga tau', 'Perumahan Puri Cityam Permai 2', 'Saya ngga tau', 'svasvsvsv', 'hot project.png', 'svsavasvfwfscas');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `pm_tu`
+--
+
+CREATE TABLE `pm_tu` (
+  `id_tu` varchar(10) NOT NULL,
+  `periode` varchar(10) NOT NULL,
+  `nama_utilitas` varchar(50) NOT NULL,
+  `lokasi_utilitas` varchar(50) NOT NULL,
+  `rencana` date NOT NULL,
+  `realisasi` date NOT NULL,
+  `nama_vendor` varchar(50) NOT NULL,
+  `alamat_vendor` text NOT NULL,
+  `nama_teknisi` varchar(50) NOT NULL,
+  `jenis_kerjaan` varchar(50) NOT NULL,
+  `gambar` varchar(100) NOT NULL,
+  `rekomendasi` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `pm_tu`
+--
+
+INSERT INTO `pm_tu` (`id_tu`, `periode`, `nama_utilitas`, `lokasi_utilitas`, `rencana`, `realisasi`, `nama_vendor`, `alamat_vendor`, `nama_teknisi`, `jenis_kerjaan`, `gambar`, `rekomendasi`) VALUES
+('KTU002', '3 Bulanan', 'AC Panasonic', 'Basemane', '2020-08-27', '2020-08-29', 'Saya ngga tau', 'fmfmssgm', 'Saya ngga tau', 'svasvsvsv', '5LYzTBVoS196gvYvw3zjwDmcfgQNDrjz5dzwZ30U6mc.png', 'svsavasvfwfscas'),
+('KTU003', 'Tahunan', 'Aadavv', 'svsvsav', '2020-08-30', '2020-09-06', 'fnsnd', 'nrbebebbebeb', 'bsdbsdb', 'dbadbb', '31485-193x278.jpg', 'gmmdgmgdm');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tb_ke`
+--
+
+CREATE TABLE `tb_ke` (
+  `id_ke` int(11) NOT NULL,
+  `nama` varchar(100) NOT NULL,
+  `alamat` text NOT NULL,
+  `jabatan` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `tb_ke`
+--
+
+INSERT INTO `tb_ke` (`id_ke`, `nama`, `alamat`, `jabatan`) VALUES
+(1920010022, 'Alif Abby', 'Tinggal di persimpangan kali ciliwung', 'Babu'),
+(2147483647, 'Varel Pura Jaya', 'jvhjghffz', 'Staff');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tb_negara`
+--
+
+CREATE TABLE `tb_negara` (
+  `id` int(11) NOT NULL,
+  `negara` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tb_staff`
 --
 
 CREATE TABLE `tb_staff` (
@@ -483,23 +1072,22 @@ CREATE TABLE `tb_staff` (
   `nama_staff` varchar(100) NOT NULL,
   `username` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
-  `level` enum('engineering','tenant','security','gudang') NOT NULL
+  `level` enum('engineering','tenant','security','gudang','admin') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `tb_staff`
+-- Dumping data untuk tabel `tb_staff`
 --
 
 INSERT INTO `tb_staff` (`id_staff`, `nama_staff`, `username`, `password`, `level`) VALUES
-(1, 'Andrean Ahmad Fauzi', 'andrean', 'dd1602d48bcb40d7adbc75a709eb7046', 'engineering'),
-(2, 'Raehan ', 'rehan', 'd35101883d6894ff4c6592f191ce3bd7', 'tenant'),
-(3, 'Nur', 'nur', 'ed1e56ef963bb91c45a14a50c2f3cd95', 'security'),
-(4, 'Abby', 'abby', '4636b17d0d975f911bc94c6a5ae745b6', 'gudang');
+(1, 'Andrean Ahmad Fauzi', 'andrean', 'staff2', 'engineering'),
+(6, 'Alif Abby Damanhuri', 'alif', 'staff1', 'engineering'),
+(7, 'andrean ahmad', 'admin', 'admin', 'admin');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_unit`
+-- Struktur dari tabel `tb_unit`
 --
 
 CREATE TABLE `tb_unit` (
@@ -508,7 +1096,7 @@ CREATE TABLE `tb_unit` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `tb_unit`
+-- Dumping data untuk tabel `tb_unit`
 --
 
 INSERT INTO `tb_unit` (`id_unit`, `unit`) VALUES
@@ -724,181 +1312,279 @@ INSERT INTO `tb_unit` (`id_unit`, `unit`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_user`
+-- Struktur dari tabel `tb_user`
 --
 
 CREATE TABLE `tb_user` (
-  `id_user` int(10) NOT NULL,
+  `id_user` int(11) NOT NULL,
+  `username` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL,
   `nama_lengkap` varchar(100) NOT NULL,
-  `username` varchar(50) NOT NULL,
-  `password` varchar(50) NOT NULL
+  `gender` varchar(10) NOT NULL,
+  `negara` varchar(50) NOT NULL,
+  `tanggal_lahir` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `tb_user`
+-- Dumping data untuk tabel `tb_user`
 --
 
-INSERT INTO `tb_user` (`id_user`, `nama_lengkap`, `username`, `password`) VALUES
-(1, 'Andrean Ahmad Fauzi', 'andreanahmadf@gmail.com', 'dd1602d48bcb40d7adbc75a709eb7046'),
-(2, 'Nur Khusnia Noviyanti', 'nurkhusnia@gmail.com', 'dd1602d48bcb40d7adbc75a709eb7046');
+INSERT INTO `tb_user` (`id_user`, `username`, `password`, `nama_lengkap`, `gender`, `negara`, `tanggal_lahir`) VALUES
+(2, 'contoh@gmail.com', 'user1', 'andrean ahmad fauzi', 'Man', 'Indonesia;', '2001-01-03');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `co_ac`
+-- Indeks untuk tabel `co_ac`
 --
 ALTER TABLE `co_ac`
   ADD PRIMARY KEY (`id_complaine`);
 
 --
--- Indexes for table `co_me`
+-- Indeks untuk tabel `co_me`
 --
 ALTER TABLE `co_me`
   ADD PRIMARY KEY (`id_complaine`);
 
 --
--- Indexes for table `co_sipil`
+-- Indeks untuk tabel `co_sipil`
 --
 ALTER TABLE `co_sipil`
   ADD PRIMARY KEY (`id_complaine`);
 
 --
--- Indexes for table `dc_air`
+-- Indeks untuk tabel `dc_air`
 --
 ALTER TABLE `dc_air`
   ADD PRIMARY KEY (`id_air`);
 
 --
--- Indexes for table `dc_listrik`
+-- Indeks untuk tabel `dc_listrik`
 --
 ALTER TABLE `dc_listrik`
   ADD PRIMARY KEY (`id_listrik`);
 
 --
--- Indexes for table `dp_air`
+-- Indeks untuk tabel `dp_air`
 --
 ALTER TABLE `dp_air`
   ADD PRIMARY KEY (`id_cek`);
 
 --
--- Indexes for table `dp_listrik`
+-- Indeks untuk tabel `dp_listrik`
 --
 ALTER TABLE `dp_listrik`
   ADD PRIMARY KEY (`id_cek`);
 
 --
--- Indexes for table `du_ac_public_area`
+-- Indeks untuk tabel `du_ac_public_area`
 --
 ALTER TABLE `du_ac_public_area`
   ADD PRIMARY KEY (`id_acpa`);
 
 --
--- Indexes for table `du_elektrical`
+-- Indeks untuk tabel `du_elektrical`
 --
 ALTER TABLE `du_elektrical`
   ADD PRIMARY KEY (`id_utilitas`);
 
 --
--- Indexes for table `du_generator_set`
+-- Indeks untuk tabel `du_generator_set`
 --
 ALTER TABLE `du_generator_set`
   ADD PRIMARY KEY (`id_generator_set`);
 
 --
--- Indexes for table `du_lift`
+-- Indeks untuk tabel `du_lift`
 --
 ALTER TABLE `du_lift`
   ADD PRIMARY KEY (`id_lift`);
 
 --
--- Indexes for table `du_pompa`
+-- Indeks untuk tabel `du_me`
+--
+ALTER TABLE `du_me`
+  ADD PRIMARY KEY (`id_me`);
+
+--
+-- Indeks untuk tabel `du_pompa`
 --
 ALTER TABLE `du_pompa`
   ADD PRIMARY KEY (`id_pompa`);
 
 --
--- Indexes for table `du_trafo`
+-- Indeks untuk tabel `du_trafo`
 --
 ALTER TABLE `du_trafo`
   ADD PRIMARY KEY (`id_trafo`);
 
 --
--- Indexes for table `pm_acap`
+-- Indeks untuk tabel `pm_acap`
 --
 ALTER TABLE `pm_acap`
   ADD PRIMARY KEY (`id_pmac`);
 
 --
--- Indexes for table `pm_acten`
+-- Indeks untuk tabel `pm_acten`
 --
 ALTER TABLE `pm_acten`
   ADD PRIMARY KEY (`id_acten`);
 
 --
--- Indexes for table `pm_elektrical`
+-- Indeks untuk tabel `pm_elektrical`
 --
 ALTER TABLE `pm_elektrical`
   ADD PRIMARY KEY (`id_pmelektrik`);
 
 --
--- Indexes for table `pm_fa`
+-- Indeks untuk tabel `pm_fa`
 --
 ALTER TABLE `pm_fa`
   ADD PRIMARY KEY (`id_pmfa`);
 
 --
--- Indexes for table `pm_lift`
+-- Indeks untuk tabel `pm_geset`
+--
+ALTER TABLE `pm_geset`
+  ADD PRIMARY KEY (`id_geset`);
+
+--
+-- Indeks untuk tabel `pm_gt`
+--
+ALTER TABLE `pm_gt`
+  ADD PRIMARY KEY (`id_gt`);
+
+--
+-- Indeks untuk tabel `pm_gwt`
+--
+ALTER TABLE `pm_gwt`
+  ADD PRIMARY KEY (`id_pmgwt`);
+
+--
+-- Indeks untuk tabel `pm_infrared`
+--
+ALTER TABLE `pm_infrared`
+  ADD PRIMARY KEY (`id_infrared`);
+
+--
+-- Indeks untuk tabel `pm_lift`
 --
 ALTER TABLE `pm_lift`
   ADD PRIMARY KEY (`id_pmlift`);
 
 --
--- Indexes for table `pm_mecha`
+-- Indeks untuk tabel `pm_mecha`
 --
 ALTER TABLE `pm_mecha`
   ADD PRIMARY KEY (`id_mecha`);
 
 --
--- Indexes for table `tb_staff`
+-- Indeks untuk tabel `pm_pl`
+--
+ALTER TABLE `pm_pl`
+  ADD PRIMARY KEY (`id_pl`);
+
+--
+-- Indeks untuk tabel `pm_preasure_fan`
+--
+ALTER TABLE `pm_preasure_fan`
+  ADD PRIMARY KEY (`id_pf`);
+
+--
+-- Indeks untuk tabel `pm_ps`
+--
+ALTER TABLE `pm_ps`
+  ADD PRIMARY KEY (`id_ps`);
+
+--
+-- Indeks untuk tabel `pm_pt`
+--
+ALTER TABLE `pm_pt`
+  ADD PRIMARY KEY (`id_pt`);
+
+--
+-- Indeks untuk tabel `pm_rt`
+--
+ALTER TABLE `pm_rt`
+  ADD PRIMARY KEY (`id_rt`);
+
+--
+-- Indeks untuk tabel `pm_stp`
+--
+ALTER TABLE `pm_stp`
+  ADD PRIMARY KEY (`id_stp`);
+
+--
+-- Indeks untuk tabel `pm_trafo`
+--
+ALTER TABLE `pm_trafo`
+  ADD PRIMARY KEY (`id_trafo`);
+
+--
+-- Indeks untuk tabel `pm_tu`
+--
+ALTER TABLE `pm_tu`
+  ADD PRIMARY KEY (`id_tu`);
+
+--
+-- Indeks untuk tabel `tb_ke`
+--
+ALTER TABLE `tb_ke`
+  ADD PRIMARY KEY (`id_ke`);
+
+--
+-- Indeks untuk tabel `tb_negara`
+--
+ALTER TABLE `tb_negara`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `tb_staff`
 --
 ALTER TABLE `tb_staff`
   ADD PRIMARY KEY (`id_staff`);
 
 --
--- Indexes for table `tb_unit`
+-- Indeks untuk tabel `tb_unit`
 --
 ALTER TABLE `tb_unit`
   ADD PRIMARY KEY (`id_unit`);
 
 --
--- Indexes for table `tb_user`
+-- Indeks untuk tabel `tb_user`
 --
 ALTER TABLE `tb_user`
   ADD PRIMARY KEY (`id_user`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `tb_staff`
+-- AUTO_INCREMENT untuk tabel `tb_negara`
+--
+ALTER TABLE `tb_negara`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT untuk tabel `tb_staff`
 --
 ALTER TABLE `tb_staff`
-  MODIFY `id_staff` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_staff` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT for table `tb_unit`
+-- AUTO_INCREMENT untuk tabel `tb_unit`
 --
 ALTER TABLE `tb_unit`
   MODIFY `id_unit` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=248;
 
 --
--- AUTO_INCREMENT for table `tb_user`
+-- AUTO_INCREMENT untuk tabel `tb_user`
 --
 ALTER TABLE `tb_user`
-  MODIFY `id_user` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

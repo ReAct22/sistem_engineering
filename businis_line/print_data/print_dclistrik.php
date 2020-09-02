@@ -34,7 +34,7 @@
 			<th><?php echo $data['unit'] ?></th>
 			<th><?php echo $data['meter_awal'] ?></th>
 			<th><?php echo $data['meter_akhir'] ?></th>
-			<th><img src="img/<?php echo $data['gambar'] ?>" width="50" height="50"></th>
+			<th><img src="../assets/img/<?php echo $data['gambar'] ?>" width="50" height="50"></th>
 			<th><?php echo $data['total'] ?></th>
 			<th><?php echo $data['keterangan'] ?></th>
 			</tr>

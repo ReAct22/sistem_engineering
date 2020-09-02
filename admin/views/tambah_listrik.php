@@ -110,7 +110,7 @@ if($tambah_data){
 	}else{
 		$pindah = move_uploaded_file($sumber, $target.$nama_gambar);
 		if($pindah){
-			mysqli_query($koneksi,"insert into dp_listrik values('$no_cek','$no_unit','$meter_awal','$meter_akhir','$nama_gambar','$pemakaian','keterangan')");
+			mysqli_query($koneksi,"insert into dp_listrik values('$no_cek','$no_unit','$meter_awal','$meter_akhir','$nama_gambar','$pemakaian','$keterangan')");
 			?>
 			<script type="text/javascript">
 				alert("Input Data berhasil");
