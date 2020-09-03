@@ -9,7 +9,7 @@ teknologi yg di gunakan untuk aplikasi ini :
 - Javascript.
 - HTML 5.
 - CC3
--Bootstrap 4 plugin
+- Bootstrap 4 plugin
 
 terdapat beberapa halaman di aplikasi ini sebagai berikut:
 

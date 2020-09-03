@@ -76,7 +76,7 @@
 	</div>
 		<div class="input-group mb-3">
 	  <div class="input-group-prepend">
-	  <span class="input-group-text">Realisasi Perkerjaan</span>
+	  <span class="input-group-text">Foto Perkerjaan</span>
 	  </div>
 	  <input type="file" name="gambar" class="form-control">
 	</div>
