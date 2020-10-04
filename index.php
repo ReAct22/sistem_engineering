@@ -15,8 +15,9 @@
     <a href="/sistem_engineering" class="w3-bar-item w3-button"><b>APARTEMENT</b> Bukit Golf Pondok Indah</a>
     <!-- Float links to the right. Hide them on small screens -->
     <div class="w3-right w3-hide-small">
+      <a href="businis_line/login.php" class="w3-bar-item w3-button">Security Sistem</a>
       <a href="compline_online/login.php" class="w3-bar-item w3-button">Compline Online</a>
-      <a href="businis_line/login.php" class="w3-bar-item w3-button">Busines Line</a>
+      <a href="businis_line/login.php" class="w3-bar-item w3-button">Maintenant</a>
       <a href="?page=contact" class="w3-bar-item w3-button">Contact</a>
     </div>
   </div>
