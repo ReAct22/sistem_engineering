@@ -14,7 +14,7 @@
 <body>
 <div>
 	<!-- Navbar (sit on top) -->
-<div class="w3-top">
+<div class="">
   <div class="w3-bar w3-white w3-wide w3-padding w3-card">
     <a href="/sistem_engineering/compline_online" class="w3-bar-item w3-button"><b>APARTEMENT</b> Bukit Golf Pondok Indah</a>
     <!-- Float links to the right. Hide them on small screens -->
@@ -23,7 +23,7 @@
   <button class="w3-button ">Data</button>
   <div class="w3-dropdown-content w3-bar-block w3-border">
     <a href="?page=log_book" class="w3-bar-item w3-button">Data Log Book</a>
-    <a href="?page=requet" class="w3-bar-item w3-button">Data Request</a>
+    <a href="?page=request" class="w3-bar-item w3-button">Data Request</a>
     <a href="?page=security" class="w3-bar-item w3-button">Data Security</a>
     <a href="?page=list_parking" class="w3-bar-item w3-button">Data List Parking</a>
 
@@ -53,6 +53,20 @@ if($page == ""){
 	include "views/home.php";
 }else if($page == "log_book"){
   include "views/log_book.php";
+}else if($page == "tambah_log_book"){
+  include "views/tambah_log_book.php";
+}else if($page == "request"){
+  include "views/request_list.php";
+}else if($page == "tambah_request"){
+  include "views/tambah_request.php";
+}else if($page == "list_parking"){
+  include "views/parking.php";
+}else if($page == "tambah_parking"){
+  include "views/tambah_parking.php";
+}else if($page == "security"){
+  include "views/security.php";
+}else if($page == "tambah_security"){
+  include "views/tambah_security.php";
 }else{
 	include "views/404.php";
 }

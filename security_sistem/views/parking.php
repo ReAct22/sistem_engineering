@@ -1,9 +1,9 @@
 <?php 
 	include "../config/koneksi.php";
 ?>
-<h3 style="margin-top: 70px;" class="ml-3">Data Log Book</h3>
+<h3 style="margin-top: 70px;" class="ml-3">Data Parking</h3>
 <br>
-<a href="?page=tambah_log_book" class="btn btn-md btn-success ml-3"><i class="fas fa-plus"></i>Tambah</a>
+<a href="?page=tambah_parking" class="btn btn-md btn-success ml-3"><i class="fas fa-plus"></i>Tambah</a>
 <a href="?page=print_ac" class="btn btn-md btn-primary ml-3"><i class="fas fa-print"></i> Print</a>
 
 <form action="" method="post" class="d-none d-sm-inline-block form-inline ml-md-3 my-2 my-md-0 mw-100 navbar-search" style="float: right; margin-right: 50px;">
@@ -20,17 +20,14 @@
 	<table border="1" align="center" class="w3-table w3-striped">
 	<tr>
 		<th>No</th>
-		<th>Nomer Log Book</th>
+		<th>ID Tenant</th>
 		<th>Nama</th>
-		<th>Date</th>
-		<th>Document</th>
-		<th>Package</th>
-		<th>Unit Key</th>
-		<th>Inventory Key</th>
-		<th>Acces Card</th>
-		<th>Car Keys</th>
-		<th>Payment</th>
-		<th>Message</th>
+		<th>Floor</th>
+		<th>Unit</th>
+		<th>Park No.Lot</th>
+		<th>No Plat Kendaraan</th>
+		<th>Nama Driver</th>
+		<th>Keterangan</th>
 	</tr>
 		<?php 
 			$no = 1;
@@ -47,13 +44,13 @@
 	$cari_barang = @$_POST['cari_barang'];
 	if($cari_barang){
 		if($cari != ""){
-			$sql = mysqli_query($koneksi,"select *from d_log_book where id_log_book like '%$cari%' or nama like '%$cari%' or tgl like '%$cari%'");
+			$sql = mysqli_query($koneksi,"select *from d_parking where id_tenant like '%$cari%' or nama like '%$cari%' or unit like '%$cari%'");
 		}else{
-			$sql = mysqli_query($koneksi,"select *from d_log_book");
+			$sql = mysqli_query($koneksi,"select *from d_parking");
 		}
 	}else{
 		 
-		$sql = mysqli_query($koneksi,"select *from d_log_book order by id_log_book desc LIMIT $posisi, $batas");
+		$sql = mysqli_query($koneksi,"select *from d_parking order by id_tenant desc LIMIT $posisi, $batas");
 		
 	}
 
@@ -70,28 +67,24 @@
 		?>
 	<tr>
 		<td><?php echo $no++ ?></td>
-		<td><?php echo $data['id_log_book'] ?></td>
+		<td><?php echo $data['id_tenant'] ?></td>
 		<td><?php echo $data['nama'] ?></td>
-		<td><?php echo date('d-m-Y', strtotime($data['tgl'])) ?></td>
-		<td><?php echo $data['document'] ?></td>
-		<td><?php echo $data['package'] ?></td>
-		<td><?php echo $data['unit_key'] ?></td>
-		<td><?php echo $data['inventori_key'] ?></td>
-		<td><?php echo $data['acces_card'] ?></td>
-		<td><?php echo $data['l'] ?></td>
-		<td><?php echo $data['payment'] ?></td>
-		<td><?php echo $data['message'] ?></td>
+		<td><?php echo $data['floor'] ?></td>
+		<td><?php echo $data['unit'] ?></td>
+		<td><?php echo $data['no_park'] ?></td>
+		<td><?php echo $data['no_plat'] ?></td>
+		<td><?php echo $data['nama_driver'] ?></td>
+		<td><?php echo $data['keterangan'] ?></td>
 	</tr>
-	<?php 
+	<?php }
 		}
-	}
-	?>
+	 ?>
 	
 </table>
 
 <div style="margin-top: 10px;float: left;">
         <?php 
-        $jml = mysqli_num_rows(mysqli_query($koneksi,"select *from d_log_book"));
+        $jml = mysqli_num_rows(mysqli_query($koneksi,"select *from d_parking"));
         
         ?>
       </div>
@@ -100,7 +93,7 @@
           $jml_hal = ceil($jml / $batas);
           for($i=1; $i<=$jml_hal; $i++){
         ?>
-        <a href="?page=log_book&hal=<?php echo $i; ?>" class="btn btn-outline-primary"><?php echo $i; ?></a>
+        <a href="?page=list_parking&hal=<?php echo $i; ?>" class="btn btn-outline-primary"><?php echo $i; ?></a>
         <?php
           }
         ?>
