@@ -1,3 +1,6 @@
+<?php 
+	include "../config/koneksi.php";
+?>
 <h3 class="ml-3" style="margin-top: 70px;">Add Security</h3>
 <form action="" method="post">
 	<div class="card-body">
@@ -48,7 +51,7 @@
 	  <div class="input-group-prepend">
 	  <span class="input-group-text">BB</span>
 	  </div>
-		<input type="text" name="BB" class="form-control" >
+		<input type="text" name="bb" class="form-control" >
 	</div>
 
 	<div class="input-group mb-3">
@@ -128,22 +131,17 @@ $jabatan = @$_POST['jabatan'];
 $status = @$_POST['status'];
 $tambah_data = @$_POST['tambah'];
 
-
-	echo $nik_s;
-	echo $nama;
-	echo $lahir;
-	echo $tgl_lahir;
-	echo $tmt;
-	echo $tb;
-	echo $bb;
-	echo $nik;
-	echo $alamat;
-	echo $agama;
-	echo $pendidikan;
-	echo $no_tlp;
-	echo $jabatan;
-	echo $status;
-
+if($tambah_data.mysqli_connect_error($koneksi)){
+	mysqli_query($koneksi,"INSERT INTO d_security 
+	 values('$nik_s','$nama','$lahir','$tgl_lahir','$tmt','$tb','$bb','$nik',
+	'$alamat','$agama','$pendidikan','$no_tlp','$jabatan','$status')");
+	?>
+	<script>
+		alert("Data berhasil di tambahkan");
+		window.location.href='?page=security';
+	</script>
+	<?php
+}
 
 ?>
 

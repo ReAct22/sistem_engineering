@@ -1,10 +1,10 @@
 <?php 
 	include "../config/koneksi.php";
 ?>
-<h3 style="margin-top: 70px;" class="ml-3">Data Parking</h3>
+<h3 style="margin-top: 70px;" class="ml-3">Rencana Tugas</h3>
 <br>
-<a href="?page=tambah_parking" class="btn btn-md btn-success ml-3"><i class="fas fa-plus"></i>Tambah</a>
-<a href="?page=print_parking" class="btn btn-md btn-primary ml-3"><i class="fas fa-print"></i> Print</a>
+<a href="?page=tambah_tugas" class="btn btn-md btn-success ml-3"><i class="fas fa-plus"></i>Tambah</a>
+<a href="?page=print_tugas" class="btn btn-md btn-primary ml-3"><i class="fas fa-print"></i> Print</a>
 
 <form action="" method="post" class="d-none d-sm-inline-block form-inline ml-md-3 my-2 my-md-0 mw-100 navbar-search" style="float: right; margin-right: 50px;">
             <div class="input-group">
@@ -20,17 +20,20 @@
 	<table border="1" align="center" class="w3-table w3-striped">
 	<tr>
 		<th>No</th>
-		<th>ID Tenant</th>
-		<th>Nama</th>
-		<th>Floor</th>
-		<th>Unit</th>
-		<th>Park No.Lot</th>
-		<th>No Plat Kendaraan</th>
-		<th>Nama Driver</th>
+		<th>No Form</th>
+		<th>Hari/Tanggal</th>
+		<th>Regu</th>
+		<th>Shift</th>
+		<th>Waktu</th>
+		<th>Nama Pos</th>
+		<th>Lokasi</th>
+		<th>Petugas</th>
+		<th>Jam Masuk</th>
+		<th>Jam Keluar</th>
 		<th>Keterangan</th>
 	</tr>
 		<?php 
-			$no = 1;
+			$no =1;
 			$batas = 3;
         $hal = @$_GET['hal'];
         if(empty($hal)){
@@ -44,13 +47,13 @@
 	$cari_barang = @$_POST['cari_barang'];
 	if($cari_barang){
 		if($cari != ""){
-			$sql = mysqli_query($koneksi,"select *from d_parking where id_tenant like '%$cari%' or nama like '%$cari%' or unit like '%$cari%'");
+			$sql = mysqli_query($koneksi,"select *from tb_tugas where no_form like '%$cari%' or hari like '%$cari%' or tanggal like '%$cari%'");
 		}else{
-			$sql = mysqli_query($koneksi,"select *from d_parking");
+			$sql = mysqli_query($koneksi,"select *from tb_tugas");
 		}
 	}else{
 		 
-		$sql = mysqli_query($koneksi,"select *from d_parking order by id_tenant desc LIMIT $posisi, $batas");
+		$sql = mysqli_query($koneksi,"select *from tb_tugas order by no_form desc LIMIT $posisi, $batas");
 		
 	}
 
@@ -64,27 +67,32 @@
 		<?php
 	}else{
 	while($data = mysqli_fetch_array($sql)){
+
 		?>
 	<tr>
 		<td><?php echo $no++ ?></td>
-		<td><?php echo $data['id_tenant'] ?></td>
-		<td><?php echo $data['nama'] ?></td>
-		<td><?php echo $data['floor'] ?></td>
-		<td><?php echo $data['unit'] ?></td>
-		<td><?php echo $data['no_park'] ?></td>
-		<td><?php echo $data['no_plat'] ?></td>
-		<td><?php echo $data['nama_driver'] ?></td>
+		<td><?php echo $data['no_form'] ?></td>
+		<td><?php echo $data['hari'] ?>/ <?php echo date('d-m-Y',strtotime($data['tanggal'])) ?></td>
+		<td><?php echo $data['regu'] ?></td>
+		<td><?php echo $data['shift'] ?></td>
+		<td><?php echo $data['waktu'] ?></td>
+		<td><?php echo $data['nama_pos'] ?></td>
+		<td><?php echo $data['lokasi'] ?></td>
+		<td><?php echo $data['petugas'] ?></td>
+		<td><?php echo $data['masuk'] ?></td>
+		<td><?php echo $data['keluar'] ?></td>
 		<td><?php echo $data['keterangan'] ?></td>
 	</tr>
-	<?php }
+	<?php 
 		}
+	}
 	 ?>
 	
 </table>
 
 <div style="margin-top: 10px;float: left;">
         <?php 
-        $jml = mysqli_num_rows(mysqli_query($koneksi,"select *from d_parking"));
+        $jml = mysqli_num_rows(mysqli_query($koneksi,"select *from tb_tugas"));
         
         ?>
       </div>
@@ -93,7 +101,7 @@
           $jml_hal = ceil($jml / $batas);
           for($i=1; $i<=$jml_hal; $i++){
         ?>
-        <a href="?page=list_parking&hal=<?php echo $i; ?>" class="btn btn-outline-primary"><?php echo $i; ?></a>
+        <a href="?page=tugas&hal=<?php echo $i; ?>" class="btn btn-outline-primary"><?php echo $i; ?></a>
         <?php
           }
         ?>

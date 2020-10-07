@@ -1,8 +1,13 @@
+<?php 
+@session_start();
+include "../config/koneksi.php";
+if(@$_SESSION['security']){
+?>
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Bukit Golf Pondok Indah - Jakarta Selatan</title>
-	<link rel="icon" type="image/x-icon" href="img/icon.jpg">
+	<link rel="icon" type="image/x-icon" href="assets/img/icon.jpg">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
@@ -14,9 +19,9 @@
 <body>
 <div>
 	<!-- Navbar (sit on top) -->
-<div class="">
+<div class="w3-top">
   <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-    <a href="/sistem_engineering/compline_online" class="w3-bar-item w3-button"><b>APARTEMENT</b> Bukit Golf Pondok Indah</a>
+    <a href="/sistem_engineering/security_sistem" class="w3-bar-item w3-button"><b>APARTEMENT</b> Bukit Golf Pondok Indah</a>
     <!-- Float links to the right. Hide them on small screens -->
     <div class="w3-right w3-hide-small">
       <div class="w3-dropdown-hover">
@@ -30,12 +35,20 @@
   </div>
 </div>
      
-      <a href="businis_line/login.php" class="w3-bar-item w3-button">Preventif Apar</a>
-      <a href="compline_online/login.php" class="w3-bar-item w3-button">Rencana Tugas</a>
-    
+      <a href="?page=prevn_apar" class="w3-bar-item w3-button">Preventif Apar</a>
+      <a href="?page=tugas" class="w3-bar-item w3-button">Rencana Tugas</a>
+    <?php 
+  if(@$_SESSION['security']){
+    $user_login = @$_SESSION['security'];
+  }
+
+  $sql_login = mysqli_query($koneksi,"select *from tb_staff where id_staff = '$user_login'");
+  $data = mysqli_fetch_array($sql_login);
+  ?>
 <div class="w3-dropdown-hover">
   <button class="w3-button">Selamat Datang</button>
   <div class="w3-dropdown-content w3-bar-block w3-border">
+    <a href="" class="w3-bar-item w3-button"><?php echo $data['nama_staff'] ?></a>
     <a href="?page=air" class="w3-bar-item w3-button">Setting</a>
     <a href="logout.php" class="w3-bar-item w3-button">LogOut</a>
   </div>
@@ -67,6 +80,26 @@ if($page == ""){
   include "views/security.php";
 }else if($page == "tambah_security"){
   include "views/tambah_security.php";
+}else if($page == "prevn_apar"){
+  include "views/prevn_apar.php";
+}else if($page == "tambah_apar"){
+  include "views/tambah_apar.php";
+}else if($page == "tugas"){
+  include "views/tugas.php";
+}else if($page == "tambah_tugas"){
+  include "views/tambah_tugas.php";
+}else if($page == "print_log_book"){
+  include "print/print_log_book.php";
+}else if($page == "print_request"){
+  include "print/print_request.php";
+}else if($page =="print_security"){
+  include "print/print_security.php";
+}else if($page == "print_parking"){
+  include "print/print_parking.php";
+}else if($page == "print_apar"){
+  include "print/print_apar.php";
+}else if($page == "print_tugas"){
+  include "print/print_tugas.php";
 }else{
 	include "views/404.php";
 }
@@ -74,3 +107,8 @@ if($page == ""){
 
 </body>
 </html>
+<?php 
+}else{
+  header("location: login.php");
+}
+?>
