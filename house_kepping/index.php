@@ -1,3 +1,8 @@
+<?php 
+@session_start();
+include "../config/koneksi.php";
+if(@$_SESSION['gudang']){
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -75,3 +80,8 @@ if($page == ""){
 
 </body>
 </html>
+<?php 
+}else{
+  header("location: login.php");
+}
+?>
