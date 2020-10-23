@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 01 Sep 2020 pada 20.12
--- Versi server: 10.4.13-MariaDB
--- Versi PHP: 7.4.8
+-- Waktu pembuatan: 07 Okt 2020 pada 04.04
+-- Versi server: 10.4.14-MariaDB
+-- Versi PHP: 7.4.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -94,10 +94,7 @@ CREATE TABLE `co_sipil` (
 --
 
 INSERT INTO `co_sipil` (`id_complaine`, `nama_tenant`, `tower`, `lantai`, `unit`, `complaine`, `keterangan`) VALUES
-('SPL001', 'Andrean gg', 'A', 'Lantai 2', 'A 02-01', 'TV Rusak', 'dgsgsfhdjgfgjgjfdf'),
-('SPL002', 'Andrean', 'A', 'Ground', 'A 01-01', 'TV Rusak', 'apa yang harus lakukan dengan kerusaka ini'),
-('SPL004', 'Dhimas', 'B', 'Lantai 13', 'B 13-04', 'TV Rusak', 'BFlkfbakbflKABF'),
-('SPL005', 'Dhimas', 'B', 'Lantai 14', 'A 14-03', 'TV Rusak', 'scksknkwnvkw');
+('1', 'Andrean Ahmad Fauzi', 'A', 'Ground', 'A 01-02', 'TV Rusak', 'Bangsat');
 
 -- --------------------------------------------------------
 
@@ -341,6 +338,121 @@ CREATE TABLE `du_trafo` (
 
 INSERT INTO `du_trafo` (`id_trafo`, `nama_utilitas`, `lokasi_utilitas`, `jumlah`, `keterangan`) VALUES
 ('DUL001', 'Andrean Ahmad Fauzi', 'Basemane', 3, 'svsvsvsv');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `d_log_book`
+--
+
+CREATE TABLE `d_log_book` (
+  `id_log_book` varchar(10) NOT NULL,
+  `nama` varchar(250) NOT NULL,
+  `tgl` date NOT NULL,
+  `document` varchar(250) NOT NULL,
+  `package` varchar(250) NOT NULL,
+  `unit_key` varchar(250) NOT NULL,
+  `inventori_key` varchar(250) NOT NULL,
+  `acces_card` varchar(250) NOT NULL,
+  `car_keys` varchar(250) NOT NULL,
+  `l` varchar(250) NOT NULL,
+  `payment` varchar(250) NOT NULL,
+  `message` varchar(250) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `d_log_book`
+--
+
+INSERT INTO `d_log_book` (`id_log_book`, `nama`, `tgl`, `document`, `package`, `unit_key`, `inventori_key`, `acces_card`, `car_keys`, `l`, `payment`, `message`) VALUES
+('NLB001', 'Alif Abby Damarhuri ', '2020-10-04', 'adada', 'adad', 'adad', 'adad', 'adad', 'adad', 'L', 'adada', 'adad'),
+('NLB002', 'Varel Pura Jaya', '2020-10-04', 'adada', 'adad', 'adad', 'adad', 'adad', 'adad', 'F', 'adada', 'adad'),
+('NLB003', 'Andrean Ahmad Fauzi', '2020-10-05', 'adada', 'adad', 'adad', 'adad', 'adad', 'adad', 'L', 'adada', 'adad'),
+('NLB004', 'Varel Pura Jaya', '2020-10-06', 'adada', 'adad', 'adad', 'adad', 'adad', 'adad', 'L', 'adada', 'adad');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `d_parking`
+--
+
+CREATE TABLE `d_parking` (
+  `id_tenant` varchar(10) NOT NULL,
+  `nama` varchar(100) NOT NULL,
+  `floor` varchar(100) NOT NULL,
+  `unit` varchar(100) NOT NULL,
+  `no_park` varchar(100) NOT NULL,
+  `no_plat` varchar(100) NOT NULL,
+  `nama_driver` varchar(100) NOT NULL,
+  `keterangan` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `d_parking`
+--
+
+INSERT INTO `d_parking` (`id_tenant`, `nama`, `floor`, `unit`, `no_park`, `no_plat`, `nama_driver`, `keterangan`) VALUES
+('NPL001', 'Alif Abby Damarhuri ', 'floor 2', 'A 02 01', '001', 'B 00114 FG', 'jago', 'gdgsgdgs'),
+('NPL002', 'Alif Abby Damarhuri ', 'floor 2', 'A 02 01', '001', 'B 00114 FG', 'jago', 'bfsdgdgsd'),
+('NPL003', 'Alif Abby Damarhuri ', 'floor 3', 'A 02 01', '001', 'B 00114 FG', 'jago', 'gsdgdgdgee'),
+('NPL004', 'Andrean Ahmad Fauzi', 'floor 5', 'A 02 01', '001', 'B 00114 FG', 'jago', 'ghyyjthh');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `d_request`
+--
+
+CREATE TABLE `d_request` (
+  `id_request` varchar(10) NOT NULL,
+  `floor` varchar(100) NOT NULL,
+  `unit` varchar(100) NOT NULL,
+  `ext` varchar(100) NOT NULL,
+  `nama` varchar(100) NOT NULL,
+  `company` varchar(100) NOT NULL,
+  `renmark` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `d_request`
+--
+
+INSERT INTO `d_request` (`id_request`, `floor`, `unit`, `ext`, `nama`, `company`, `renmark`) VALUES
+('NRL001', 'floor 2', 'A 02 01', 'saya ngga tau', 'Alif Abby Damarhuri ', 'Dubes Bang Jago', 'jago'),
+('NRL002', 'floor 3', 'A 02 01', 'saya ngga tau', 'Alif Abby Damarhuri ', 'Andrean ahmad fazui', 'jago'),
+('NRL003', 'floor 5', 'A 02 01', 'saya ngga tau', 'Alif Abby Damarhuri ', 'Andrean ahmad fazui', 'jago'),
+('NRL004', 'floor 2', 'A 02 01', 'saya ngga tau', 'Alif Abby Damarhuri ', 'Andrean ahmad fazui', 'jago');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `d_security`
+--
+
+CREATE TABLE `d_security` (
+  `nik_security` varchar(100) NOT NULL,
+  `nama` varchar(100) NOT NULL,
+  `tempat_lhr` varchar(100) NOT NULL,
+  `tgl_lhr` date NOT NULL,
+  `tmt` date NOT NULL,
+  `tb` varchar(10) NOT NULL,
+  `bb` varchar(10) NOT NULL,
+  `nik_ktp` varchar(100) NOT NULL,
+  `alamat` text NOT NULL,
+  `agama` varchar(100) NOT NULL,
+  `pendidikan` varchar(100) NOT NULL,
+  `no_tlp` varchar(100) NOT NULL,
+  `jabatan` varchar(100) NOT NULL,
+  `status` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `d_security`
+--
+
+INSERT INTO `d_security` (`nik_security`, `nama`, `tempat_lhr`, `tgl_lhr`, `tmt`, `tb`, `bb`, `nik_ktp`, `alamat`, `agama`, `pendidikan`, `no_tlp`, `jabatan`, `status`) VALUES
+('11222334', 'Alif Abby Damarhuri ', 'Jakarat', '2020-10-06', '2020-10-29', '150', '88', '1234567890', 'vdvasvsv', 'Islam', 'SMA', '08997776', 'Staff', 'Jomblo'),
+('11222334', 'Andrean Ahmad Fauzi', 'Jakarat', '2001-01-03', '2020-10-20', '165', '95', '1234567890', 'assafsf', 'Islam', 'SMA', '08997776', 'Staff', 'Jomblo');
 
 -- --------------------------------------------------------
 
@@ -1032,6 +1144,35 @@ INSERT INTO `pm_tu` (`id_tu`, `periode`, `nama_utilitas`, `lokasi_utilitas`, `re
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `p_apar`
+--
+
+CREATE TABLE `p_apar` (
+  `no_apar` varchar(10) NOT NULL,
+  `tower` varchar(10) NOT NULL,
+  `lantai` varchar(20) NOT NULL,
+  `des_lantai` text NOT NULL,
+  `posisi` varchar(100) NOT NULL,
+  `des_posisi` text NOT NULL,
+  `masa_berlaku` date NOT NULL,
+  `preasure` varchar(100) NOT NULL,
+  `des_preasure` text NOT NULL,
+  `keterangan` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `p_apar`
+--
+
+INSERT INTO `p_apar` (`no_apar`, `tower`, `lantai`, `des_lantai`, `posisi`, `des_posisi`, `masa_berlaku`, `preasure`, `des_preasure`, `keterangan`) VALUES
+('NPA001', 'A', 'lantai 2', 'Lantai 2 aja ini mash', 'Sebelah kiri', 'Pokonya kiri ini mash', '2020-10-21', 'aada', 'aada', 'sfafsanfslvbsjabvj'),
+('NPA002', 'B', 'Ground', 'vskvnlsavla', 'sacsnavknsalvlasvlks', 'csnakvalsvk', '2020-10-30', 'svavjsbvjsbv', 'svavjsbvjsbv', 'vsivlvblsjbvsjbvsbvsbvsbv'),
+('NPA003', 'A', 'lantai 7', 'sasvsjvbsajbvjsvjsv', 'vsvkvlbvevavslknv', 'vsvvblvblabvsbvbvl', '2020-10-31', 'cscalsvlsajbvjsbvjslv', 'cscalsvlsajbvjsbvjslv', 'svvwvnvlasvlabvljavlja'),
+('NPA004', 'B', 'Ground', 'savsabvsjbvjsbvkjbv', 'vasvwvnwvnlsnvlsnvlsv', 'avsbvsbvsbvbsvbbw', '2020-10-31', 'svavsvasvasv', 'svavsvasvasv', 'vavslvlsvlsbvsvbslvskv');
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `tb_ke`
 --
 
@@ -1082,7 +1223,37 @@ CREATE TABLE `tb_staff` (
 INSERT INTO `tb_staff` (`id_staff`, `nama_staff`, `username`, `password`, `level`) VALUES
 (1, 'Andrean Ahmad Fauzi', 'andrean', 'staff2', 'engineering'),
 (6, 'Alif Abby Damanhuri', 'alif', 'staff1', 'engineering'),
-(7, 'andrean ahmad', 'admin', 'admin', 'admin');
+(7, 'andrean ahmad', 'admin', 'admin', 'admin'),
+(8, 'Andrean Ahmad Fauzi', 'security', 'pass1', 'security');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tb_tugas`
+--
+
+CREATE TABLE `tb_tugas` (
+  `no_form` varchar(10) NOT NULL,
+  `hari` varchar(10) NOT NULL,
+  `tanggal` date NOT NULL,
+  `regu` varchar(10) NOT NULL,
+  `shift` varchar(10) NOT NULL,
+  `waktu` varchar(10) NOT NULL,
+  `nama_pos` varchar(100) NOT NULL,
+  `lokasi` text NOT NULL,
+  `petugas` varchar(100) NOT NULL,
+  `masuk` varchar(10) NOT NULL,
+  `keluar` varchar(10) NOT NULL,
+  `keterangan` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `tb_tugas`
+--
+
+INSERT INTO `tb_tugas` (`no_form`, `hari`, `tanggal`, `regu`, `shift`, `waktu`, `nama_pos`, `lokasi`, `petugas`, `masuk`, `keluar`, `keterangan`) VALUES
+('NRT001', 'Selasa', '2020-10-06', 'Regu 1', 'Shift 1', '17:24', 'Pos1', 'svsdvsdv', 'Andrean Ahmad Fauzi', '17:24', '17:24', 'vsdvsdvdsv'),
+('NRT002', 'Selasa', '2020-10-06', 'Regu 2', 'Shift 2', '18:26', 'Pos1', 'asv asvajsbvjs', 'Andrean Ahmad Fauzi', '18:26', '18:26', 'vjbvjasbvjasbv');
 
 -- --------------------------------------------------------
 
@@ -1572,7 +1743,7 @@ ALTER TABLE `tb_negara`
 -- AUTO_INCREMENT untuk tabel `tb_staff`
 --
 ALTER TABLE `tb_staff`
-  MODIFY `id_staff` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_staff` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_unit`
