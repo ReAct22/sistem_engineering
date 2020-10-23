@@ -4,7 +4,7 @@
 <h3 style="margin-top: 70px;" class="ml-3">Data Check List</h3>
 <br>
 <a href="?page=tambah_checklistcs" class="btn btn-md btn-success ml-3"><i class="fas fa-plus"></i> Compline</a>
-<a href="?page=print_ac" class="btn btn-md btn-primary ml-3"><i class="fas fa-print"></i> Print</a>
+<!-- <a href="?page=print_ac" class="btn btn-md btn-primary ml-3"><i class="fas fa-print"></i> Print</a> -->
 
 <form action="" method="post" class="d-none d-sm-inline-block form-inline ml-md-3 my-2 my-md-0 mw-100 navbar-search" style="float: right; margin-right: 50px;">
             <div class="input-group">
@@ -30,9 +30,39 @@
 		<th>Target/realisasi</th>
 		<th>Keterangan</th>
 	</tr>
-		<?php 
+		<?php
+	$no =1;
+
+        $batas = 3;
+        $hal = @$_GET['hal'];
+        if(empty($hal)){
+          $posisi = 0;
+          $hal = 1;
+        }else{
+          $posisi = ($hal - 1)*$batas;
+        }
+
+	$cari = @$_POST['cari'];
+	$cari_barang = @$_POST['cari_barang'];
+	if($cari_barang){
+		if($cari != ""){
+			$sql = mysqli_query($koneksi,"select *from hk_cl where no_check like '%$cari%' or floor like '%$cari%' or nama_petugas like '%$cari%'");
+		}else{
 			$sql = mysqli_query($koneksi,"select *from hk_cl");
-			while($data = mysqli_fetch_array($sql)){
+		}
+	}else{
+		$sql = mysqli_query($koneksi,"select *from hk_cl LIMIT $posisi, $batas");
+	}
+
+	$cek = mysqli_num_rows($sql);
+	if($cek < 1){
+		?>
+			<tr>
+				<td colspan="7" style="padding: 10px; text-align: center;">Data Tidak Ditemukan</td>
+			</tr>
+		<?php
+	}else{
+		while($data = mysqli_fetch_array($sql)){
 		?>
 	<tr>
 		<td><?php echo $data['no_check'] ?></td>
@@ -46,8 +76,26 @@
 		<td><?php echo $data['target'] ?></td>
 		<td><?php echo $data['keterangan'] ?></td>
 	</tr>
-	<?php } ?>
+	<?php 
+			}
+	}
+	?>
 </table>
-	
+	<div style="margin-top: 10px;float: left;">
+        <?php 
+        $jml = mysqli_num_rows(mysqli_query($koneksi,"select *from hk_cl"));
+        
+        ?>
+      </div>
+      <div style="margin-top: 10px; float: right;">
+        <?php 
+          $jml_hal = ceil($jml / $batas);
+          for($i=1; $i<=$jml_hal; $i++){
+        ?>
+        <a href="?page=check_listcs&hal=<?php echo $i; ?>" class="btn btn-outline-primary"><?php echo $i; ?></a>
+        <?php
+          }
+        ?>
+      </div>
 </div>
 </div>

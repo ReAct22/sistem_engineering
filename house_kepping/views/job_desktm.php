@@ -1,9 +1,9 @@
 <?php 
 	include "../config/koneksi.php";
 ?>
-<h3 style="margin-top: 70px;" class="ml-3">Data Job Desk</h3>
+<h3 style="margin-top: 70px;" class="ml-3">Data Job Deskripsi Tanaman</h3>
 <br>
-<a href="?page=tambah_jobdeskcs" class="btn btn-md btn-success ml-3"><i class="fas fa-plus"></i> Compline</a>
+<a href="?page=tambah_jobdesktm" class="btn btn-md btn-success ml-3"><i class="fas fa-plus"></i> Tambah</a>
 <!-- <a href="?page=print_ac" class="btn btn-md btn-primary ml-3"><i class="fas fa-print"></i> Print</a> -->
 
 <form action="" method="post" class="d-none d-sm-inline-block form-inline ml-md-3 my-2 my-md-0 mw-100 navbar-search" style="float: right; margin-right: 50px;">
@@ -19,15 +19,14 @@
 <div class="card-body">
 	<table border="1" align="center" class="w3-table w3-striped">
 	<tr>
-		<th>No Jobdeskripsi</th>
-		<th>Hari dan Tanggal</th>
-		<th>Waktu Shift</th>
-		<th>Area</th>
-		<th>Petugas</th>
-		<th>Uraian Tugas</th>
-		<th>Supervisor</th>
-		<th>Uraian Tugas Supervisor</th>
-		<th>Waktu Shift Supervisor</th>
+		<th>No Schedule Perawatan</th>
+		<th>Tanggal</th>
+		<th>Nama Petugas</th>
+		<th>Area(Zona)</th>
+		<th>Deskripsi Zona</th>
+		<th>Frekuensi</th>
+		<th>Uraian Perkerjaan</th>
+		<th>Catatan</th>
 		<th>Keterangan</th>
 	</tr>
 		<?php
@@ -46,12 +45,12 @@
 	$cari_barang = @$_POST['cari_barang'];
 	if($cari_barang){
 		if($cari != ""){
-			$sql = mysqli_query($koneksi,"select *from jb_cs where no_job like '%$cari%' or tgl like '%$cari%' or petugas like '%$cari%' or supervisor like '%$cari%'");
+			$sql = mysqli_query($koneksi,"select *from jb_st where no_perawatan like '%$cari%' or area like '%$cari%' or nama_petugas like '%$cari%'");
 		}else{
-			$sql = mysqli_query($koneksi,"select *from jb_cs");
+			$sql = mysqli_query($koneksi,"select *from jb_st");
 		}
 	}else{
-		$sql = mysqli_query($koneksi,"select *from jb_cs LIMIT $posisi, $batas");
+		$sql = mysqli_query($koneksi,"select *from jb_st LIMIT $posisi, $batas");
 	}
 
 	$cek = mysqli_num_rows($sql);
@@ -65,15 +64,14 @@
 		while($data = mysqli_fetch_array($sql)){
 		?>
 	<tr>
-		<td><?php echo $data['no_job'] ?></td>
-		<td><?php echo $data['hari'] ?>/<?php echo $data['tgl'] ?></td>
-		<td><?php echo $data['waktu_shift'] ?></td>
+		<td><?php echo $data['no_perawatan'] ?></td>
+		<td><?php echo $data['tgl'] ?></td>
+		<td><?php echo $data['nama_petugas'] ?></td>
 		<td><?php echo $data['area'] ?></td>
-		<td><?php echo $data['petugas'] ?></td>
-		<td><?php echo $data['uraian_tugas'] ?></td>
-		<td><?php echo $data['supervisor'] ?></td>
-		<td><?php echo $data['tugas_supervisor'] ?></td>
-		<td><?php echo $data['shift_supervisor'] ?></td>
+		<td><?php echo $data['desk_zona'] ?></td>
+		<td><?php echo $data['frekuensi'] ?></td>
+		<td><?php echo $data['uraian_perkerjaan'] ?></td>
+		<td><?php echo $data['catatan'] ?></td>
 		<td><?php echo $data['keterangan'] ?></td>
 	</tr>
 	<?php 
@@ -83,7 +81,7 @@
 </table>
 	<div style="margin-top: 10px;float: left;">
         <?php 
-        $jml = mysqli_num_rows(mysqli_query($koneksi,"select *from jb_cs"));
+        $jml = mysqli_num_rows(mysqli_query($koneksi,"select *from jb_st"));
         
         ?>
       </div>
@@ -92,7 +90,7 @@
           $jml_hal = ceil($jml / $batas);
           for($i=1; $i<=$jml_hal; $i++){
         ?>
-        <a href="?page=job_deskcs&hal=<?php echo $i; ?>" class="btn btn-outline-primary"><?php echo $i; ?></a>
+        <a href="?page=job_desktm&hal=<?php echo $i; ?>" class="btn btn-outline-primary"><?php echo $i; ?></a>
         <?php
           }
         ?>

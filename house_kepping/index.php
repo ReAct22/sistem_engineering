@@ -28,8 +28,8 @@
      <div class="w3-dropdown-hover">
       <button class="w3-button ">Land Scape</button>
       <div class="w3-dropdown-content w3-bar-block w3-border">
-        <a href="" class="w3-bar-item w3-button">Check List Taman</a>
-        <a href="" class="w3-bar-item w3-button">Job Desk Taman </a>
+        <a href="?page=check_listtm" class="w3-bar-item w3-button">Check List Taman</a>
+        <a href="?page=job_desktm" class="w3-bar-item w3-button">Job Desk Taman </a>
       </div>
     </div>
 
@@ -59,6 +59,14 @@ if($page == ""){
   include "views/job_deskcs.php";
 }else if($page == "tambah_jobdeskcs"){
   include "views/tambah_jobdeskcs.php";
+}else if($page == "check_listtm"){
+  include "views/check_listtm.php";
+}else if($page == "tambah_checklisttm"){
+  include "views/tambah_checklisttm.php";
+}else if($page == "job_desktm"){
+  include "views/job_desktm.php";
+}else if($page == "tambah_jobdesktm"){
+  include "views/tambah_jobdesktm.php";
 }else{
 	include "views/404.php";
 }
