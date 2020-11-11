@@ -17,7 +17,7 @@ if(@$_SESSION['gudang']){
 	<!-- Navbar (sit on top) -->
 <div class="">
   <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-    <a href="/sistem_engineering" class="w3-bar-item w3-button"><b>APARTEMENT</b> Bukit Golf Pondok Indah</a>
+    <a href="/sistem_engineering/house_kepping" class="w3-bar-item w3-button"><b>APARTEMENT</b> Bukit Golf Pondok Indah</a>
     <!-- Float links to the right. Hide them on small screens -->
     <div class="w3-right w3-hide-small">
       <a href="" class="w3-bar-item w3-button">Home</a>

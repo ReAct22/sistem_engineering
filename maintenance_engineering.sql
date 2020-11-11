@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 07 Okt 2020 pada 04.04
+-- Waktu pembuatan: 11 Nov 2020 pada 22.25
 -- Versi server: 10.4.14-MariaDB
 -- Versi PHP: 7.4.10
 
@@ -453,6 +453,120 @@ CREATE TABLE `d_security` (
 INSERT INTO `d_security` (`nik_security`, `nama`, `tempat_lhr`, `tgl_lhr`, `tmt`, `tb`, `bb`, `nik_ktp`, `alamat`, `agama`, `pendidikan`, `no_tlp`, `jabatan`, `status`) VALUES
 ('11222334', 'Alif Abby Damarhuri ', 'Jakarat', '2020-10-06', '2020-10-29', '150', '88', '1234567890', 'vdvasvsv', 'Islam', 'SMA', '08997776', 'Staff', 'Jomblo'),
 ('11222334', 'Andrean Ahmad Fauzi', 'Jakarat', '2001-01-03', '2020-10-20', '165', '95', '1234567890', 'assafsf', 'Islam', 'SMA', '08997776', 'Staff', 'Jomblo');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `hk_cl`
+--
+
+CREATE TABLE `hk_cl` (
+  `no_check` varchar(100) NOT NULL,
+  `floor` varchar(100) NOT NULL,
+  `desk_floor` varchar(100) NOT NULL,
+  `perkerjaan` varchar(100) NOT NULL,
+  `kondisi` varchar(100) NOT NULL,
+  `action_by` varchar(100) NOT NULL,
+  `nama_petugas` varchar(100) NOT NULL,
+  `catatan` text NOT NULL,
+  `target` varchar(100) NOT NULL,
+  `keterangan` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `hk_cl`
+--
+
+INSERT INTO `hk_cl` (`no_check`, `floor`, `desk_floor`, `perkerjaan`, `kondisi`, `action_by`, `nama_petugas`, `catatan`, `target`, `keterangan`) VALUES
+('CLC001', '1', 'Lanti 1 aja ', 'adada', 'adad', 'HK', 'andrean', 'sasf', 'sfasfs', 'svasvsav'),
+('CLC002', '1', 'Lanti 1 aja ', 'adada', 'adad', 'Sec', 'andrean', 'sasf', 'sfasfs', 'dvadvasvasv'),
+('CLC003', '3', 'Lanti 1 aja ', 'adada', 'adad', 'HK', 'andrean', 'sasf', 'sfasfs', 'dvavasv'),
+('CLC004', '3', 'Lanti 1 aja ', 'adada', 'adad', 'HK', 'Dhimas', 'svasvasv', 'svas', 'svasvsav');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `jb_cs`
+--
+
+CREATE TABLE `jb_cs` (
+  `no_job` varchar(10) NOT NULL,
+  `hari` varchar(20) NOT NULL,
+  `tgl` date NOT NULL,
+  `waktu_shift` varchar(100) NOT NULL,
+  `area` varchar(100) NOT NULL,
+  `petugas` varchar(100) NOT NULL,
+  `uraian_tugas` text NOT NULL,
+  `supervisor` varchar(100) NOT NULL,
+  `tugas_supervisor` text NOT NULL,
+  `shift_supervisor` varchar(100) NOT NULL,
+  `keterangan` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `jb_cs`
+--
+
+INSERT INTO `jb_cs` (`no_job`, `hari`, `tgl`, `waktu_shift`, `area`, `petugas`, `uraian_tugas`, `supervisor`, `tugas_supervisor`, `shift_supervisor`, `keterangan`) VALUES
+('JDC001', 'Selasa', '2020-10-23', 'Shift 1', 'Lobby Utama', 'Andrean Ahmad Fauzi', 'sascasc', 'scasc', 'scasc', 'Shift 2', 'savasvasvsav'),
+('JDC002', 'Selasa', '2020-10-23', 'Shift 1', 'Coridor PH-lt.10', 'Dhimas', 'sascasc', 'scasc', 'scasc', 'Shift 1', 'vasvsavasv'),
+('JDC003', 'Selasa', '2020-10-24', 'Shift 2', 'Coridor 9-Ground', 'Andrean Ahmad Fauzi', 'sascasc', 'scasc', 'scasc', 'Shift 3', 'vasvasvsav'),
+('JDC004', 'Selasa', '2020-10-30', 'Shift 3', 'Swimming Pool', 'Dhimas', 'sascasc', 'scasc', 'avsavsav', 'Shift 3', 'vavasvsav');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `jb_st`
+--
+
+CREATE TABLE `jb_st` (
+  `no_perawatan` varchar(10) NOT NULL,
+  `tgl` date NOT NULL,
+  `nama_petugas` varchar(100) NOT NULL,
+  `area` varchar(100) NOT NULL,
+  `desk_zona` text NOT NULL,
+  `frekuensi` varchar(100) NOT NULL,
+  `uraian_perkerjaan` text NOT NULL,
+  `catatan` text NOT NULL,
+  `keterangan` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `jb_st`
+--
+
+INSERT INTO `jb_st` (`no_perawatan`, `tgl`, `nama_petugas`, `area`, `desk_zona`, `frekuensi`, `uraian_perkerjaan`, `catatan`, `keterangan`) VALUES
+('JBT001', '2020-10-23', 'Dhimas', '2', 'ssvsvsavasv', 'M', 'svsavasv', 'svasvasv', 'svasbabss'),
+('JBT002', '2020-10-24', 'andrean', '1', 'ssvsvsavasv', 'M', 'cascsavasv', 'vasvasvsav', 'svasvsvavasv'),
+('JBT003', '2020-10-31', 'Dhimas', '3', 'ssvsvsavasv', 'B.2B', 'svsavasv', 'sasf', 'dvasvasvs'),
+('JBT004', '2020-10-31', 'Dhimas', '3', 'ssvsvsavasv', 'B.2B', 'svsavasv', 'svasvasv', 'svsavasvsav');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `ls_th`
+--
+
+CREATE TABLE `ls_th` (
+  `no_check` varchar(10) NOT NULL,
+  `check_list` varchar(100) NOT NULL,
+  `tgl` date NOT NULL,
+  `jenis_tanaman` varchar(100) NOT NULL,
+  `area` varchar(100) NOT NULL,
+  `kondisi` varchar(100) NOT NULL,
+  `desk_kondisi` text NOT NULL,
+  `keterangan` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `ls_th`
+--
+
+INSERT INTO `ls_th` (`no_check`, `check_list`, `tgl`, `jenis_tanaman`, `area`, `kondisi`, `desk_kondisi`, `keterangan`) VALUES
+('CLT001', '1', '2020-10-24', 'dbd', 'dbsdb', 'dbsdb', 'dbsdb', 'dbsdb'),
+('CLT002', '2', '2020-10-17', 'dbd', 'dbsdb', 'adad', 'dbsdb', 'bdsjbvldjbvladbv'),
+('CLT003', '4', '2020-11-01', 'reerer', 'dbsdb', 'adad', 'dbsdb', 'sdbdbsdb'),
+('CLT004', '2', '2020-10-31', 'reerer', 'dbsdb', 'adad', 'dbsdb', 'bsdbdbsdb');
 
 -- --------------------------------------------------------
 
@@ -1205,6 +1319,21 @@ CREATE TABLE `tb_negara` (
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `tb_pjtn`
+--
+
+CREATE TABLE `tb_pjtn` (
+  `no_unit` varchar(10) NOT NULL,
+  `nama_pjtn` varchar(255) NOT NULL,
+  `kontak_pjtn` int(40) NOT NULL,
+  `email_pjtn` varchar(100) NOT NULL,
+  `kantor_pjtn` varchar(100) NOT NULL,
+  `status_pjtn` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `tb_staff`
 --
 
@@ -1224,7 +1353,8 @@ INSERT INTO `tb_staff` (`id_staff`, `nama_staff`, `username`, `password`, `level
 (1, 'Andrean Ahmad Fauzi', 'andrean', 'staff2', 'engineering'),
 (6, 'Alif Abby Damanhuri', 'alif', 'staff1', 'engineering'),
 (7, 'andrean ahmad', 'admin', 'admin', 'admin'),
-(8, 'Andrean Ahmad Fauzi', 'security', 'pass1', 'security');
+(8, 'Andrean Ahmad Fauzi', 'security', 'pass1', 'security'),
+(9, 'Andrean Ahmad Fauzi', 'staff3', 'staff', 'gudang');
 
 -- --------------------------------------------------------
 
@@ -1743,7 +1873,7 @@ ALTER TABLE `tb_negara`
 -- AUTO_INCREMENT untuk tabel `tb_staff`
 --
 ALTER TABLE `tb_staff`
-  MODIFY `id_staff` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_staff` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_unit`
