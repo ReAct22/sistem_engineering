@@ -1,3 +1,8 @@
+<?php 
+@session_start();
+include "../config/koneksi.php";
+if(@$_SESSION['keuangan']){
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,18 +20,27 @@
 <div>
 	<!-- Navbar (sit on top) -->
 <div class="">
-  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+  <div class="w3-bar w3-white w3-padding w3-card">
     <a href="/sistem_engineering/keuangan" class="w3-bar-item w3-button"><b>APARTEMENT</b> Bukit Golf Pondok Indah</a>
     <!-- Float links to the right. Hide them on small screens -->
     <div class="w3-right w3-hide-small">
       <a href="?page=data_p_tenant" class="w3-bar-item w3-button">Data Penanggung Jawab Tenant</a>
       <a href="?page=data_pemilik" class="w3-bar-item w3-button">Data Pemilik</a>
-      <a href="?page=data_P_Tenant" class="w3-bar-item w3-button">Data Penanggung Jawab Pemilik</a>
+      <a href="?page=data_p_pemilik" class="w3-bar-item w3-button">Data Penanggung Jawab Pemilik</a>
       <a href="?page=data_tenant" class="w3-bar-item w3-button">Data Tenant</a>
       <a href="?page=dept_keuangan" class="w3-bar-item w3-button">Departement Keuangan</a>
 <div class="w3-dropdown-hover">
   <button class="w3-button">Selamat Datang</button>
+  <?php 
+  if(@$_SESSION['keuangan']){
+    $user_login = @$_SESSION['keuangan'];
+  }
+
+  $sql_login = mysqli_query($koneksi,"select *from tb_staff where id_staff = '$user_login'");
+  $data = mysqli_fetch_array($sql_login);
+  ?>
   <div class="w3-dropdown-content w3-bar-block w3-border">
+    <a href="#" class="w3-bar-item w3-button"><?php echo $data['nama_staff'] ?></a>
     <a href="?page=air" class="w3-bar-item w3-button">Setting</a>
     <a href="logout.php" class="w3-bar-item w3-button">LogOut</a>
   </div>
@@ -46,13 +60,26 @@
   }else if($page == "data_pemilik"){
     include "views/data_pemilik.php";
   }else if($page == "data_p_pemilik"){
-    include "views/data_p_pemilik.php";
+    include "views/data_pjp.php";
   }else if($page == "data_tenant"){
     include "views/data_tenant.php";
   }else if($page == "dept_keuangan"){
     include "views/dept_keuangan.php";
+  }else if($page == "tambah_pjtn"){
+    include "views/tambah_p_tenant.php";
+  }else if($page == "tambah_pemilik"){
+    include "views/tambah_pemilik.php";
+  }else if($page == "tambah_pjp"){
+    include "views/tambah_pjp.php";
+  }else if($page == "tambah_tenant"){
+    include "views/tambah_tenant.php";
   }
 ?>
 
 </body>
 </html>
+<?php 
+}else{
+  header("location: login.php");
+}
+?>

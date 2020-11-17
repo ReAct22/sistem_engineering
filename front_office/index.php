@@ -1,7 +1,7 @@
 <?php 
 @session_start();
 include "../config/koneksi.php";
-if(@$_SESSION['security']){
+if(@$_SESSION['office']){
 ?>
 <!DOCTYPE html>
 <html>
@@ -24,20 +24,13 @@ if(@$_SESSION['security']){
     <a href="/sistem_engineering/security_sistem" class="w3-bar-item w3-button"><b>APARTEMENT</b> Bukit Golf Pondok Indah</a>
     <!-- Float links to the right. Hide them on small screens -->
     <div class="w3-right w3-hide-small">
-      <div class="w3-dropdown-hover">
-  <button class="w3-button ">Data</button>
-  <div class="w3-dropdown-content w3-bar-block w3-border">
-    <a href="?page=security" class="w3-bar-item w3-button">Data Security</a>
-    <a href="?page=list_parking" class="w3-bar-item w3-button">Data List Parking</a>
+      <a href="?page=log_book" class="w3-bar-item w3-button">Data Log Book</a>
+      <a href="security_sistem/login.php" class="w3-bar-item w3-button">Security</a>
+    <a href="?page=request" class="w3-bar-item w3-button">Data Request</a>
 
-  </div>
-</div>
-     
-      <a href="?page=prevn_apar" class="w3-bar-item w3-button">Preventif Apar</a>
-      <a href="?page=tugas" class="w3-bar-item w3-button">Rencana Tugas</a>
     <?php 
-  if(@$_SESSION['security']){
-    $user_login = @$_SESSION['security'];
+  if(@$_SESSION['office']){
+    $user_login = @$_SESSION['office'];
   }
 
   $sql_login = mysqli_query($koneksi,"select *from tb_staff where id_staff = '$user_login'");
@@ -62,34 +55,14 @@ $page = @$_GET['page'];
 
 if($page == ""){
 	include "views/home.php";
-}else if($page == "list_parking"){
-  include "views/parking.php";
-}else if($page == "tambah_parking"){
-  include "views/tambah_parking.php";
-}else if($page == "security"){
-  include "views/security.php";
-}else if($page == "tambah_security"){
-  include "views/tambah_security.php";
-}else if($page == "prevn_apar"){
-  include "views/prevn_apar.php";
-}else if($page == "tambah_apar"){
-  include "views/tambah_apar.php";
-}else if($page == "tugas"){
-  include "views/tugas.php";
-}else if($page == "tambah_tugas"){
-  include "views/tambah_tugas.php";
-}else if($page == "print_log_book"){
-  include "print/print_log_book.php";
-}else if($page == "print_request"){
-  include "print/print_request.php";
-}else if($page =="print_security"){
-  include "print/print_security.php";
-}else if($page == "print_parking"){
-  include "print/print_parking.php";
-}else if($page == "print_apar"){
-  include "print/print_apar.php";
-}else if($page == "print_tugas"){
-  include "print/print_tugas.php";
+}else if($page == "log_book"){
+  include "views/log_book.php";
+}else if($page == "tambah_log_book"){
+  include "views/tambah_log_book.php";
+}else if($page == "request"){
+  include "views/request_list.php";
+}else if($page == "tambah_request"){
+  include "views/tambah_request.php";
 }else{
 	include "views/404.php";
 }

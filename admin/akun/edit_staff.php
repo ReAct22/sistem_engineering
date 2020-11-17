@@ -31,7 +31,9 @@
                   <option value="engineering">engineering</option>
                   <option value="tenant">tenant</option>
                   <option value="security">security</option>
-                  <option value="gudang">gudang</option>    
+                  <option value="gudang">gudang</option> 
+                  <option value="keuangan">keungan</option>
+                  <option value="office">office</option>    
                 </select>
     				</div>
 
