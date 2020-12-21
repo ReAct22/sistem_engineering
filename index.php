@@ -11,14 +11,16 @@
 <div>
 	<!-- Navbar (sit on top) -->
 <div class="w3-top">
-  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-    <a href="/sistem_engineering" class="w3-bar-item w3-button"><b>APARTEMENT</b> Bukit Golf Pondok Indah</a>
+  <div class="w3-bar w3-white  w3-padding w3-card">
+    <a href="/sistem_engineering" class="w3-bar-item w3-wide w3-button"><b>APARTEMENT</b> Bukit Golf Pondok Indah</a>
     <!-- Float links to the right. Hide them on small screens -->
     <div class="w3-right w3-hide-small">
+      <a href="dept_gh/" class="w3-bar-item w3-button">Dept GH</a>
       <a href="keuangan/" class="w3-bar-item w3-button">Dept Keuangan</a>
       <a href="house_kepping/login.php" class="w3-bar-item w3-button">Dept House Kepping</a>
       <a href="front_office/" class="w3-bar-item w3-button">Front Office</a>
       <a href="compline_online/login.php" class="w3-bar-item w3-button">Compline Online</a>
+      <a href="tenant_relasi" class="w3-bar-item w3-button">Tenant Relasi</a>
       <a href="businis_line/login.php" class="w3-bar-item w3-button">Maintenant</a>
       <a href="?page=contact" class="w3-bar-item w3-button">Contact</a>
     </div>

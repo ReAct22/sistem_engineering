@@ -33,7 +33,8 @@
                   <option value="security">security</option>
                   <option value="gudang">gudang</option> 
                   <option value="keuangan">keungan</option>
-                  <option value="office">office</option>    
+                  <option value="office">office</option>
+                  <option value="relasi">relasi</option>    
                 </select>
     				</div>
 
