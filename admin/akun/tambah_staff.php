@@ -31,7 +31,8 @@
                   <option value="gudang">gudang</option>
                   <option value="keuangan">keungan</option>
                   <option value="office">office</option>
-                  <option value="relasi">relasi</option>     
+                  <option value="relasi">relasi</option>
+                  <option value="GA">GA</option>     
                 </select>
     				</div>
 

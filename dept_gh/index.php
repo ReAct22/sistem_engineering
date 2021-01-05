@@ -1,7 +1,7 @@
 <?php 
-// @session_start();
-// include "../config/koneksi.php";
-// if(@$_SESSION['security']){
+@session_start();
+include "../config/koneksi.php";
+if(@$_SESSION['GA']){
 ?>
 <!DOCTYPE html>
 <html>
@@ -24,24 +24,15 @@
     <a href="/sistem_engineering/security_sistem" class="w3-bar-item w3-button"><b>APARTEMENT</b> Bukit Golf Pondok Indah</a>
     <!-- Float links to the right. Hide them on small screens -->
     <div class="w3-right w3-hide-small">
-      <!-- <div class="w3-dropdown-hover">
-  <button class="w3-button ">Data</button>
-  <div class="w3-dropdown-content w3-bar-block w3-border">
-    <a href="?page=security" class="w3-bar-item w3-button">Data Security</a>
-    <a href="?page=list_parking" class="w3-bar-item w3-button">Data List Parking</a>
-
-  </div>
-</div> -->
-     
       <a href="?page=data_izin" class="w3-bar-item w3-button">Data Perizinan</a>
       <a href="?page=data_build" class="w3-bar-item w3-button">Data Bulding Managemant</a>
     <?php 
-  // if(@$_SESSION['security']){
-  //   $user_login = @$_SESSION['security'];
-  // }
+  if(@$_SESSION['GA']){
+    $user_login = @$_SESSION['GA'];
+  }
 
-  // $sql_login = mysqli_query($koneksi,"select *from tb_staff where id_staff = '$user_login'");
-  // $data = mysqli_fetch_array($sql_login);
+  $sql_login = mysqli_query($koneksi,"select *from tb_staff where id_staff = '$user_login'");
+  $data = mysqli_fetch_array($sql_login);
   ?>
 <div class="w3-dropdown-hover">
   <button class="w3-button">Selamat Datang</button>
@@ -81,7 +72,7 @@ if($page == ""){
 </body>
 </html>
 <?php 
-// }else{
-//   header("location: login.php");
-// }
+}else{
+  header("location: login.php");
+}
 ?>

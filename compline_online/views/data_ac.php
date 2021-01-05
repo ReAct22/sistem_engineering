@@ -8,7 +8,7 @@
 
 <form action="" method="post" class="d-none d-sm-inline-block form-inline ml-md-3 my-2 my-md-0 mw-100 navbar-search" style="float: right; margin-right: 50px;">
             <div class="input-group">
-              <input type="text" name="cari" class="form-control bg-light border-1 mb-3 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+              <input type="text" name="cari" id="input" class="form-control bg-light border-1 mb-3 small" placeholder="Search for..." onkeyup='searchTable()' aria-label="Search" aria-describedby="basic-addon2">
               <div class="input-group-append">
                 <input type="submit" name="cari_barang" class="btn btn-primary mb-3" value="cari">
               </div>
@@ -17,7 +17,7 @@
 
 <br>
 <div class="card-body">
-	<table border="1" align="center" class="w3-table w3-striped">
+	<table border="1" id="table" align="center" class="w3-table w3-striped">
 	<tr>
 		<th>Nomer Compline</th>
 		<th>Nama Tenant</th>
